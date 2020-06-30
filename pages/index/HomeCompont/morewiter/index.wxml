@@ -1,0 +1,59 @@
+<view class="morewiter">
+	<Search></Search>
+	<view class="morewiter_main">
+		<view class="morewiter_tab">
+			<view class="morewiter_tab_child  {{selecttypes==1?'active':''}} " bindtap="showfwtype" data-selectType="1">综合</view>
+			<view class="morewiter_tab_child {{selecttypes==2?'active':''}} " bindtap="showfwtype" data-selectType="2">附近</view>
+			<view class="morewiter_tab_child {{selecttypes==3?'active':''}} " bindtap="showfwtype" data-selectType="3">成交量</view>
+			<view class="morewiter_tab_child {{selecttypes==4?'active':''}} " bindtap="showfwtype" data-selectType="4">好评度</view>
+			<view class="morewiter_tab_child {{selecttypes==5?'active':''}} " bindtap="showfwtype" data-selectType="5">服务类型
+				<image style="width:14rpx;vertical-align: middle;margin-left: 10rpx;" src="http://zxty.mrhkj.com/assets/index/index/shoplist/selectss.png" mode="widthFix"></image>
+			</view>
+
+		</view>
+		<view id="waiter">
+			<view class="waiter_item" wx:for="{{waiterlist}}" wx:key="*this" bindtap="toWaiterdetails" data-id="{{item.id}}">
+				<view class="waiter_img">
+					<image src="{{item.himg}}" mode="widthFix"></image>
+				</view>
+				<view class="waiter_msg">
+					<view class="msg_info">
+						<text>{{item.names}} </text>
+						<text>{{item.age}}岁 </text>
+						<text class="price">{{item.salary}}元/h</text>
+					</view>
+					<view class="msg_skill">
+						<text wx:for="{{item.type_cn}}" wx:key="*this">{{item}} |</text>
+					</view>
+					<view class="msg_badge">
+						<text>金牌员工</text>
+						<text>{{item.nplace}}</text>
+					</view>
+					<view class="msg_checked">
+						<button>专人服务</button>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>
+
+<view class="morewiter_type " style="display:{{showsevertype ? 'block' : 'none'}}">
+	<view class="morewiter_type_child">
+
+		<view class="morewiter_type_name">服务类型</view>
+		<view class="morewiter_type_itembox">
+			<view class="morewiter_type_item  {{selectsevertyes == 1?'active':''}}" wx:for="{{typebtn}}" wx:key="id" bindtap="selectsevertype" data-severtype="{{item.id}}" >{{item.names}}</view>
+		</view>
+		<view class="morewiter_type_itembtn">
+
+			<view class="morewiter_type_item_rest">重置</view>
+			<view class="morewiter_type_item_see" bindtap="heidsevertype">查看员工</view>
+		</view>
+
+	</view>
+
+
+
+
+</view>

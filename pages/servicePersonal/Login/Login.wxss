@@ -1,0 +1,93 @@
+.Login_banner {
+  width: 100%;
+  height: 380rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.Login_from {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 0 55rpx;
+
+
+
+}
+
+.login_tel {
+  height: 99rpx;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-bottom: 1rpx solid #EEEEEE;
+  justify-content: space-between;
+  padding: 10rpx 0;
+
+
+}
+
+.login_tel_icon {
+  width: 96rpx;
+}
+
+.login_tel_left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+}
+
+.agreement {
+  height: 159rpx;
+  width: 100%;
+  font-size: 28rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.agreement_icon {
+  width: 32rpx;
+  height: 32rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #F07F04;
+  border-radius: 50%;
+  margin-right: 20rpx;
+
+}
+.LoginBtn{
+  width: 642rpx;
+  height: 90rpx;
+  background-image: linear-gradient(#FAB100, #F08003);
+  border-radius: 50rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size:32rpx;
+font-family:PingFang SC;
+font-weight:500;
+color:rgba(255,255,255,1);
+
+}
+.LoginJump{
+  height: 100rpx;
+  width: 100%;
+  font-size:30rpx;
+  font-family:SimHei;
+  font-weight:400;
+  color:rgba(153,153,153,1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+.LoginJump>view{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}

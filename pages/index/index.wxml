@@ -1,0 +1,128 @@
+<view class="container">
+	<view id="address_serch">
+		<picker class="address" mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+			<text class="address_txt"> {{region[2]}}</text>
+			<image class="address_icon" src="/assets/image/index/xiala.png" mode="widthFix"></image>
+		</picker>
+		<view class="serch" bindtap="toSerchPage">
+			<icon type='search' mode="widthFix" size="12"></icon>
+			<input type="text" disabled placeholder='请输入...' />
+		</view>
+	</view>
+
+	<view class="page-section page-section-spacing swiper">
+		<swiper indicator-dots="true" autoplay="true">
+			<block wx:for="{{swiperimg}}" wx:key="*this">
+				<swiper-item class="swiper_item">
+					<image style="width:100%;height:100%" src="{{item.img_url}}"></image>
+				</swiper-item>
+			</block>
+		</swiper>
+	</view>
+	<view id="tab_list">
+		<view wx:for="{{tablist}}" wx:key="*this" class="tab_item" bindtap="NavEvent" data-index="{{index}}" data-url="{{item.url}}">
+			<view class="tab_itemurl">
+				<image style="width: 80rpx;" src="http://zxty.mrhkj.com/assets/index/index/tabicon/{{item.img}}.png" mode="widthFix"></image>
+				<text class="name">{{item.name}}</text>
+			</view>
+		</view>
+		<view wx:for="{{sefvertype}}" wx:key="*this" class="tab_item" bindtap="ToShop" data-id="{{item.id}}" data-url="{{item.url}}">
+			<view class="tab_itemurl">
+				<image style="width: 80rpx;height:80rpx" src="{{item.img_url}}"></image>
+				<text class="name">{{item.names}}</text>
+			</view>
+		</view>
+
+
+
+		<view class="tab_item" wx:if="{{shortlist == false}}">
+			<view class="tab_itemurl">
+				<image style="width: 80rpx;height:80rpx" src="/assets/image/index/more.png" bindtap="Shouqi"></image>
+				<text class="name">更多</text>
+			</view>
+		</view>
+		<view class="tab_item" wx:if="{{shortlist == true}}">
+			<view class="tab_itemurl">
+				<image style="width: 80rpx;height:80rpx" src="/assets/image/index/shouqi.png" bindtap="Shouqi"></image>
+				<text class="name">{{item.names}}</text>
+			</view>
+		</view>
+	</view>
+	<!-- 金牌店铺 -->
+	<view class="gold">
+		<view class="shop">金牌店铺</view>
+		<navigator class="more" url="/pages/index/HomeCompont/moreshop/moreshop">更多</navigator>
+	</view>
+
+	<view id="goldshop_list">
+		<view wx:for="{{shoplist}}" wx:key="*this" class="goldshop_item" bindtap="toservicedetails" data-id="{{item.id}}">
+			<image class="goldl" src="/assets/image/index/goldl.png"></image>
+			<image style="width: 100%;height:274rpx;" src="{{item.logo}}" wx:if="{{item.logo != ''}}"></image>
+			<image style="width: 100%;height:274rpx;" wx:if="{{item.logo == ''}}" src="/assets/image/index/shopdefual.jpg"></image>
+
+			<view class="shop_msg">
+				<view class="shop_msg_text">
+					<view class="shop_name">
+						{{item.shop_name}}</view>
+					<view class="shop_volume">
+						<image class="heart" src="/assets/image/index/heart.png"></image>
+						<text>好评率{{item.rate}}%</text>
+						<text>成交量{{item.deal_num}}</text>
+					</view>
+				</view>
+				<view class="shop_goshop">
+					<button>进店</button>
+				</view>
+			</view>
+		</view>
+		<view id="avd">
+			<image src="http://zxty.mrhkj.com/assets/index/index/shoplist/avd.png" mode="widthFix"></image>
+		</view>
+	</view>
+	<view class="gold">
+		<view class="shop">金牌员工</view>
+		<view class="more">
+			<navigator url="/pages/index/HomeCompont/morewiter/index">更多</navigator>
+		</view>
+	</view>
+	<view id="waiter">
+		<view class="waiter_item" wx:for="{{waiterlist}}" wx:key="*this" bindtap="toWaiterdetails" data-id="{{item.id}}">
+			<view class="waiter_img">
+				<image src="{{item.himg}}" style="width:200rpx;height:240rpx"></image>
+			</view>
+			<view class="waiter_msg">
+				<view class="msg_info">
+					<text>{{item.names}} </text>
+					<text>{{item.age}}岁 </text>
+					<text class="price">{{item.salary}}元/h</text>
+				</view>
+				<view class="msg_skill">
+					<text wx:for="{{item.type_cn}}" wx:key="*this">{{item}} |</text>
+				</view>
+				<view class="msg_badge">
+					<text>金牌员工</text>
+					<text>{{item.nplace}}</text>
+				</view>
+				<view class="msg_checked">
+					<button>专人服务</button>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view id="contact">
+		<view class="contact_item">
+			<view class="contact_msg">
+				<button class="contact_msgchild" open-type="contact" session-from="7moor|{{userInfo.nickName}}|{{userInfo.avatarUrl}}|{{customField}}">
+					<image class="contact_icons" src="/assets/image/index/kefu.png"></image>
+					<text >在线客服</text>
+				</button>
+			</view>
+			<view class="contact_msg" bindtap="Call">
+				<image class="contact_icon" src="/assets/image/index/tel.png" mode="widthFix"></image>
+				<text >电话咨询</text>
+			</view>
+		</view>
+	</view>
+	<view class="bottom_box"></view>
+</view>
+<home-item selected='0' />

@@ -1,0 +1,44 @@
+<view class="Balance">
+
+	<view class="Balance_header">
+		<view class="banner" style="background-image: url(http://zxty.mrhkj.com/assets/index/myhome/bacck.png);background-size: 100%;">
+			<view class="bannerbox1">总资产(CNY)</view>
+			<view class="bannerbox2">{{Balancelist.money}}</view>
+			<view class="bannerbox3">
+				<view bindtap="toRecharge" data-moneys="{{Balancelist.money}}">
+					<text>充值</text>
+					<image style="width: 10rpx;margin-left: 18rpx;" src="http://zxty.mrhkj.com/assets/index/myhome/left.png" mode="widthFix"></image>
+				</view>
+				<view bindtap="toCashOut" data-moneys="{{Balancelist.money}}">
+					<text>提现</text>
+					<image style="width: 10rpx;margin-left: 18rpx;" src="http://zxty.mrhkj.com/assets/index/myhome/left.png" mode="widthFix"></image>
+				</view>
+			</view>
+		</view>
+	</view>
+
+
+	<view class="Balance_main">
+		<view class="Balance_title">
+
+
+			明细
+		</view>
+		<view class="Balance_main_item" wx:for='{{Balancelist.list}}' wx:key="*this">
+			<view class="Balance_main_item01">
+				<text style="font-size:28rpx;" wx:if="{{item.title == 1}}">充值</text>
+				<text style="font-size:28rpx;" wx:if="{{item.title == 2}}">提现</text>
+				<text style="font-size:28rpx;" wx:if="{{item.title == 3}}">消费</text>
+				<text style="font-size:28rpx;" wx:if="{{item.title == 0}}">其他</text>
+				<text  style="color:#FE3F10;font-size:36rpx;">{{item.change_money}}</text>
+			</view>
+			<view class="Balance_main_item02">
+				<text >{{item.content}}</text>
+				<text>{{item.create_time}}</text>
+			</view>
+		</view>
+
+	</view>
+
+
+</view>

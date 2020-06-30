@@ -1,0 +1,13 @@
+{
+  "usingComponents": {
+    "SelectWaiter": "/pages/index/HomeCompont/ConfirmOrder/SelectWaiter/actionsheet",
+    "PayMode": "/pages/index/HomeCompont/ConfirmOrder/PayMode/actionsheet",
+    "Coupon": "/pages/index/HomeCompont/ConfirmOrder/Coupon/actionsheet",
+    "Timer": "/pages/index/HomeCompont/ConfirmOrder/Timer/pickerYMDHM"
+   
+
+
+  },
+  "navigationBarTitleText": "确认订单"
+
+}

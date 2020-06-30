@@ -1,0 +1,134 @@
+.OfflineTrain {
+  background: #F1F2F2;
+}
+
+.OfflineTrain_banner {
+  margin: 0 auto;
+  width: 690rpx;
+  height: 610rpx;
+  background: #fff;
+}
+
+.swiper {
+  width: 690rpx;
+  height: 400rpx;
+}
+
+.OfflineTrain_bannern_masg {
+  margin: 0 auto;
+  width: 690rpx;
+  height: 210rpx;
+  padding-left: 30rpx;
+}
+
+.OfflineTrain_bannern_tiele {
+  font-size: 36rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(34, 34, 34, 1);
+  line-height: 41px;
+}
+
+.OfflineTrain_bannern_time {
+  font-size: 26rpx;
+  font-family: SimHei;
+  font-weight: 400;
+  color: rgba(153, 153, 153, 1);
+  line-height: 41rpx;
+}
+
+.OfflineTrain_bannern_score {
+  margin-top: 24rpx;
+  width: 125rpx;
+  height: 40rpx;
+  font-family: SimHei;
+  font-size: 24rpx;
+  font-weight: 400;
+  color: rgba(153, 153, 153, 1);
+  line-height: 41rpx;
+  border: 1rpx solid #999;
+  text-align: center;
+  border-radius: 20rpx;
+}
+
+.OfflineTrain_msg {
+  width: 690rpx;
+  height: 256rpx;
+  background: #fff;
+  margin: 19rpx auto;
+  display: flex;
+  justify-content: space-between;
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(34, 34, 34, 1);
+
+}
+
+.OfflineTrain_msg_left {
+  width: 138rpx;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.OfflineTrain_msg_right {
+  width: 552rpx;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.OfflineTrain_msg_right_bor {
+  width: 553rpx;
+  height: 83rpx;
+  line-height: 83rpx;
+  border-bottom: 1rpx solid #EEEEEE;
+}
+
+.OfflineTrain_msg_right_bor:last-child {
+  border-bottom: none
+}
+
+.TrainingDetails {
+  width: 690rpx;
+  height: 402rpx;
+  margin: 0 auto;
+  background: #fff;
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+
+.TrainingDetails_title {
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(34, 34, 34, 1);
+  line-height: 41rpx;
+}
+.TrainingDetails_connent{
+  font-size:24rpx;
+font-family:SimHei;
+font-weight:400;
+color:rgba(153,153,153,1);
+line-height:40rpx;
+}
+.TrainingDetails_btn{
+  width: 280rpx;
+  height: 70rpx;
+  border-radius: 30rpx;
+  background:#EC9701 ;
+  margin: 30rpx auto;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-size:30rpx;
+font-family:PingFang SC;
+font-weight:bold;
+color:rgba(255,255,255,1);
+line-height:39px;
+}

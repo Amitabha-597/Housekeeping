@@ -1,0 +1,124 @@
+<view class="details">
+	<view class="details_header">
+		<view class="details_header_card">
+			<view class="details_headermsg">
+				<view class="details_headermsgname">
+					<text>{{writer.names}}</text>
+					<image style="width:26rpx; vertical-align: bottom; margin-right: 9rpx;" src="http://zxty.mrhkj.com/assets/index/index/waiterdetails/heart02.png" mode="widthFix"> </image>
+					<image style="width:26rpx; vertical-align: bottom; margin-right: 9rpx;" src="http://zxty.mrhkj.com/assets/index/index/waiterdetails/heart02.png" mode="widthFix"> </image>
+					<image style="width:26rpx; vertical-align: bottom; margin-right: 9rpx;" src="http://zxty.mrhkj.com/assets/index/index/waiterdetails/heart02.png" mode="widthFix"> </image>
+					<image style="width:26rpx; vertical-align: bottom; margin-right: 9rpx;" src="http://zxty.mrhkj.com/assets/index/index/waiterdetails/heart02.png" mode="widthFix"> </image>
+					<image style="width:26rpx; vertical-align: bottom; margin-right: 9rpx;" src="http://zxty.mrhkj.com/assets/index/index/waiterdetails/heart01.png" mode="widthFix"> </image>
+				</view>
+				<view class="details_headermsginfo">
+					<text>学历 ：{{writer.education}} </text>
+					<text>籍贯 ：{{writer.nplace}}</text>
+					<text> 全职</text>
+				</view>
+				<view class="details_headermsgprice">
+					<view class="details_headermsgpricechild">
+						<text>{{writer.deal_num}}</text>
+						<text style="font-size: 22rpx;">预约次数</text>
+					</view>
+					<view class="details_headermsgpricechild">
+						<text>{{writer.obtain}}</text>
+						<text style="font-size: 22rpx;">从业年限</text>
+					</view>
+					<view class="details_headermsgpricechild">
+						<text>{{writer.salary}}</text>
+						<text style="font-size: 22rpx;">薪资(元/h)</text>
+					</view>
+
+
+
+				</view>
+			</view>
+		</view>
+		<view class="details_headerimgbox">
+			<image style="width:172rpx; height:246rpx" src="{{writer.himg}}"></image>
+			<image class="details_gold" style="width:30rpx" src="http://zxty.mrhkj.com/assets/index/index/waiterdetails/gold.png" mode="widthFix"></image>
+		</view>
+
+	</view>
+
+	<view class="detailed_main">
+		<view class="detailed_mainitem">
+			<view class="detailed_main_title">
+				<image style="width:30rpx" src="http://zxty.mrhkj.com/assets/index/index/waiterdetails/servicetype.png " mode="widthFix"></image>
+				<text style="width:30rpx">服务类型</text>
+			</view>
+			<view class="detailed_main_conent">
+				<text  wx:for="{{writer.s_type}}" wx:key="*this">{{item.names}}</text>
+			</view>
+		</view>
+		<view class="detailed_mainitem">
+			<view class="detailed_main_title">
+				<image style="width:30rpx" src="http://zxty.mrhkj.com/assets/index/index/waiterdetails/adress.png " mode="widthFix"></image>
+				<text style="width:30rpx">所在公司</text>
+			</view>
+			<view class="detailed_main_conent">{{writer.biz_name}}</view>
+		</view>
+		<view class="detailed_mainitem">
+			<view class="detailed_main_title">
+				<image style="width:30rpx" src="http://zxty.mrhkj.com/assets/index/index/waiterdetails/jiashao.png " mode="widthFix"></image>
+				<text style="width:30rpx">自我介绍</text>
+			</view>
+			<view class="detailed_main_conent">
+				<text>{{writer.desc}} </text>
+				<view class="detailed_main_imgbox">
+					<image style="width:182rpx" wx:for="{{writer.certificate}}" wx:key="*this" src="{{item}} " mode="widthFix"></image>
+
+
+				</view>
+
+			</view>
+
+		</view>
+		<view class="detailed_mainitem">
+			<view class="detailed_main_title">
+				<image style="width:30rpx" src="http://zxty.mrhkj.com/assets/index/index/waiterdetails/zhengshu.png " mode="widthFix"></image>
+				<text style="width:30rpx">技能证书</text>
+			</view>
+			<view class="detailed_main_conent" wx:for="{{writer.certificate}}" wx:key="*this">
+				<image style="width:182rpx;  margin-right: 20rpx;" src="{{item}}" mode="widthFix"></image>
+			</view>
+		</view>
+
+		<view class="detailed_mainitem">
+			<view class="detailed_main_title">
+				<image style="width:30rpx" src="http://zxty.mrhkj.com/assets/index/index/waiterdetails/servicetype.png " mode="widthFix"></image>
+				<text style="width:30rpx">工作经历</text>
+			</view>
+			<view class="detailed_main_conent" wx:for="{{writer.work}}" wx:key="*this">
+				<view class="detailed_main_conentbox">
+					<view class="detailed_main_conentleft">
+						<image style="width:23rpx" src="http://zxty.mrhkj.com/assets/index/index/waiterdetails/jigli.png " mode="widthFix"></image>
+					</view>
+					<view class="detailed_main_conentRight">
+						<view class="detailed_main_conentdate">{{item.add_time}}</view>
+						<view class="detailed_main_conentjingli">{{item.content}}</view>
+					</view>
+				</view>
+
+			</view>
+		</view>
+
+
+	</view>
+
+</view>
+
+<view class="details_footer">
+	<view class="details_footerbox1 ">
+		<button class="contact_msgchild" open-type="contact" session-from="7moor|{{userInfo.nickName}}|{{userInfo.avatarUrl}}|{{customField}}">
+			<image class="contact_icons" src="/assets/image/index/kfmsg.png"></image>
+			<text >在线客服</text>
+		</button>
+	</view>
+	<view class="details_footerbox1" bindtap="callme" data-tel="{{writer.mobile}}">
+		<image style="width:26rpx;margin-right:10rpx; vertical-align: middle;" src="/assets/image/index/kftel.png" mode="widthFix"></image>
+		<text >电话咨询</text>
+	</view>
+	<view class="details_footerbtn" bindtap="showAct">定制服务</view>
+</view>
+<ActionSheet bindactiontap="btnClick" show="{{showActionsheet}}" actions="{{serviceType}}" title=" s"></ActionSheet>

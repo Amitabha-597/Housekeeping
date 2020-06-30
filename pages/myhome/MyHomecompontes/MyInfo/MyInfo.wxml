@@ -1,0 +1,47 @@
+<view class="MyInfo">
+	<view class="MyInfo_hrader">
+		<view class="MyInfo_hrader_avatar">
+			<view>头像</view>
+			<image style="width: 103rpx;height:103rpx" src="{{userinfo.avatar_url}}" bindtap="changeAvatar"></image>
+		</view>
+		<view class="MyInfo_hrader_name">
+			<view>昵称</view>
+			<input value="{{userinfo.nickname}}" bindinput="changeName"></input>
+
+		</view>
+		<view class="MyInfo_hrader_Gender">
+			<view>性别</view>
+			<view>
+				<text wx:if="{{userinfo.gender == 1}}">男</text>
+				<text wx:if="{{userinfo.gender == 2}}">女</text>
+				<image style="width:13rpx; margin-left: 10rpx;vertical-align: auto;" src="http://zxty.mrhkj.com/assets/index/myhome/next.png" mode="widthFix"></image>
+			</view>
+		</view>
+	</view>
+	<view class="MyInfo_main">
+		<view class="MyInfo_main_tel">
+			<view>手机号</view>
+			<input value="15682311231" maxlength="11" value="{{userinfo.mobile}}"></input>
+		</view>
+		<view class="MyInfo_main_code">
+			<view>验证码</view>
+			<view class="MyInfo_main_code_get">
+				<input placeholder="请输入验证码" bindinput="codedata"></input>
+				<view>获取验证码</view>
+			</view>
+		</view>
+		<view class="MyInfo_main_autograph">
+			<view class="MyInfo_main_autograph_title">
+				<view>个性签名</view>
+				<view>
+					<text style="color: #FF8D60;">{{autographLength}}</text>/
+					<text>15</text>
+				</view>
+			</view>
+			<input value="{{userinfo.sign}}" bindinput="autograph" maxlength="15"></input>
+		</view>
+	</view>
+	<view class="MyInfo_btnBox">
+		<view class="MyInfo_btn" bindtap="saveMsg">保存</view>
+	</view>
+</view>

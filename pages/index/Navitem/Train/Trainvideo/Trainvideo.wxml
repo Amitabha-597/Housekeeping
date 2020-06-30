@@ -1,0 +1,58 @@
+<wxs module="filter" src="../../../../../utils/timer.wxs"></wxs>
+<view class="VideoBox">
+
+	<video wx:if="{{palayvideo !=''}}" id="myvideo" src="{{palayvideo}}" binderror="videoErrorCallback" controls></video>
+	<image class="bannert" wx:if="{{palayvideo ==''}}" src="{{onlinevideo.img_url}}"></image>
+	<view class="VideoTitle">
+		<view class="VideoName">{{onlinevideo.title}}</view>
+		<view class="VideoDate">
+			<text>{{onlinevideo.lecturer}}</text>
+			<text>{{filter.getDateTime(onlinevideo.add_time)}}发布</text>
+		</view>
+		<view class="VideoScore">评分:{{onlinevideo.score}}| 共{{keshi}}课时</view>
+	</view>
+
+
+
+	<view>
+		<view class='Train'>
+			<view class='title'>
+				<view class='titleSel' bindtap='titleClick' data-idx='0'>
+					<view style="color:{{0 == currentIndex ? '#EC8401' : ''}}">详情</view>
+					<hr class="{{0 == currentIndex ? 'headerLineSel' : 'headerLineUnsel'}}" />
+				</view>
+				<view class='titleSel' bindtap='titleClick' data-idx='1'>
+					<view style="color:{{1 == currentIndex ? '#EC8401' : ''}}">目录</view>
+					<hr class="{{1 == currentIndex ? 'headerLineSel' : 'headerLineUnsel'}} " />
+				</view>
+			</view>
+
+			<swiper class='swiper' bindchange='pagechange' current='{{currentIndex}}'>
+				<swiper-item class='swiper'>
+					<view class="CourseIntr">
+						<view class="CourseIntr_title">课程介绍</view>
+						<view class="CourseIntr_conent">
+							{{onlinevideo.desc}}
+						</view>
+					</view>
+				</swiper-item>
+				<swiper-item class='swiper' class='swiper'>
+					<view class="Catalog">
+						<view class="CatalogItem" wx:for="{{onlinevideo.video}}" wx:key="actionIndex" bindtap="CatalogSelect" wx:for-index="actionIndex" data-index="{{actionIndex}}" data-url="{{item.video_url}}">
+							<view class="CatalogItemA">
+								<text style="color:{{CatalogSelect == actionIndex ? '#ec8401' : '#222'}}">{{item.title}}</text>
+								<image wx:if="{{CatalogSelect == actionIndex}}" style="width: 25rpx;" src="/assets/image/index/check.png" mode="widthFix"></image>
+							</view>
+							<view class="CatalogItemB">{{item.minutes}}min | {{item.num}}次学习</view>
+						</view>
+						</view>
+				</swiper-item>
+
+			</swiper>
+		</view>
+
+
+
+
+	</view>
+</view>

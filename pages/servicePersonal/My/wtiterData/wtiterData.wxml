@@ -1,0 +1,52 @@
+<view class="writerData">
+	<view class="writerDatacard">
+		<view class="writerDatacardtitle">身份证件资料</view>
+		<view class="writerDatacardmsg">
+			<view>
+				<text>姓名</text>
+				<text>{{usrinfo.names}}</text>
+			</view>
+			<view>
+				<text>手机号</text>
+				<text>{{usrinfo.mobile}}</text>
+			</view>
+			<view>
+				<text>身份证号</text>
+				<text>{{usrinfo.idnum}}</text>
+			</view>
+
+		</view>
+	</view>
+	<view class="idcarddata">
+		<view class="writerDatacardtitle">基本信息</view>
+		<view class="idcarddataimg">
+			<view>
+				<view>
+				<image style="width:100%;height:100%" src="{{URl}}{{usrinfo.idimg}}"> </image>
+				</view>
+				<text>手持身份证正面</text>
+			</view>
+			<view>
+				<view>
+						<image style="width:100%;height:100%" src="{{URl}}{{usrinfo.idcarimg}}"> </image>
+				</view>
+
+				<text>手持身份证反面</text>
+			</view>
+
+		</view>
+	</view>
+  	<view class="idcarddata">
+		<view class="writerDatacardtitle">技能证书资料</view>
+		<view class="idcarddataimg">
+			<view  wx:for="{{usrinfo.certificate}}"  wx:key="*this">
+				<view>
+					<image style="width:100%;height:100%" src="{{URl}}{{item}}"> </image>
+				</view>
+				<text>技能证书</text>
+			</view>
+		
+
+		</view>
+	</view>
+</view>

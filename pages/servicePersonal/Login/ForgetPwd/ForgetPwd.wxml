@@ -1,0 +1,69 @@
+<view class="Login">
+	<view class="Login_banner">
+
+		<image style=" width: 210rpx;height: 138rpx;" src="http://zxty.mrhkj.com/assets/servicePersonal/logo.png"></image>
+	</view>
+	<view class="Login_from">
+		<!-- 手机号 -->
+		<view class="login_tel">
+			<view class="login_tel_left">
+				<view class="login_tel_icon">
+					<image style="width: 32rpx;height: 37rpx;" src="http://zxty.mrhkj.com/assets/servicePersonal/tel.png"></image>
+				</view>
+				<input placeholder='请输入手机号码' value='{{inputValue}}' type="number" type="number"></input>
+			</view>
+			<view class="login_tel_right">
+				<image style="width: 36rpx;height: 36rpx;" src="http://zxty.mrhkj.com/assets/servicePersonal/clrar.png" bindtap="clearInput"></image>
+			</view>
+		</view>
+		<!-- 验证码 -->
+		<view class="login_tel">
+			<view class="login_tel_left">
+				<view class="login_tel_icon">
+					<image style="width: 32rpx;height: 37rpx;" src="http://zxty.mrhkj.com/assets/servicePersonal/code.png"></image>
+				</view>
+				<input placeholder='请输入验证码' value='{{inputValue}}' type="number" type="number"></input>
+			</view>
+			<view class="login_tel_right">
+				<button bindtap="sendCode" disabled="{{smsFlag}}" style='margin-right:10rpx;color:{{sendColor}};font-size:28rpx; '>{{sendTime}}</button>
+
+			</view>
+		</view>
+		<view class="login_tel">
+			<view class="login_tel_left">
+				<view class="login_tel_icon">
+					<image style="width: 32rpx;height: 37rpx;" src="http://zxty.mrhkj.com/assets/servicePersonal/password.png"></image>
+				</view>
+				<input type="{{showPwd ? 'password' : 'text'}}" placeholder="请输入新的登录密码" />
+			</view>
+			<view class="login_tel_right">
+				<switch style="transform:scale(0.7,0.7) ;margin-right: -20rpx;" checked="{{switch1Checked}}" color="#CFCFCF" bindchange="switch1Change" />
+			</view>
+		</view>
+		<view class="login_tel">
+			<view class="login_tel_left">
+				<view class="login_tel_icon">
+					<image style="width: 32rpx;height: 37rpx;" src="http://zxty.mrhkj.com/assets/servicePersonal/password.png"></image>
+				</view>
+				<input type="{{showPwd ? 'password' : 'text'}}" placeholder="请再次输入新的登录密码" />
+			</view>
+			<view class="login_tel_right">
+				<switch style="transform:scale(0.7,0.7) ;margin-right: -20rpx;" checked="{{switch1Checked}}" color="#CFCFCF" bindchange="switch1Change" />
+			</view>
+		</view>
+
+
+		<view class="LoginBtn" style="margin-top: 50rpx;">确认</view>
+
+
+
+	</view>
+
+
+
+
+
+
+
+
+</view>

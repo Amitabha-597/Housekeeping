@@ -1,0 +1,130 @@
+<view class="register">
+	<view class="register_banner">
+		<image style=" width: 210rpx;height: 138rpx;" src="/assets/image/index/logo.png"></image>
+	</view>
+	<view class="register_msg">
+		<view class="register_msg_title">基本信息</view>
+		<!-- 手机号 -->
+		<view class="register_msgbox">
+			<view class="register_msgItem">
+				<view class="register_msgItemLeft">
+					<view>手机号</view>
+					<input placeholder='请输入手机号码' maxlength="11"  bindinput="Mobile"></input>
+				</view>
+				<image style="width: 36rpx;height: 36rpx;" src="/assets/image/index/clrar.png" bindtap="clearInput"></image>
+			</view>
+		</view>
+		<!-- 验证码 -->
+		<view class="register_msgbox">
+			<view class="register_msgItem">
+				<view class="register_msgItemLeft">
+					<view>验证码</view>
+					<input placeholder='请输入验证码'  bindinput="Yzcode"></input>
+				</view>
+				<button bindtap="sendCode" disabled="{{smsFlag}}" style='margin-right:10rpx;color:{{sendColor}};font-size:28rpx;color: #EE8101; '>{{sendTime}}</button>
+
+			</view>
+		</view>
+		<!-- 密码 -->
+		<view class="register_msgbox">
+			<view class="register_msgItem">
+				<view class="register_msgItemLeft">
+					<view>密码</view>
+					<input type="{{showPwd ? 'text' : 'password'}}" placeholder="请输入新的登录密码" bindinput="Password"  />
+				</view>
+				<switch style="transform:scale(0.7,0.7) ;margin-right: -20rpx;" checked="{{switch1Checked}}" color="#CFCFCF" bindchange="ShowPwd" />
+			</view>
+		</view>
+		<!-- 姓名 -->
+		<view class="register_msgbox">
+			<view class="register_msgItem">
+				<view class="register_msgItemLeft">
+					<view>姓名</view>
+					<input placeholder='请确保与身份证上姓名一致' bindinput="userName"></input>
+				</view>
+			</view>
+		</view>
+		<!-- 身份证 -->
+		<view class="register_msgbox">
+			<view class="register_msgItem">
+				<view class="register_msgItemLeft">
+					<view style="  width:140rpx">身份证号</view>
+					<input placeholder-class="place-holder" style="font-size:30rpx;" placeholder='请确保与身份证上号码一致' bindinput="Idnum"  value="{{regfrom.idnum}}" style="width:400rpx" maxlength="18"></input>
+				</view>
+				<image style="width: 36rpx;height: 36rpx;" src="/assets/image/index/clrar.png" bindtap="clearInputID"></image>
+			</view>
+		</view>
+	</view>
+	<view class="registerline"></view>
+	<view class="uploadIdCard">
+		<view class="register_msg_title">上传身份证照片</view>
+		<view class="uploadIdCardTips">上传的证件要求号码和文字清晰可见，图片大小不 大于5M，证件用于检验您的信息，请确保您的信息 真实有效</view>
+		<view class="uploadIdCardImgbox">
+			<view class="IDcard" bindtap="IdcardA">
+			<image wx:if="{{regfrom.idimg == ''}}" src="/assets/image/index/Idcarda.png"></image>
+			<image  src="{{URl}}{{regfrom.idimg}}"></image>
+			</view>
+			<view class="IDcard" bindtap="IdcardB">
+			<image  wx:if="{{regfrom.idcarimg == ''}}" src="/assets/image/index/Idcardb.png"></image>
+			<image  src="{{URl}}{{regfrom.idcarimg}}"></image>
+			</view>
+
+		</view>
+	</view>
+	<view class="registerline"></view>
+	<view class="uploadIdCard">
+		<view class="register_msg_title">上传技能证书（非必填）</view>
+		<view class="uploadIdCardTips">上传的证件要求号码和文字清晰可见，图片大小不 大于5M，证件用于检验您的信息，请确保您的信息 真实有效</view>
+		<view class="uploadIdCardImgboxb">
+			<view class="IDcard "  bindtap="ZhengshuA"  wx:for="{{certificate}}" wx:key="*this"> 
+			<image src="{{URl}}{{item}}"> </image>
+			</view>
+
+			<view class="IDcard "  bindtap="ZhengshuA"  > 
+			<image  src="/assets/image/index/zhengshu.png"></image>
+			</view>
+			
+		</view>
+	</view>
+	<view class="Remarks">
+		<view class="register_msg_title">备注信息</view>
+		<view class="RemarksMsg">
+			<view class="RemarksMsg_item">
+				<view class="RemarksMsg_itemLeft" >所属公司店铺</view>
+				<view class="RemarksMsg_itemRight" bindtap="ShowShopSelect">
+					<input placeholder="请选择" value="{{shopName}}"></input>
+					<image style="width: 15rpx;height: 26rpx;" src="/assets/image/index/next.png"></image>
+				</view>
+			</view>
+			<view class="RemarksMsg_item">
+				<view class="RemarksMsg_itemLeft">主要职务</view>
+				<view class="RemarksMsg_itemRight" bindtap="ShowJobSelect">
+					<input placeholder="请选择" value="{{jobName}}"></input>
+					<image style="width: 15rpx;height: 26rpx;" src="/assets/image/index/next.png"></image>
+				</view>
+			</view>
+			<view class="RemarksMsg_item">
+		
+				<view class="RemarksMsg_itemLeft" >详细地址</view>
+				<view class="RemarksMsg_itemRight"  bindtap="getLocation">
+					<input style="width: 100%" placeholder="定位当前位置" value="{{addressa}}"></input>
+					<image style="width: 15rpx;height: 26rpx;" src="/assets/image/index/next.png"></image>
+				</view>
+			</view>
+
+
+		</view>
+
+
+	</view>
+	<view class="agreement  agreementrg">
+		<view class="agreement_icon" bindtap="ConsentAgreement">
+			<image wx:if="{{ConsentAgreement}}" style=" width: 16rpx;height: 16rpx;padding: 0rpx 1rpx 1rpx 0rpx;" src="/assets/image/index/select.png"></image>
+		</view>
+		<text style="color:#999 ">已阅读并同意</text>
+		<navigator style="color:#F07F04 ">《五华家政人员服务协议》</navigator>
+	</view>
+	<view class="registerBtn" bindtap="Register">注册</view>
+</view>
+<SelectShop bindactiontap="ShowShop" show="{{showSelectShop}}" actions="{{shopList}}" title="这"></SelectShop>
+<SelectJob bindactiontap="ShowJob" show="{{showSelectJob}}" actions="{{jobList}}" title="这"></SelectJob>

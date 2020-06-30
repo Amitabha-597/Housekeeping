@@ -1,0 +1,27 @@
+<view class="Pay">
+	<view class="Pay_hrader">
+		<view class="Pay_hrader_mun">
+			<image style="width:34rpx" src="/assets/image/index/Step1.png" mode="widthFix"></image>
+			<view class="line"></view>
+			<image style="width:34rpx" src="/assets/image/index/Step201.png" mode="widthFix"></image>
+			<view class="line"></view>
+			<image style="width:34rpx" src="/assets/image/index/Step3.png" mode="widthFix"></image>
+		</view>
+		<view class="Pay_hrader_text">
+			<text>店铺资料</text>
+			<text>更多资料</text>
+			<text>入驻费用</text>
+		</view>
+	</view>
+	<view class="Pay_main">
+
+		<view class="Pay_main_title">商家入驻费用</view>
+		<view class="Pay_main_price">300元/次</view>
+		<view class="Pay_main_date">审核时间：1-3个工作日</view>
+
+	</view>
+	<view class="Pay_footer">
+		<view class="Pay_footer_btn" bindtap="Pay">立即支付
+		</view>
+	</view>
+</view>

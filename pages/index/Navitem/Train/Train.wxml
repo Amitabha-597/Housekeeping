@@ -1,0 +1,76 @@
+	<view class='Train'>
+		<view class='title'>
+			<view class='titleSel' bindtap='titleClick' data-idx='0'>
+				<view style="color:{{0 == currentIndex ? '#EC8401' : ''}}">线上培训</view>
+				<hr class="{{0 == currentIndex ? 'headerLineSel' : 'headerLineUnsel'}}" />
+			</view>
+			<view class='titleSel' bindtap='titleClick' data-idx='1'>
+				<view style="color:{{1 == currentIndex ? '#EC8401' : ''}}">线下培训</view>
+				<hr class="{{1 == currentIndex ? 'headerLineSel' : 'headerLineUnsel'}} " />
+			</view>
+		</view>
+
+		<swiper class='swiper' bindchange='pagechange' current='{{currentIndex}}'>
+			<swiper-item class='swiper'>
+				<view class="Train_item" wx:for="{{onlinelist}}" wx:key="id" bindtap="toVideo" data-id="{{item.id}}">
+					<view class="Train_item_conentbox">
+						<view class="Train_item_conent">
+							<view class="Train_item_conentImgbox">
+								<image style="width:100%;height: 100%;" src="{{item.img_url}}"></image>
+							</view>
+							<view class="Train_item_conentConbox">
+								<view class="Train_item_conentCon_title">{{item.title}}</view>
+								<view class="Train_item_conentCon_info">
+									<text>{{item.lecturer}} </text>
+									<text>{{item.add_time}}</text>
+								</view>
+								<view class="Train_item_conentCon_operation">
+									<view class="conentCon_operationeva">评分:{{item.score}}</view>
+									<view class="conentCon_operationeva">录播</view>
+									<view class="conentCon_operationBtn">立即学习</view>
+
+								</view>
+
+							</view>
+						</view>
+					</view>
+
+
+
+					<view class="Train_item_line"></view>
+
+				</view>
+
+			</swiper-item>
+			<swiper-item class='swiper' class='swiper'>
+				<view class="Undertheline">
+					<view class="Undertheline_box" wx:for="{{offlinList}}" wx:key="id" bindtap="toOfflineTrain" data-id="{{item.id}}">.
+						<view class="UnderthelineImg">
+							<image style="width:100%;height: 100%;" src="{{item.img_url}}"></image>
+						</view>
+						<view class="UnderthelineConent">
+							<view class="UnderthelineTitle">{{item.title}}</view>
+							<view class=" Underthelineinfo">{{item.lecturer}}</view>
+							<view class=" Underthelineinfo">
+								<text>培训时间:</text>
+								<text>{{item.train_time}}</text>
+							</view>
+							<view class="UnderthelineOpe">
+								<view class="UnderthelineOpe_txt">线下评分</view>
+								<view class="UnderthelineOpe_btn conentCon_operationBtn"  >
+									<view class="UnderthelineOpe_btn">立即报名</view>
+								</view>
+
+							</view>
+
+						</view>
+
+
+
+
+					</view>
+					<view class="Train_item_line"></view>
+				</view>
+			</swiper-item>
+		</swiper>
+	</view>

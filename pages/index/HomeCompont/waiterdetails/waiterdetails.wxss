@@ -1,0 +1,262 @@
+.details {
+  padding: 0 30rpx 150rpx 30rpx;
+
+}
+
+.details_header {
+  width: 100%;
+  height: 286rpx;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.details_header_card {
+  width: 609rpx;
+  height: 286rpx;
+  background: #EC8401;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.details_headerimgbox {
+  position: absolute;
+  left: 30rpx;
+  top: 20rpx;
+  width: 172rpx;
+  height: 246rpx;
+}
+
+.details_gold {
+  position: absolute;
+  top: 0;
+  left: 138rpx;
+}
+
+.details_headermsgname {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 34rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 1);
+}
+
+.details_headermsgname text {
+  margin-right: 13rpx;
+}
+
+.details_headermsg {
+  width: 80%;
+
+}
+
+.details_headermsginfo {
+  padding: 20rpx 0;
+  display: flex;
+  font-size: 22rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+}
+
+.details_headermsginfo text {
+  margin-right: 30rpx;
+}
+
+.details_headermsgprice {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.details_headermsgpricechild {
+  height: 100rpx;
+}
+
+.details_headermsgpricechild {
+  font-size: 34rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.detailed_main {
+  margin-top: 40rpx;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 0px 18rpx 0px rgba(14, 17, 35, 0.16);
+  border-radius: 20rpx;
+  padding: 42rpx 30rpx;
+}
+
+.detailed_mainitem {
+  margin-bottom: 30rpx;
+}
+
+.detailed_main_title {
+  padding-bottom: 20rpx;
+}
+
+.detailed_main_title text {
+  font-size: 34rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(34, 34, 34, 1);
+  line-height: 48rpx;
+  margin-left: 20rpx;
+}
+
+.detailed_main_conent {
+  margin: 0rpx 0 42rpx;
+  font-size: 28rpx;
+  font-family: SimHei;
+  font-weight: 400;
+  color: rgba(34, 34, 34, 1);
+  background: rgba(245, 246, 248, 1);
+  border-radius: 10px;
+  padding: 23rpx 20rpx;
+
+
+
+
+}
+.detailed_main_conent>text{
+  padding-right:20rpx;
+}
+
+.detailed_main_conentbox {
+  margin-bottom: 30rpx;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: rgba(34, 34, 34, 1);
+
+}
+
+.detailed_main_conentleft {
+  color: red;
+  padding-top: 9rpx;
+  width: 10%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+}
+
+.detailed_main_imgbox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: 20rpx;
+  display: flex;
+
+}
+.detailed_main_imgbox>image{
+  margin-right: 23rpx;
+}
+.detailed_main_imgbox>image:nth-child(3n){
+  margin-right: 0;
+  margin-bottom: 20rpx;
+}
+
+/* .detailed_main_conentdate {} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.details_footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 130rpx;
+  background: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(229, 229, 229, 1);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
+
+.details_footerbox1 {
+  font-size: 20rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: rgba(34, 34, 34, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 149rpx;
+
+
+}
+
+.details_footerbtn {
+  width: 280rpx;
+  height: 70rpx;
+  background: #EC8401;
+  border-radius: 40rpx;
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact_msgchild {
+  display: flex;
+  align-items: center;
+  
+  background-color: rgba(255, 255, 255, 0);
+  border: 0px;
+  height: 46rpx;
+  margin:0;
+  border: none;
+  font-size: 20rpx;
+  padding: 0;
+  line-height: 0;
+
+
+}
+.contact_msgchild::after {
+  border: none;
+}
+
+.contact_icons {
+  margin-right: 10rpx;
+  vertical-align: middle;
+  z-index: 9999;
+  width: 25rpx;
+  height: 27rpx;
+}

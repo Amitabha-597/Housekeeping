@@ -1,0 +1,100 @@
+.Balance {
+  background: #DFE6F3;
+  width: 100%;
+  height: 100%;
+}
+
+.Balance_header {
+  width: 100%;
+  height: 409rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner {
+  width: 670rpx;
+  height: 320rpx;
+  padding: 30rpx 40rpx 37rpx 50rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.bannerbox1 {
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 1);
+}
+
+.bannerbox2 {
+  font-size: 76rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 1);
+}
+
+.bannerbox3 {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.bannerbox3>view {
+  height: 48rpx;
+  width: 140rpx;
+  font-size: 28rpx;
+  font-family: SimHei;
+  font-weight: 400;
+  color: rgba(255, 242, 123, 1);
+  background: #D86E06;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30rpx;
+  margin-left: 35rpx;
+}
+
+.Balance_title {
+  font-size: 36rpx;
+  font-family: SimHei;
+  font-weight: 400;
+  color: rgba(26, 26, 26, 1);
+  line-height: 50rpx;
+  padding-left: 40rpx;
+}
+
+.Balance_main_item {
+  box-sizing: border-box;
+  margin: 10rpx auto;
+  width: 688rpx;
+  height: 164rpx;
+  background: #fff;
+  padding: 0 40rpx;
+  border-radius: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.Balance_main_item>view {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+
+.Balance_main_item01 {
+margin: 0 0 21rpx ;
+}
+
+.Balance_main_item02 >text{
+  font-size:24rpx;
+color:rgba(128,128,128,1);
+letter-spacing: 1px;
+font-weight: 500;
+}

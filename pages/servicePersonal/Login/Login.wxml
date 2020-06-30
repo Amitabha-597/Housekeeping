@@ -1,0 +1,60 @@
+<view class="Login">
+	<view class="Login_banner">
+
+		<image style=" width: 210rpx;height: 138rpx;" src="http://zxty.mrhkj.com/assets/servicePersonal/logo.png"></image>
+	</view>
+	<view class="Login_from">
+		<view class="login_tel">
+			<view class="login_tel_left">
+				<view class="login_tel_icon">
+					<image style="width: 32rpx;height: 37rpx;" src="http://zxty.mrhkj.com/assets/servicePersonal/tel.png"></image>
+				</view>
+				<input placeholder='请输入手机号码' bindinput="loginmobile" value='{{loginFrom.mobile}}' type="number"  maxlength="11"></input>
+			</view>
+			<view class="login_tel_right">
+				<image style="width: 36rpx;height: 36rpx;" src="http://zxty.mrhkj.com/assets/servicePersonal/clrar.png" bindtap="clearInput"></image>
+			</view>
+		</view>
+		<view class="login_tel">
+			<view class="login_tel_left">
+		
+				<view class="login_tel_icon">
+					<image style="width: 32rpx;height: 37rpx;" src="http://zxty.mrhkj.com/assets/servicePersonal/password.png"></image>
+				</view>
+				<input type="{{showPwd ? ' text' : 'password'}}" value="{{loginFrom.pass}}" bindinput="loginpwd"  placeholder="请输入登录密码"  />
+			</view>
+			<view class="login_tel_right">
+				<switch style="transform:scale(0.7,0.7) ;margin-right: -20rpx;" checked="{{switch1Checked}}" color="#CFCFCF" bindchange="switch1Change" />
+			</view>
+		</view>
+		<view class="agreement">
+			<view class="agreement_icon" bindtap="ConsentAgreement">
+				<image wx:if="{{ConsentAgreement}}" style=" width: 16rpx;height: 16rpx;padding: 0rpx 1rpx 1rpx 0rpx;" src="http://zxty.mrhkj.com/assets/servicePersonal/select.png"></image>
+			</view>
+			<text style="color:#999 ">已阅读并同意</text>
+			<navigator style="color:#F07F04 ">《五华家政人员服务协议》</navigator>
+		</view>
+
+		<view class="LoginBtn" bindtap="loginBtn">登录</view>
+
+		<view class="LoginJump">
+			<view><text style="color:#999999;margin-right: 20rpx;">还没有账号？</text>
+				<navigator style="color:#F07F04" url="./register/register">立即注册</navigator>
+			</view>
+			<navigator style="color:#F07F04" url="./ForgetPwd/ForgetPwd">忘记密码</navigator>
+
+
+		</view>
+
+
+
+	</view>
+
+
+
+
+
+
+
+
+</view>

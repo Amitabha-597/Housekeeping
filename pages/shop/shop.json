@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "Serch":"/pages/Components/searchBox/index",
+    "home-item": "../../../custom-tab-bar/index"
+  }
+}

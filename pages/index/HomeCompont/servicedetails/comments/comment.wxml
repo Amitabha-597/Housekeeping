@@ -1,0 +1,197 @@
+<view class='comment'>
+	<view class='title'>
+		<view class="{{0 == currentIndex ? 'titleSel' : 'titleSelon'}} " bindtap='titleClick' data-idx='0'>
+			全部
+		</view>
+		<view class="{{1 == currentIndex ? 'titleSel' : 'titleSelon'}} " bindtap='titleClick' data-idx='1'>
+			好评
+		</view>
+		<view class="{{2 == currentIndex ? 'titleSel' : 'titleSelon'}} " bindtap='titleClick' data-idx='2'>
+			中评
+		</view>
+		<view class="{{3 == currentIndex ? 'titleSel' : 'titleSelon'}} " bindtap='titleClick' data-idx='3'>
+			差评
+		</view>
+
+	</view>
+
+	<view class="comment_check">
+		<view class="blank50"></view>
+		<view wx:for="{{typelist}}" wx:key="*this" class="{{ selecttype == index ? 'comment_check_itemcheck' : 'comment_check_item'}}" bindtap="checktype" data-index="{{index}}">{{item.typename}}</view>
+	</view>
+	<swiper class='swiper' bindchange='pagechange' current='{{currentIndex}}'>
+		<swiper-item class='swiper'>
+			<view class="comment_comment_list">
+				<view class="comment_comment_list_item" wx:for="{{evalistA}}" wx:key="id">
+					<view class="comment_comment_list_left">
+						<view class="comment_comment_list_useravtar">
+							<image style="width:78rpx; height:78rpx" src="{{item.avatar_url}}"></image>
+						</view>
+					</view>
+					<view class="comment_comment_list_right">
+						<view class="comment_comment_list_username">
+							<text>{{item.nickname}}</text>
+							<image wx:for="{{item.star}}" wx:key="*this" style="width:29rpx; margin-left: 10rpx; vertical-align: middle;" src="/assets/image/index/heart.png " mode="widthFix"></image>
+						</view>
+						<view class="comment_comment_list_usercom">{{item.content}}</view>
+						<view class="comment_comment_list_userdate">
+							<text>{{item.add_time}}</text>
+							<view>
+								<image style="width:21rpx; margin-right: 10rpx; vertical-align: bottom;" src="/assets/image/index/laud.png" mode="widthFix"></image>
+							</view>
+						</view>
+
+						<view class="evaphotos">
+							<image wx:for="{{item.img_path}}" wx:key="*this" style="width:168rpx;height:168rpx; margin-right: 10rpx; vertical-align: bottom;" src="{{item}}" mode="widthFix"></image>
+						</view>
+						<view class="bossreply" bindtap="userReply" data-id="{{item.id}}">
+							<image style="width:21rpx; margin-right: 10rpx; vertical-align: bottom;" src="/assets/image/index/shopmsg.png" mode="widthFix"></image>
+							<text>店家回复</text>
+						</view>
+						<block wx:if="{{item.reply_content&& item.shop_name}}">
+							<view class="storereply">
+								<text class="storereply_shopname" >{{item.shop_name}} :</text>
+								<text class="storereply_shopmsg">{{item.reply_content}}</text>
+							</view>
+						</block>
+
+					</view>
+				</view>
+
+			</view>
+		</swiper-item>
+		<swiper-item class='swiper'>
+			<view class="comment_comment_list">
+				<view class="comment_comment_list_item" wx:for="{{evalistB}}" wx:key="id">
+					<view class="comment_comment_list_left">
+						<view class="comment_comment_list_useravtar">
+							<image style="width:78rpx; height:78rpx" src="{{item.avatar_url}}"></image>
+						</view>
+					</view>
+					<view class="comment_comment_list_right">
+						<view class="comment_comment_list_username">
+							<text>{{item.nickname}}</text>
+							<image wx:for="{{item.star}}" wx:key="*this" style="width:29rpx; margin-left: 10rpx; vertical-align: middle;" src="/assets/image/index/heart.png " mode="widthFix"></image>
+						</view>
+						<view class="comment_comment_list_usercom">{{item.content}}</view>
+						<view class="comment_comment_list_userdate">
+							<text>{{item.add_time}}</text>
+							<view>
+								<image style="width:21rpx; margin-right: 10rpx; vertical-align: bottom;" src="/assets/image/index/laud.png" mode="widthFix"></image>
+							</view>
+						</view>
+
+						<view class="evaphotos">
+							<image wx:for="{{item.img_path}}" wx:key="*this" style="width:168rpx;height:168rpx; margin-right: 10rpx; vertical-align: bottom;" src="{{item}}" mode="widthFix"></image>
+						</view>
+						<view class="bossreply" bindtap="userReply" data-item="{{item.name}}">
+							<image style="width:21rpx; margin-right: 10rpx; vertical-align: bottom;" src="/assets/image/index/shopmsg.png" mode="widthFix"></image>
+							<text>店家回复</text>
+						</view>
+						<block wx:if="{{item.reply_content&& item.shop_name}}">
+							<view class="storereply">
+								<text class="storereply_shopname" >{{item.shop_name}} :</text>
+								<text class="storereply_shopmsg">{{item.reply_content}}</text>
+							</view>
+						</block>
+
+					</view>
+				</view>
+
+			</view>
+		</swiper-item>
+		<swiper-item class='swiper'>
+			<view class="comment_comment_list">
+				<view class="comment_comment_list_item" wx:for="{{evalistC}}" wx:key="id">
+					<view class="comment_comment_list_left">
+						<view class="comment_comment_list_useravtar">
+							<image style="width:78rpx; height:78rpx" src="{{item.avatar_url}}"></image>
+						</view>
+					</view>
+					<view class="comment_comment_list_right">
+						<view class="comment_comment_list_username">
+							<text>{{item.nickname}}</text>
+							<image wx:for="{{item.star}}" wx:key="*this" style="width:29rpx; margin-left: 10rpx; vertical-align: middle;" src="/assets/image/index/heart.png " mode="widthFix"></image>
+						</view>
+						<view class="comment_comment_list_usercom">{{item.content}}</view>
+						<view class="comment_comment_list_userdate">
+							<text>{{item.add_time}}</text>
+							<view>
+								<image style="width:21rpx; margin-right: 10rpx; vertical-align: bottom;" src="/assets/image/index/laud.png" mode="widthFix"></image>
+							</view>
+						</view>
+
+						<view class="evaphotos">
+							<image wx:for="{{item.img_path}}" wx:key="*this" style="width:168rpx;height:168rpx; margin-right: 10rpx; vertical-align: bottom;" src="{{item}}" mode="widthFix"></image>
+						</view>
+						<view class="bossreply" bindtap="userReply" data-item="{{item.name}}">
+							<image style="width:21rpx; margin-right: 10rpx; vertical-align: bottom;" src="/assets/image/index/shopmsg.png" mode="widthFix"></image>
+							<text>店家回复</text>
+						</view>
+						<block wx:if="{{item.reply_content&& item.shop_name}}">
+							<view class="storereply">
+								<text class="storereply_shopname" >{{item.shop_name}} :</text>
+								<text class="storereply_shopmsg">{{item.reply_content}}</text>
+							</view>
+						</block>
+
+					</view>
+				</view>
+
+			</view>
+		</swiper-item>
+		<swiper-item class='swiper'>
+			<view class="comment_comment_list">
+				<view class="comment_comment_list_item" wx:for="{{evalistD}}" wx:key="id">
+					<view class="comment_comment_list_left">
+						<view class="comment_comment_list_useravtar">
+							<image style="width:78rpx; height:78rpx" src="{{item.avatar_url}}"></image>
+						</view>
+					</view>
+					<view class="comment_comment_list_right">
+						<view class="comment_comment_list_username">
+							<text>{{item.nickname}}</text>
+							<image wx:for="{{item.star}}" wx:key="*this" style="width:29rpx; margin-left: 10rpx; vertical-align: middle;" src="/assets/image/index/heart.png " mode="widthFix"></image>
+						</view>
+						<view class="comment_comment_list_usercom">{{item.content}}</view>
+						<view class="comment_comment_list_userdate">
+							<text>{{item.add_time}}</text>
+							<view>
+								<image style="width:21rpx; margin-right: 10rpx; vertical-align: bottom;" src="/assets/image/index/laud.png" mode="widthFix"></image>
+							</view>
+						</view>
+
+						<view class="evaphotos">
+							<image wx:for="{{item.img_path}}" wx:key="*this" style="width:168rpx;height:168rpx; margin-right: 10rpx; vertical-align: bottom;" src="{{item}}" mode="widthFix"></image>
+						</view>
+						<view class="bossreply" bindtap="userReply" data-item="{{item.name}}">
+							<image style="width:21rpx; margin-right: 10rpx; vertical-align: bottom;" src="/assets/image/index/shopmsg.png" mode="widthFix"></image>
+							<text>店家回复</text>
+						</view>
+						<block wx:if="{{item.reply_content&& item.shop_name}}">
+							<view class="storereply">
+								<text class="storereply_shopname" >{{item.shop_name}} :</text>
+								<text class="storereply_shopmsg">{{item.reply_content}}</text>
+							</view>
+						</block>
+
+					</view>
+				</view>
+
+			</view>
+		</swiper-item>
+	</swiper>
+
+</view>
+<view class="commentreply" style="display:{{iscommentreply ? 'block' : 'none'}}">
+	<view class="commentreply_child">
+		<view class="commentreply_childtxt">回复{{commentreplyuser}}</view>
+		<view class="commentreply_childmsg"> <textarea bindblur="bindTextAreaBlur" auto-height placeholder="可输入消息与客户互动哦！" placeholder-style="color:#999999;" /></view>
+		<view class="commentreply_childbtn">
+		<view bindtap="Huifevaqx">取消</view>
+		<view bindtap="Huifeva">发送</view> 
+
+		</view>
+		</view>
+				
+</view>

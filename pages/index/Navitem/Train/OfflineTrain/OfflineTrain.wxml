@@ -1,0 +1,35 @@
+<view class="OfflineTrain">
+	<view class="OfflineTrain_banner">
+		<swiper indicator-dots="true" duration="500" class="swiper">
+			<block wx:for="{{Offlist.banner}}" wx:key="*this">
+				<swiper-item>
+					<image style="width: 690rpx;height: 400rpx;" src="item"></image>
+				</swiper-item>
+			</block>
+		</swiper>
+		<view class="OfflineTrain_bannern_masg">
+			<view class="OfflineTrain_bannern_tiele">{{Offlist.title}}</view>
+			<view class="OfflineTrain_bannern_time">56分钟前</view>
+			<view class="OfflineTrain_bannern_score">线下评分</view>
+		</view>
+	</view>
+
+
+	<view class="OfflineTrain_msg">
+		<view class="OfflineTrain_msg_left">
+			<text>培训老师</text>
+			<text>培训时间</text>
+			<text>培训地点</text>
+		</view>
+		<view class="OfflineTrain_msg_right">
+			<view class="OfflineTrain_msg_right_bor">{{Offlist.lecturer}}</view>
+			<view class="OfflineTrain_msg_right_bor">{{Offlist.train_time}}</view>
+			<view class="OfflineTrain_msg_right_bor">{{Offlist.addr}}</view>
+		</view>
+	</view>
+	<view class="TrainingDetails">
+		<view class="TrainingDetails_title">培训详情</view>
+		<view class="TrainingDetails_connent">{{Offlist.desc}}</view>
+	<view class="TrainingDetails_btn" bindtap="signup" data-id="{{Offlist.id}}">立即报名</view>
+  </view>
+</view>

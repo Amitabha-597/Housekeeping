@@ -1,0 +1,82 @@
+.writerData {
+  padding: 30rpx;
+  background: #F1F2F2;
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.writerDatacard {
+  width: 100%;
+  border-radius: 10rpx;
+  height: 340rpx;
+  background: #fff;
+}
+
+.writerDatacardtitle {
+  font-size: 32rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(51, 51, 51, 1);
+  padding: 15rpx 13rpx;
+}
+
+.writerDatacardmsg {
+  width: 100%;
+  height: 280rpx;
+  box-sizing: border-box;
+  padding: 0 13rpx;
+  font-size: 30rpx;
+  font-family: SimHei;
+  font-weight: 400;
+  color: rgba(51, 51, 51, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.writerDatacardmsg>view {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.idcarddata {
+
+  width: 100%;
+  height: 336rpx;
+  background: #fff;
+  margin-top: 21rpx;
+}
+
+.idcarddataimg {
+  margin-top: 10rpx;
+  width: 100%;
+  height: 250rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.idcarddataimg>view>view {
+  width: 288rpx;
+  height: 174rpx;
+  background: grey;
+}
+
+.idcarddataimg>view {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.idcarddataimg>view>text {
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: rgba(34, 34, 34, 1);
+  padding: 20rpx 0;
+}

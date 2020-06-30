@@ -1,0 +1,31 @@
+<view class='activity'>
+
+	<view class='title'>
+		<view class='titleSel' bindtap='titleClick' data-idx='0'>
+			<view style="color:{{0 == currentIndex ? '#EC8401' : '#333333'}}">拼团抢购</view>
+			<hr class="{{0 == currentIndex ? 'headerLineSel' : 'headerLineUnsel'}}" />
+		</view>
+
+		<view class='titleSel' bindtap='titleClick' data-idx='1'>
+			<view style="color:{{1 == currentIndex ? '#EC8401' : '#333333'}}">服务套餐</view>
+			<hr class="{{1 == currentIndex ? 'headerLineSel' : 'headerLineUnsel'}} " />
+		</view>
+		<view class='titleSel' bindtap='titleClick' data-idx='2'>
+			<view style="color:{{2 == currentIndex ? '#EC8401' : '#333333'}}">优惠券</view>
+			<hr class="{{2 == currentIndex ? 'headerLineSel' : 'headerLineUnsel'}} " />
+		</view>
+	</view>
+
+	<swiper class='swiper' bindchange='pagechange' current='{{currentIndex}}'>
+		<swiper-item class='swiper'>
+			<Group></Group>
+		</swiper-item>
+		<swiper-item class='swiper'>
+			<Setmeal></Setmeal>
+		</swiper-item>
+		<swiper-item class='swiper'>
+			<Coupon></Coupon>
+		</swiper-item>
+	</swiper>
+</view>
+<home-item selected='3'/>

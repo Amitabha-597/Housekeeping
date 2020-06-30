@@ -1,0 +1,17 @@
+<view class="myDemand">
+
+	<view class="myDemand_item" wx:for="{{collagelist}}" wx:key="id" bindtap="toDemandInfo" data-id="{{item.id}}">
+		<view class="myDemand_item_imgbox">
+			<image style="width: 171rpx;height: 171rpx;" src="{{item.avatar}}"></image>
+		</view>
+		<view class="myDemand_item_conect">
+			<view class="myDemand_item_conectA">{{item.title}}</view>
+			<view class="myDemand_item_conectB">{{item.content}}</view>
+			<view class="myDemand_item_conectC center">
+				<text>{{item.create_time}}分钟前</text>
+				<view wx:if="{{item.status  == 0}}">待处理</view>
+				<view wx:if="{{item.status  == 1}}">已处理</view>
+			</view>
+		</view>
+	</view>
+</view>

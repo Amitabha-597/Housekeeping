@@ -1,0 +1,58 @@
+
+<wxs module="filter" src="../../../../utils/timer.wxs"></wxs>
+<view class="groupdetails_bg">
+
+	<view class="groupdetails">
+		<view class="groupdetails_imgbox">
+			<image class="groupdetails_img" src="http://zxty.mrhkj.com/assets/index/activity/whiter02.png"></image>
+	
+		</view>
+		<view class="groupdetails_msgbox">
+			<view class="groupdetails_msg_name">{{groupdetails.name}}</view>
+			<view class="groupdetails_msg_price">
+				<view class="groupdetails_msg_price01">
+					<text class="groupdetails_msg_price011">¥{{groupdetails.collage_price}}</text>
+					<text class="groupdetails_msg_price012">拼团价</text>
+				</view>
+				<text class="groupdetails_msg_price02">¥{{groupdetails.money}}</text>
+			</view>
+			<view class="groupdetails_msg_num">
+				<view class="groupdetails_msg_numpeo">{{groupdetails.collage_where}}人团</view>
+				<view class="groupdetails_msg_numpeo_sur">剩余{{groupdetails.subscribe_num}}</view>
+			</view>
+		</view>
+		<view class="groupin">
+			<view class="groupin_state">
+				<text class="groupin_state01">拼团中</text>
+				<text class="groupin_state02">已有{{collageUser.total}}人参与拼团</text>
+			</view>
+			<view class="groupin_time">
+				<text class="groupin_time02">{{filter.getDateTime(groupdetails.end_time)}}</text>
+				<text class="groupin_time01">结束</text>
+			</view>
+			<view class="groupin_icon">
+
+		
+				<view class="groupin_iconchild" wx:for="{{collageUser.list}}" wx:key="*this">
+					<image class="groupin_iconchild_img" src="{{item.avatar_url}}"></image>
+				</view>
+				
+			
+			</view>
+		</view>
+		<view class="actrules">
+			<view class="actrules_title">拼团活动规则</view>
+			<view class="actrules_content">01.拼团成员只能选择同一服务区域，不同区域成员不能拼团。</view>
+			<view class="actrules_content">02.拼团上门服务时间会根据实际情况安排。</view>
+
+		</view>
+	
+
+	</view>
+
+	<view class="group_btns">
+			<view class="group_btn0">邀请好友</view>
+			<button open-type='share'>分享</button>
+			<view class="group_btn1" bindtap="collageSub" data-id="{{groupdetails.id}}">立即拼团</view>
+		</view>
+</view>

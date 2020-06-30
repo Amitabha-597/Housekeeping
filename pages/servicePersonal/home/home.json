@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "SPtabbar":"../Components/servicePersonNav/SPtabbar"
+  },
+  "enablePullDownRefresh": true ,
+  "backgroundTextStyle": "dark" 
+}

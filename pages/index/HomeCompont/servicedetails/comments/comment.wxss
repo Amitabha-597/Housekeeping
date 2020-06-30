@@ -1,0 +1,264 @@
+.comment {
+  height: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.title {
+  width: 100%;
+  height: 88rpx;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 1rpx solid rgba(246, 247, 249, 1);
+}
+
+.titleSelon {
+  color: rgba(34, 34, 34, 1);
+  font-size: 32rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 128rpx;
+  height: 80rpx;
+
+}
+
+.titleSel {
+  color: rgba(34, 34, 34, 1);
+  font-size: 32rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 128rpx;
+  height: 80rpx;
+  border-bottom: 4rpx solid #EB8301;
+}
+
+
+
+.headerLineSel {
+
+  border-bottom: 4rpx solid #EB8301;
+}
+
+.headerLineUnsel {
+  background: #fff;
+  height: 6rpx;
+  width: 40rpx;
+  position: relative;
+  margin-top: 10rpx;
+}
+
+.swiper {
+  width: 100%;
+  flex: 1;
+  height: 100vh;
+  overflow: scroll;
+}
+
+.recordItem {
+  margin-top: 10rpx;
+  background-color: white;
+  padding-bottom: 20rpx;
+  padding-top: 20rpx;
+}
+
+.comment_check {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 690rpx;
+
+}
+
+.blank50 {
+  height: 50rpx;
+  width: 100%;
+}
+
+.comment_check_item {
+  margin: 0rpx 20rpx 29rpx 0;
+  padding: 15rpx 25rpx;
+  border: 1px solid rgba(227, 227, 227, 1);
+  border-radius: 40rpx;
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #222222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.comment_check_itemcheck {
+  margin: 0rpx 20rpx 29rpx 0;
+  padding: 15rpx 25rpx;
+  border: 2rpx solid #EC8401;
+  border-radius: 40rpx;
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: rgba(235, 131, 1, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.comment_comment_list {
+  width: 100%;
+  height: 100%;
+  padding-top: 40rpx;
+}
+
+
+.comment_comment_list_item {
+
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30rpx;
+
+}
+
+.comment_comment_list_left {
+  width: 90rpx;
+  height: 100%;
+
+}
+
+.comment_comment_list_useravtar {
+  width: 77rpx;
+  height: 78rpx;
+
+}
+
+.comment_comment_list_right {
+  width: 588rpx;
+  height: 100%;
+  border-bottom: 1rpx solid #f2f2f2;
+}
+
+.comment_comment_list_username {
+  padding: 0 0 10rpx 0;
+
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(34, 34, 34, 1);
+}
+
+.comment_comment_list_usercom {
+  padding: 10rpx 0;
+
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: rgba(34, 34, 34, 1);
+}
+
+.comment_comment_list_userdate {
+  padding: 10rpx 0;
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 22rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: rgba(102, 102, 102, 1);
+}
+
+.evaphotos {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  overflow: scroll;
+
+}
+
+
+.bossreply {
+  height: 50rpx;
+  font-size: 22rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: rgba(235, 131, 1, 1);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+
+}
+
+.storereply {
+  width: 100%;
+  background: rgba(246, 247, 249, 1);
+  padding: 19rpx 23rpx 30rpx 20rpx;
+  box-sizing: border-box;
+}
+
+.storereply_shopname {
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: rgba(33, 84, 132, 1);
+}
+
+.storereply_shopmsg {
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #222222;
+}
+
+.commentreply {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.commentreply_child {
+box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+  height: 300rpx;
+  width: 100%;
+  background: #fff;
+  border-radius: 30rpx 30rpx 0 0;
+  padding: 30rpx 30rpx;
+}
+
+.commentreply_childtxt {
+  width: 100%;
+  color: rgba(34, 34, 34, 1);
+  font-size: 24rpx;
+}
+
+.commentreply_childmsg {
+  height: 160rpx;
+  width: 100%;
+}
+
+.commentreply_childmsg>textarea {
+  font-size: 24rpx;
+  margin-top: 20rpx;
+  font-family: SimHei;
+  display: line-block;
+  height: 100%;
+  width: 100%;
+  font-weight: 400;
+  color: rgba(34, 34, 34, 1);
+}
+.commentreply_childbtn{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}

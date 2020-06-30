@@ -1,0 +1,115 @@
+
+
+.setmeal {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 29rpx 27rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.setmeal .setmeal_item {
+  border: 2px solid rgba(234, 234, 234, 1);
+  border-radius: 12px;
+  height: 570rpx;
+  width: 328rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 38rpx;
+}
+
+.setmeal_item_imgbox {
+  width: 100%;
+  height: 328rpx;
+  position: relative;
+}
+
+.setmeal_item_img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.setmeal_item_countdown {
+  font-size: 22rpx;
+  height: 40rpx;
+  color: #fff;
+  position: absolute;
+  line-height: 40rpx;
+  padding-left: 20rpx;
+  letter-spacing: 3rpx;
+  bottom: 0;
+  background-image: linear-gradient(to right, rgba(236, 132, 1,1) , rgba(255, 255, 255,0.8));
+  width: 100%;
+
+}
+
+.setmeal_item_info {
+  width: 300rpx;
+  height: 69rpx;
+  font-size: 28rpx;
+  font-weight: bold;
+  margin: 17rpx 0;
+  color: #222;
+
+}
+
+.setmeal_item_outtime {
+  width: 300rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+}
+.setmeal_item_outtimeday{
+height:34rpx;
+font-size:22rpx;
+font-family:PingFang SC;
+font-weight:500;
+color:rgba(235,131,1,1);
+border:2px solid  #ECAC01;
+padding:5rpx 10rpx ;
+border-radius: 10rpx;
+}
+
+
+
+
+
+.setmeal_item_num {
+  height: 70rpx;
+  width: 294rpx;
+  padding-bottom: 17rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:10rpx 0 ;
+}
+
+.setmeal_item_num_price_newprice{
+  font-size:30rpx;
+font-family:PingFang SC;
+color: #EC8401;
+}
+.setmeal_item_num_price_oldrice{
+  font-size: 22rpx;
+  color: #9A9A9A;
+  text-decoration:line-through
+}
+
+
+.setmeal_item_num_btn {
+  font-size: 28rpx;
+  width: 116rpx;
+  height: 50rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #EC8401;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+}

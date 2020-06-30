@@ -1,0 +1,29 @@
+<!--pages/myhome/MyHomecompontes/Recharge/Recharge.wxml-->
+<view class="my_money flex_r_between">
+	<text>当前余额:</text>
+	<text>￥{{balance}}</text>
+</view>
+<view class="change_money">
+	<view class="money_input flex_r_between">
+		<text>￥</text>
+		<input type="number" placeholder-class="money_num" value="{{money}}" placeholder="请输入至少100元充值金额" bindinput="moneych"></input>
+	</view>
+	<view class="choose_money">
+		<text class="{{navIndex==index?'money_con2':'money_con'}}" data-index="{{index}}"  wx:for='{{arrMoney}}' data-money="{{item}}" bindtap="changeMoney" wx:key="*this">{{item}}元</text>
+	</view>
+</view>
+
+
+<view class="box_list flex_r_between">
+	<view class="flex_r_between">
+		<image class="wechat" src="../../../../assets/image/index/wechat.png" mode="widthFix"></image>
+		<view class="list_title">
+			<text>微信</text>
+			<text>充值</text>
+		</view>
+	</view>
+	<view class="gouBox" bindtap="selectPay">
+		<image wx:if="{{selectPay}}" style="width: 22rpx;" src="../../../../assets/image/index/weichatcheck.png" mode="widthFix"></image>
+	</view>
+</view>
+<view class="Recharge center" bindtap="Recharge">去充值</view>

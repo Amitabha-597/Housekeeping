@@ -1,0 +1,120 @@
+<view class="Serch">
+	<view class="header">
+		<view class="search">
+			<icon type="search" size="18" color=""> </icon>
+			<input type="text" confirm-type="search" bindconfirm="Serch" value="{{serchValue}}" placeholder="请输入搜索内容......" placeholder-style="font-size: 25rpx;" />
+			<!-- <input type="text" confirm-type="search" bindblur="Serch" value="{{serchValue}}" placeholder="请输入搜索内容......" placeholder-style="font-size: 25rpx;" /> -->
+			<icon type="clear" style="z-index:111111111111" size="20" bindtap="cleanValue" />
+		</view>
+		<view bind:tap="onCancel" class="cancel">取消</view>
+	</view>
+	<view class="SerchMian">
+		<view class="serchHistory" wx:if="{{serchData.length != 0}}">
+			<view class="serchHistorytitle">
+				<text>最近搜索</text>
+				<text bindtap="cleanHistory">清除历史记录</text>
+			</view>
+			<view class="serchHistorymain">
+				<text wx:for="{{serchData}}" wx:key="*this" bindtap="HistorySerch" data-HistoryData="{{item}}">{{item}}</text>
+			</view>
+		</view>
+	</view>
+	<view class="serchContent">
+
+		<view class="gold" wx:if="{{shoplist.length>0}}">
+			<view class="shop">店铺</view>
+			<!-- <navigator class="more" url="/pages/index/HomeCompont/moreshop/moreshop">更多</navigator> -->
+		</view>
+	<!-- -+-+-+-+-+-+-+-+-+-+-+-+--+-+-+--+-+-+-+-+ 店铺  -+-+-+-+-+-+-+-+-+-+-+-+--+-+-+--+-+-+-+-+ -->
+		<view id="goldshop_list">
+			<view wx:for="{{shoplist}}" wx:key="*this" class="goldshop_item" bindtap="toservicedetails" data-id="{{item.id}}">
+				<image class="goldl" wx:if="{{item.shop_type == 2}}" src="/assets/image/index/goldl.png"></image>
+				<image style="width: 100%;height:274rpx;" src="{{URl}}{{item.logo}}" wx:if="{{item.logo != ''}}"></image>
+				<image style="width: 100%;height:274rpx;" wx:if="{{item.logo == ''}}" src="/assets/image/index/shopdefual.jpg"></image>
+
+				<view class="shop_msg">
+					<view class="shop_msg_text">
+						<view class="shop_name">
+							{{item.shop_name}}</view>
+						<view class="shop_volume">
+							<image class="heart" src="/assets/image/index/heart.png"></image>
+							<text>好评率{{item.rate}}%</text>
+							<text>成交量{{item.deal_num}}</text>
+						</view>
+					</view>
+					<view class="shop_goshop">
+						<button>进店</button>
+					</view>
+				</view>
+			</view>
+
+		</view>
+
+		<view class="gold" wx:if="{{waiterlist.length>0}}">
+			<view class="shop">员工</view>
+			<view class="more">
+				<!-- <navigator url="/pages/index/HomeCompont/morewiter/index">更多</navigator> -->
+			</view>
+		</view>
+			<!-- -+-+-+-+-+-+-+-+-+-+-+-+--+-+-+--+-+-+-+-+ 员工  -+-+-+-+-+-+-+-+-+-+-+-+--+-+-+--+-+-+-+-+ -->
+		<view id="waiter">
+			<view class="waiter_item" wx:for="{{waiterlist}}" wx:key="*this" bindtap="toWaiterdetails" data-id="{{item.id}}">
+				<view class="waiter_img">
+					<image src="{{item.himg}}" style="width:200rpx;height:240rpx"></image>
+				</view>
+				<view class="waiter_msg">
+					<view class="msg_info">
+						<text>{{item.names}} </text>
+						<text>{{item.age}}岁 </text>
+						<text class="price">{{item.salary}}元/h</text>
+					</view>
+					<view class="msg_skill">
+						<text wx:for="{{item.type_cn}}" wx:key="*this">{{item}} |</text>
+					</view>
+					<view class="msg_badge">
+						<text>金牌员工</text>
+						<text>{{item.nplace}}</text>
+					</view>
+					<view class="msg_checked">
+						<button>专人服务</button>
+					</view>
+				</view>
+			</view>
+		</view>
+
+
+		<!-- -+-+-+-+-+-+-+-+-+-+-+-+--+-+-+--+-+-+-+-+ 服务项目  -+-+-+-+-+-+-+-+-+-+-+-+--+-+-+--+-+-+-+-+ -->
+		<view class="gold" wx:if="{{itemlist.length>0}}">
+			<view class="shop">项目</view>
+			<!-- <navigator class="more" url="/pages/index/HomeCompont/moreshop/moreshop">更多</navigator> -->
+		</view>
+		<view class="serviceItems">
+			<view class="serviceItemschild" wx:for="{{itemlist}}" wx:key="id" bindtap="toonLineservice" data-id="{{item.id}}" data-idb="{{shopids}}">
+				<image class="serviceItemschild_img" src="{{URl}}{{item.thumbnail}}"></image>
+				<view class="serviceItemschild_msg">
+					<view class="serviceItemschild_msg_con">
+						{{item.name}}
+					</view>
+					<view class="serviceItemschild_msg_eva">
+						<image style="width:21rpx;vertical-align: middle; margin-right: 10rpx;" src="/assets/image/index/heart.png" mode="widthFix"></image>
+						<text>好评率{{item.rate}}%   </text>
+						<text>预约次数:{{item.subscribe_num}}</text>
+					</view>
+					<view class="serviceItemschild_msg_pric">
+						<view class="serviceItemschild_msg_price">¥{{item.money}}</view>
+						<navigator class="serviceItemschild_msg_btn" url="pages/index/HomeCompont/ConfirmOrder/index">立即预约</navigator>
+					</view>
+				</view>
+			</view>
+
+		</view>
+
+
+
+
+
+
+
+	</view>
+
+</view>

@@ -1,0 +1,77 @@
+<view class="ApplyRefund">
+	<view class="ApplyRefund_boxA">
+		<view class="ARB_imgbox">
+			<image style="width:100%;height:100%" src="{{URL}}{{evadata.thumbnail}}"></image>
+		</view>
+		<view class="ARB_contentbox">
+			<view class="ARB_contentboxA">{{evadata.title}}</view>
+			<view class="ARB_contentboxB">
+				<text>{{evadata.shop.shop_name}}</text>
+				<text>{{evadata.tag}}</text>
+				<text>{{evadata.shop.area}}</text>
+			</view>
+			<view class="ARB_contentboxC">
+				<text style="color:#EC8401">¥166.00</text>
+				<text>X1</text></view>
+		</view>
+
+	</view>
+	<view class="ApplyRefundline"></view>
+	<view class="ApplyRefund_boxB">
+		<view class="ApplyRefund_boxB_title">订单信息</view>
+
+		<view class="ApplyRefund_boxB_con">
+			<text>订单编号</text>
+			<text>{{evadata.order_no}}</text>
+		</view>
+		<view class="ApplyRefund_boxB_con">
+			<text>创建时间</text>
+			<text>{{evadata.create_time}}</text>
+		</view>
+
+	</view>
+	<view class="ApplyRefundline"></view>
+	<view class="ApplyRefund_boxC">
+		<view class="ApplyRefund_boxCA" bindtap="showRefund">
+			<view>退款原因</view>
+			<view>
+				<text>{{Reasons}}</text>
+				<image style="width:15rpx;margin-left: 30rpx;vertical-align: middle;" src="/assets/image/index/next.png" mode="widthFix"></image>
+			</view>
+		</view>
+		<view class="ApplyRefund_boxCB">
+			<view>退款金额：</view>.
+			<view style="color:#EC8502">￥166.00</view>
+		</view>
+	</view>
+	<view class="ApplyRefundline"></view>
+	<view class="ApplyRefund_boxD">
+		<view class="ApplyRefund_boxD_title">
+			<view>退款说明：</view>
+			<textarea class="ApplyRefund_boxD_content" placeholder="填写退款的具体原因" bindblur="Contents"></textarea>
+		</view>
+		<view class="ApplyRefund_boxD_imgbox">
+			<view class="ApplyRefund_boxD_imgitem">
+				<image style="width:61rpx;height:56rpx" src="/assets/image/index/xaingji.png" bindtap="RefundImg"> </image>
+			</view>
+				<view class="ApplyRefund_boxD_imgitem"wx:for="{{refundfrom.img}}" wx:key="*this">
+				<image style="width:100%;height:100%" src="{{URL}}{{item}}" > </image>
+			</view>
+		</view>
+
+	</view>
+
+	<view class="ApplyRefund_Submit" bindtap="RefundSubmit">提交</view>
+</view>
+<Refund bindactiontap="btnClick" show="{{showRefund}}" actions="{{Refund}}" title="这是一个标题，可以为一行或者两行。">
+</Refund>
+<view style="display:{{showSuccess ? 'none' : 'block'}}" class="Refund_SuccessBOX">
+	<view class="Refund_Success">
+		<view class="Refund_Success_item">
+			<image style="width:100rpx; height:100rpx" src="http://zxty.mrhkj.com/assets/index/myhome/success.png"></image>
+			<view class="Refund_Success_itemB">退款申请提交成功 </view>
+			<view class="Refund_Success_itemC">商家会尽快处理您的退款，如在15个工作日内 未进行处理，款项会自动退还到您的支付账号</view>
+		</view>
+	</view>
+
+</view>

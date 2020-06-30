@@ -1,0 +1,162 @@
+.VideoBox {
+  width: 750rpx;
+  height: 418rpx;
+  box-sizing: border-box;
+}
+
+#myvideo {
+  width: 100%;
+  height: 100%;
+}
+.bannert{
+  width: 100%;
+  height: 100%;
+}
+
+.VideoTitle {
+  padding-left: 30rpx;
+  padding-bottom: 33rpx;
+  border-bottom: 12rpx solid rgba(248, 248, 249, 1);
+}
+
+.VideoName {
+  margin: 30rpx 0rpx;
+  font-size: 34rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #000;
+  line-height: 41rpx;
+}
+
+/* .VideoScore {
+  
+} */
+.VideoDate text:last-child {
+  margin-left: 30rpx;
+}
+
+.VideoDate,
+.VideoScore {
+  margin-bottom: 15rpx;
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(153, 153, 153, 1);
+  line-height: 41rpx;
+}
+
+.Train {
+  height: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.title {
+  width: 100%;
+  height: 88rpx;
+  background: white;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  border-bottom: 1rpx solid #EEEEEE;
+  padding-left: 30rpx;
+}
+
+.titleSel {
+  color: #000;
+  font-size: 28rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.titleSel>view {
+  height: 50rpx;
+  margin-right: 69rpx;
+}
+
+
+.headerLineSel {
+  background: #EC8401;
+  height: 6rpx;
+  width: 40rpx;
+  position: relative;
+  margin-right: 69rpx;
+}
+
+.headerLineUnsel {
+  background: #fff;
+  height: 6rpx;
+  width: 40rpx;
+  position: relative;
+  margin-right: 69rpx;
+}
+
+.swiper {
+  width: 100%;
+  flex: 1;
+  height: 45vh;
+  overflow: scroll;
+}
+
+.Train_item {
+
+  width: 100%;
+
+
+}
+
+.CourseIntr {
+  padding: 0 30rpx;
+}
+
+.CourseIntr_title {
+  font-size: 32rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(34, 34, 34, 1);
+  line-height: 41rpx;
+  padding: 30rpx 0;
+}
+
+.CourseIntr_conent {
+  width: 685rpx;
+  height: 487rpx;
+  font-size: 26rpx;
+  font-family: SimHei;
+  font-weight: 400;
+  color: #555555;
+  line-height: 42rpx;
+
+}
+
+.Catalog {
+  margin-top: 15rpx;
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+
+.CatalogItem {
+  margin: 30rpx 0;
+}
+
+.CatalogItemA {
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #ec8401;
+  line-height: 41rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.CatalogItemB {
+  font-size: 20rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: rgba(153, 153, 153, 1);
+  line-height: 41rpx;
+}

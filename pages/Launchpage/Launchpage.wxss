@@ -1,0 +1,87 @@
+.Launchpage {
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.sq_title{
+  margin: 0 0 40rpx ;
+  letter-spacing: 2px;
+  font-size: 40rpx;
+  font-weight: bold;
+  }
+  .sq_content{
+  margin: 0 0 50rpx ;
+  padding: 0 30rpx;
+  font-size: 28rpx;
+  letter-spacing: 1px;
+  }
+  .sss{
+  /* width: 30vw !important; */
+  width: 70% !important;
+  background: rgba(24,144,255,1) !important;
+  border-top: 1px solid #EDEDED;
+  font-weight: 500;
+  border-radius: 15rpx;
+  color: #fff;
+  margin: 0 15% 50rpx ;
+  }
+  .box_pop{
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 200;
+  position: fixed;
+  bottom: 0;
+  }
+  .popcontent{
+  padding: 30rpx 0 0;
+  width: 70vw;
+  background: #fff;
+  border-radius: 10rpx;
+  }
+  .flex_coum_center{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .flex_center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.kouhao {
+  margin-top: 45rpx;
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(85, 85, 85, 1);
+}
+
+.ljty {
+  width: 357rpx;
+  height: 86rpx;
+  background: linear-gradient(#FCD35F, #EF903A);
+  border-radius: 43rpx;
+  font-size: 36rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.writer {
+  margin-top: 84rpx;
+  padding-right: 54px;
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}

@@ -1,0 +1,44 @@
+<view class="Demand">
+	<input style="padding-bottom:20rpx ; " placeholder="请输入标题" bindinput="Demandtitle"></input>
+	<textarea placeholder="请输入发布内容" class="Demand_input" bindblur="Demandcontent"></textarea>
+
+	<view class="Demand_imgbox">
+		<view class="Demand_img" wx:for="{{banner}}" wx:key="*this">
+			<image style="width:100%;height:100% " src="{{URl}}{{item}}" bindtap="Addbanner"></image>
+		</view>
+		<view class="Demand_img" wx:if="{{banner.length<3}}">
+			<image style="width:100%;height:100% " src="../../assets/image/Launchpage/add.jpg" bindtap="Addbanner"></image>
+		</view>
+	</view>
+	<view class="Demand_label">
+		<view class="Demand_label_title">添加标签</view>
+		<view class="Demand_label_conent">
+			<view class="Demand_label_item   {{sselect==index?'activetag':''}}" wx:for="{{taglist}}" wx:key="*this" bindtap="Selecttag" data-tagid="{{item.id}}" data-index="{{index}}">{{item.names}}</view>
+		</view>
+	</view>
+	<view class="Demand_msg">
+		<view class="Demand_msg_item">
+			<text>姓名</text>
+			<input placeholder="请输入真实姓名" bindinput="Demandname" ></input>
+		</view>
+		<view class="Demand_msg_item">
+			<text>电话</text>
+			<input placeholder="请输入联系电话" bindinput="Demandmobile" value="{{usertel}}" maxlength="11" type="number"></input>
+		</view>
+		<view class="Demand_msg_item">
+			<text>地址</text>
+			<view class="Demand_msg_item_adress">
+				<input placeholder="请输入详细地址" value="{{adddemand.addres}}" bindinput="Demandaddres" style="width:60%"></input>
+				<view class="Demand_msg_item_adressline"></view>
+				<view bindtap="selectAddress">地图定位</view>
+				<image style="width: 12rpx; margin-left: 20rpx;" src="/assets/image/index/next.png" mode="widthFix"></image>
+			</view>
+		</view>
+	</view>
+
+
+
+</view>
+<view class="Demand_footer">
+	<view class="Demand_footer_item" bindtap="PublishNow">立即发布</view>
+</view>

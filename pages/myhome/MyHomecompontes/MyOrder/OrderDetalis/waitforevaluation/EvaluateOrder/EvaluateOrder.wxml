@@ -1,0 +1,117 @@
+<view class="EvaOrder">
+	<view class="ApplyRefund_boxA">
+		<view class="ARB_imgbox">
+			<image style="width:100%;height:100%" src="{{URL}}{{evadata.thumbnail}}"></image>
+		</view>
+		<view class="ARB_contentbox">
+			<view class="ARB_contentboxA">{{evadata.title}}</view>
+			<view class="ARB_contentboxB">
+				<text>{{evadata.shop.shop_name}}</text>
+				<text>{{evadata.tag}}</text>
+				<text>{{evadata.shop.area}}</text>
+			</view>
+			<view class="ARB_contentboxC">
+				<text style="color:#EC8401">¥{{evadata.money}}</text>
+				<text>X1</text></view>
+		</view>
+	</view>
+	<view class="EvaOrderline"></view>
+
+	<view class="EvaOrderB">
+		<view class="EvaluateBA">
+			<view class="EvaluateBAitem" bindtap="Stars" data-starnum="5">
+				<view class="EvaluateBAimgbox">
+					<image style="width:100%;height:100%" src="/assets/image/index/hao.png"></image>
+				</view>
+				<text style="color:{{evafrom.star == 5 ? 'red' : ''}}">好评</text>
+			</view>
+			<view class="EvaluateBAitem" bindtap="Stars" data-starnum="3">
+				<view class="EvaluateBAimgbox">
+					<image style="width:100%;height:100%" src="/assets/image/index/zhong.png"></image>
+
+				</view>
+				<text style="color:{{evafrom.star == 3 ? 'red' : ''}}">中评</text>
+			</view>
+			<view class="EvaluateBAitem" bindtap="Stars" data-starnum="1">
+				<view class="EvaluateBAimgbox">
+					<image style="width:100%;height:100%" src="/assets/image/index/cha.png"></image>
+
+				</view>
+				<text style="color:{{evafrom.star == 1 ? 'red' : ''}}">差评</text>
+			</view>
+
+			<view></view>
+			<view></view>
+		</view>
+		<view class="EvaluateBB">
+			<textarea placeholder="请描述一下此次服务的感受吧" bindblur='Evacontents'></textarea>
+			<view class="EvaluateBBImg">
+
+			</view>
+		</view>
+	</view>
+	<view class="EvaOrderline"></view>
+
+	<view class="EvaOrderC">
+		<view class="EvaOrderC_title">
+			<view style="width: 5rpx;height: 30rpx;background: #F44F4F; margin-right: 13rpx;"></view>店铺评分
+		</view>
+		<view class="EvaOrderC_content">
+			<view class="EvaOrderC_contentLeft">
+				<text>描述相符</text>
+				<text>物流服务</text>
+				<text>服务态度</text>
+			</view>
+			<view class="EvaOrderC_contentRight">
+				<view>
+					<block wx:for="{{describeOn}}" wx:key="index">
+						<image catchtap='describeStar' id='{{index+1}}' data-in='star' src='/assets/image/index/heartb.png' style="margin-right: 20rpx;height:25rpx; width:29rpx; "></image>
+					</block>
+					<block wx:for="{{describeNot}}" wx:key="index">
+						<image catchtap='describeStar' id='{{index+1}}' data-in='starg' src='/assets/image/index/heartA.png' style="margin-right: 20rpx;height:25rpx; width:29rpx; "></image>
+					</block>
+				</view>
+				<view>
+					<block wx:for="{{LogisticsOn}}" wx:key="index">
+						<image catchtap='Logistics' id='{{index+1}}' data-in='star' src='/assets/image/index/heartb.png' style="margin-right: 20rpx;height:25rpx; width:29rpx; "></image>
+					</block>
+					<block wx:for="{{LogisticsNot}}" wx:key="index">
+						<image catchtap='Logistics' id='{{index+1}}' data-in='starg' src='/assets/image/index/heartA.png' style="margin-right: 20rpx;height:25rpx; width:29rpx; "></image>
+					</block>
+				</view>
+				<view>
+					<block wx:for="{{AttitudeOn}}" wx:key="index">
+						<image catchtap='Attitude' id='{{index+1}}' data-in='star' src='/assets/image/index/heartb.png' style="margin-right: 20rpx;height:25rpx; width:29rpx; "></image>
+					</block>
+					<block wx:for="{{AttitudeNot}}" wx:key="index">
+						<image catchtap='Attitude' id='{{index+1}}' data-in='starg' src='/assets/image/index/heartA.png' style="margin-right: 20rpx;height:25rpx; width:29rpx; "></image>
+					</block>
+
+				</view>
+
+
+
+			</view>
+		</view>
+	</view>
+	<view class="EvaOrderline"></view>
+	<view class="EvaOrderD">
+		<view class="Anonymousbox">
+
+			<image style="width:30rpx; margin-right: 10rpx;" wx:if="{{isAdonymous==1}}" src="./Tick.png" mode="widthFix"></image>
+			<text bindtap="Adonymous">匿名评价</text>
+		</view>
+		<view class="SubmitEvaluation" bindtap="showSuccess">提交评价</view>
+	</view>
+
+
+</view>
+<view style="display:{{evaSuccess ? 'none' : 'block'}}" class="Eva_SuccessBOX">
+	<view class="Eva_Success">
+		<view class="Eva_Success_item">
+			<image style="width:100rpx; height:100rpx" src="/assets/image/index/evasuccess.png"></image>
+			<view class="Eva_Success_itemB">评价成功 </view>
+		</view>
+	</view>
+
+</view>

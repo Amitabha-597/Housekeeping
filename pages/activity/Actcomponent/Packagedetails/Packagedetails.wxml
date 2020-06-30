@@ -1,0 +1,45 @@
+
+<wxs module="filter" src="../../../../utils/timer.wxs"></wxs>
+<view class="groupdetails_bg">
+
+	<view class="groupdetails">
+		<view class="groupdetails_imgbox">
+			<swiper indicator-dots="true" autoplay="true}">
+			<block wx:for="{{packageInfo.banner}}" wx:key="*this">
+				<swiper-item>
+					<image style="width:690px;height:246px" src="{{item}}"></image>
+				</swiper-item>
+			</block>
+		</swiper>
+	
+		</view>
+		<view class="groupdetails_msgbox">
+			<view class="groupdetails_msg_name">{{packageInfo.name}}</view>
+			<view class="groupdetails_msg_price">
+				<view class="groupdetails_msg_price01">
+					<text class="groupdetails_msg_price011">¥{{packageInfo.collage_price}}</text>
+					<text class="groupdetails_msg_price012">套餐价</text>
+				</view>
+				<text class="groupdetails_msg_price02">¥{{packageInfo.money}}</text>
+			</view>
+			<view class="groupdetails_msg_num">
+				<view class="groupdetails_msg_numpeo_sur">剩余{{packageInfo.limit}}</view>
+			</view>
+		</view>
+		<view class="groupin">
+			<view class="groupin_state">
+			</view>
+			<view class="groupin_time">
+				<text class="groupin_time01">结束日期</text>
+				<text class="groupin_time02">{{filter.getDateTime(packageInfo.end_time)}}</text>
+			</view>
+			<view class="groupin_icon">	
+			</view>
+		</view>
+	</view>
+
+	<view class="group_btns">
+			<view class="group_btn0"></view>
+			<view class="group_btn1" bindtap="collageSub" data-id="{{packageInfo.id}}">立即下单</view>
+		</view>
+</view>

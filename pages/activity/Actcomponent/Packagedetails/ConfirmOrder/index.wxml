@@ -1,0 +1,98 @@
+<view class="ConfirmOrder">
+	<view class="OrderMsg" bindtap="toaddlist">
+
+
+		<view class="OrderMsg_Left">
+			<image style="width:20rpx" src="http://zxty.mrhkj.com/assets/index/index/ConfirmOrder/address.png" mode="widthFix"></image>
+		</view>
+		<view class="OrderMsg_Middle">
+			<view class="OrderUser">
+				<view> <text> 雇主：</text>
+					<text>{{address.name}}</text></view>
+				<text>{{address.mobile}}</text>
+
+			</view>
+			<view class="OrderAdd">
+				<text>服务地址：</text>
+				<text>{{address.address}}</text>
+			</view>
+		</view>
+		<view class="OrderMsg_Right">
+			<navigator url="/pages/myhome/MyHomeComs/ServiceAddress/index">
+				<image style="width:15rpx" src="http://zxty.mrhkj.com/assets/index/index/ConfirmOrder/next.png" mode="widthFix"></image>
+			</navigator>
+
+		</view>
+	</view>
+	<view class="OrdeOptionr">
+		<view class="OrdeContent">
+			<view class="OrdeContent_img">
+				<image style="width:158rpx" src="http://zxty.mrhkj.com/assets/index/index/ConfirmOrder/sever.png" mode="widthFix"></image>
+			</view>
+			<view class="OrdeContent_txt">
+				<view class="OrdeContent_txtcont">{{itemlist.name}}</view>
+				<view class="OrdeContent_txtname">{{itemlist.shop_name}}</view>
+				<view class="OrdeContent_txtname">
+					<text style="margin-right: 30rpx;">{{itemlist.type_cn}}</text>
+					<text>{{itemlist.area}}</text>
+				</view>
+				<view class="OrdeContent_txtnum">
+					<view>¥{{itemlist.money}}</view>
+					<view class="OrdeContent_txtcut">
+					x1
+					</view>
+
+				</view>
+
+			</view>
+		</view>
+
+		<view class="OrdeOptionr_item">
+			<view class="OrdeOptionr_itemList">
+				<text>上门服务</text>
+				<Timer placeholder = "请选择时间" date = "{{date}}" disabled = "{{disabled}}" bind:onPickerChange="onPickerChange" > </Timer>
+				<image style="width:12rpx" src="http://zxty.mrhkj.com/assets/index/index/ConfirmOrder/next.png" mode="widthFix"></image>
+			</view>
+			<view class="OrdeOptionr_itemList" bindtap="showPayMode">
+				<text>支付方式</text>
+				<text>{{packageSubfrom.method == 1 ?  '微信支付':'余额支付' }}</text>
+				<image style="width:12rpx" src="http://zxty.mrhkj.com/assets/index/index/ConfirmOrder/next.png" mode="widthFix"></image>
+			</view>
+			<!-- <view class="OrdeOptionr_itemListb">
+				<text>服务小费</text>
+				<input class="Gratuity" class="OrdeOptionr_itemListinput" placeholder="输入已协商好的小费"  type="number" bindinput="xaiofei" ></input>
+			</view> -->
+				<view class="OrdeOptionr_itemListb">
+				<text>备注</text>
+				<input class="Gratuity" class="OrdeOptionr_itemListinput" placeholder="请输入备注"  type="number" bindinput="remarkContent" ></input>
+			</view>
+		</view>
+	</view>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<view class="placeOrder">
+	<view class="placeOrdermun">共 {{totalNum}} 件 </view>
+	<view class="placeOrderprice"><text>合计 </text><text>¥</text>  <text>{{price}}</text>  <text wx:if="{{discount}}">-{{discount}}</text> <text wx:if="{{xiaofei}}">+{{xiaofei}}</text>  </view>
+	<view class="placeOrderbtn">
+		<view bindtap="submitorder"> 提交订单</view>
+
+	</view>
+
+</view>
+<PayMode bindactiontap="selectPaymode" show="{{showPayMode}}" actions="{{PayMode}}" title="这"></PayMode>

@@ -1,0 +1,191 @@
+<view class="home">
+	<view class="workcondition">
+		<view class="workcondition_item">
+			<view class="{{workcondition==1 ? 'on' : 'not'}}" data-id="1" bindtap="workconditionSelect">上岗中 </view>
+			<view class=" {{workcondition==2?'on':''}}" data-id="2" bindtap="workconditionSelect">休息中</view>
+		</view>
+	</view>
+	<!--Tab布局-->
+	<view class='title'>
+		<view class='titleSel' bindtap='titleClick' data-idx='0'>
+			<view class="titleSel_name" style="color:{{0 == currentIndex ? '#EC8401' : ''}}">新任务</view>
+			<hr class="{{0 == currentIndex ? 'headerLineSel' : 'headerLineUnsel'}}" />
+		</view>
+
+		<view class='titleSel' bindtap='titleClick' data-idx='1'>
+			<view class="titleSel_name" style="color:{{1 == currentIndex ? '#EC8401' : ''}}">待上门</view>
+			<hr class="{{1 == currentIndex ? 'headerLineSel' : 'headerLineUnsel'}} " />
+		</view>
+		<view class='titleSel' bindtap='titleClick' data-idx='2'>
+			<view style="color:{{2 == currentIndex ? '#EC8401' : ''}}" class="titleSel_name">服务中</view>
+			<hr class="{{2 == currentIndex ? 'headerLineSel' : 'headerLineUnsel'}} " />
+		</view>
+
+
+	</view>
+
+	<!--内容布局-->
+	<swiper class='swiper' bindchange='pagechange' current='{{currentIndex}}'>
+		<swiper-item class='swiper'>
+			<view class="newJob" wx:for="{{orderlist}}" wx:key="*this">
+				<view class="newJobTitle">
+					<image style="width:36rpx" src="{{item.thumbnail}}" mode="widthFix"></image>
+					<text style="color:#939393">期望上门时间：</text>
+					<text >2020-03-28 10:00</text>
+					<text >{{item.type_cn}}</text>
+				</view>
+				<view class="newJobContent">
+					<view class="newJobContentImg">
+						<image style="width:100%" src="http://zxty.mrhkj.com/assets/servicePersonal/user.png" mode="widthFix"></image>
+
+					</view>
+					<view class="newJobContentMsg">
+						<view style="color:#222;font-size: 30rpx;">{{item.title}}</view>
+						<view>
+							<text>服务类型：</text>
+							<text>{{item.tag}}</text>
+						</view>
+						<view style=" line-height: 41rpx;">
+							<text>服务地址：</text>
+							{{item.address}}
+							<!-- <image style="width:18rpx;height:30rpx" src="http://zxty.mrhkj.com/assets/servicePersonal/user.png"></image> -->
+						</view>
+					</view>
+				</view>
+				<view class="newJobBtnbox">
+					<view class="newJobBtn" bindtap="jieOrder" data-orderno="{{item.order_no}}">立即接单</view>
+				</view>
+			</view>
+<view class="bottombox"></view>
+		</swiper-item>
+		<swiper-item class='swiper' class='swiper'>
+
+			<view class="writeIndoor" wx:for="{{orderlistB}}" wx:key="*this">
+				<view class="writeIndoor_title">
+					<view>
+						<text>任务：</text>
+						<text>{{item.title}}</text>
+
+					</view>
+					<view style="color:#F08004">{{item.type_cn}}</view>
+				</view>
+				<view class="writeIndoor_content">
+					<view class="writeIndoor_content_left"></view>
+					<view class="writeIndoor_content_right">
+						<view class="myadress">
+							<view class="myadress_title">我的位置</view>
+							<view class="myadress_conectbox">
+								<text class="myadress_conect">{{markers}}</text>
+								<image style="width:18rpx;height:30rpx" src="http://zxty.mrhkj.com/assets/servicePersonal/adressicon.png"></image>
+							</view>
+						</view>
+						<view class="myadress">
+							<view class="myadress_title">客户：
+								<text>{{item.contacts}}</text>
+							</view>
+							<view class="myadress_conectbox">
+								<view class="myadress_conect">
+									<view>{{item.address}} </view>
+									<!-- <view>嘉福苑4栋1单元602</view> -->
+								</view>
+
+								<image style="width:18rpx;height:30rpx" src="http://zxty.mrhkj.com/assets/servicePersonal/adressicon.png"></image>
+							</view>
+						</view>
+
+					</view>
+				</view>
+				<view class="wrremarks" wx:if="{item.remark !==''}}">
+					<text>备注：</text>
+					<text>{{item.remark}}</text>
+				</view>
+				<view class="writeIndoorbtn">
+					<view>联系客户</view>
+					<view bindtap="Arrived" data-ordernos="{{item.order_no}}"> 确认到达</view>
+				</view>
+			</view>
+<view class="bottombox"></view>
+
+		</swiper-item>
+		<swiper-item class='swiper'>
+			<view class="Inservice" wx:for="{{orderlistC}}" wx:key="*this">
+				<view class="newJobTitle">
+					<image style="width:36rpx" src="http://zxty.mrhkj.com/assets/servicePersonal/shijian.png" mode="widthFix"></image>
+					<text style="color:#939393">期望上门时间：</text>
+					<text >{{item.subscribe_time}}</text>
+					<text >{{item.type_cn}}</text>
+				</view>
+				<view class="newJobContent">
+					<view class="newJobContentImg">
+						<image style="width:100%" src="http://zxty.mrhkj.com/assets/servicePersonal/user.png" mode="widthFix"></image>
+
+					</view>
+					<view class="newJobContentMsg">
+						<view style="color:#222;font-size: 30rpx;">{{item.title}}</view>
+						<view>
+							<text>服务类型：</text>
+							<text>{{item.tag}}</text>
+						</view>
+						<view style=" line-height: 41rpx;">
+							<text>服务地址：</text>
+							{{item.address}}
+							<image style="width:18rpx;height:30rpx" src="http://zxty.mrhkj.com/assets/servicePersonal/adressicon.png"></image>
+						</view>
+					</view>
+				</view>
+				<view class="beizhu">
+					<text>备注：</text>
+					<text>{{item.remark}}</text>
+					<!-- <text>50元</text> -->
+				</view>
+				<view class="Inservicebox">
+					<view  wx:if="{{item.status == 6}}" >待用户确认</view>
+					<view bindtap="startService" wx:if="{{item.status == 7}}" data-ordernos="{{item.order_no}}">开始服务</view>
+					<view bindtap="serviceComplete"  wx:if="{{item.status == 8}}" data-ordernos="{{item.order_no}}">服务完成</view>
+				</view>
+			</view>
+<view class="bottombox"></view>
+		</swiper-item>
+	</swiper>
+
+
+
+</view>
+<view class="neworderbox" style="display: none;">
+	<view class="neworder">
+		<view class="newjoccard">
+			<view class="newjoccard_time">
+				<view>31</view>
+				<view>剩余时间</view>
+			</view>
+
+			<view class="neworder_bottombox">
+
+				<view class="neworder_bottomboxA">立即接单</view>
+				<view class="neworder_bottomboxB">取消接单</view>
+
+			</view>
+		</view>
+	</view>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<SPtabbar setectNav='1'></SPtabbar>

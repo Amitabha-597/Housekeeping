@@ -1,0 +1,13 @@
+<view class="serchBox">
+	<picker class="address" mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}"> <text class="address_txt"> {{region[2]}}</text>
+	<!-- <image class="address_icon" src="http://zxty.mrhkj.com/assets/index/index/tabicon/xiala.png"></image> -->
+	<!-- <image src="http://zxty.mrhkj.com/assets/index/index/tabicon/xiala.png"></image> -->
+	</picker>
+	
+	<view class='tit_seabox'>
+		<view class="tit_seabox_bar  ">
+			<icon class="icon" type='search' size="32rpx"></icon>
+			<input class="input" type="text" bindinput="searchList" bindconfirm="endsearchList" bindfocus='getfocus' bindblur="blursearch" confirm-type='search' value='{{searchstr}}' placeholder='请输入...' />
+		</view>
+	</view>
+</view>

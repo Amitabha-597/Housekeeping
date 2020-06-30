@@ -1,0 +1,130 @@
+<wxs module="filter" src="../../../../utils/timer.wxs"></wxs>
+
+<view class="Myorder">
+
+	<view class='container'>
+		<!--Tab布局-->
+		<view class='title'>
+			<view class='titleSel' bindtap='titleClick' data-idx='0'>
+				<view class="titleSel_name" style="color:{{0 == currentIndex ? '#EC8401' : ''}}">未使用</view>
+				<hr class="{{0 == currentIndex ? 'headerLineSel' : 'headerLineUnsel'}}" />
+			</view>
+
+			<view class='titleSel' bindtap='titleClick' data-idx='1'>
+				<view class="titleSel_name" style="color:{{1 == currentIndex ? '#EC8401' : ''}}">已使用</view>
+				<hr class="{{1 == currentIndex ? 'headerLineSel' : 'headerLineUnsel'}} " />
+			</view>
+			<view class='titleSel' bindtap='titleClick' data-idx='2'>
+				<view style="color:{{2 == currentIndex ? '#EC8401' : ''}}" class="titleSel_name">已过期</view>
+				<hr class="{{2 == currentIndex ? 'headerLineSel' : 'headerLineUnsel'}} " />
+			</view>
+
+
+		</view>
+
+		<!--内容布局-->
+		<swiper class='swiper' bindchange='pagechange' current='{{currentIndex}}'>
+			<!-- 未使用 -->
+			<swiper-item class='swiper'>
+				<view class="coupon_card" wx:for="{{couponlist}}" wx:key="index">
+					<block wx:if="{{item.status == 1}}">
+						<view class="coupon_card_left">
+							<view class="coupon_card_left_text">
+								<view class="coupon_card_left_price">
+									<view class="coupon_card_left_price01">¥{{item.discount}}</view>
+									<view class="coupon_card_left_price02">满{{item.use_where}}使用</view>
+								</view>
+								<view class="coupon_card_left_msg">
+									<view class="coupon_card_left_msg_name">{{item.title}}</view>
+									<view class="coupon_card_left_msg_con">
+										<view>{{item.desc}}</view>
+										<view>
+											<text>{{filter.getDateTime(item.star_time)}}</text>
+											<text> {{filter.getDateTime(item.end_time)}}</text>
+										</view>
+									</view>
+								</view>
+							</view>
+							<image class="coupon_card_left_img" src="http://zxty.mrhkj.com/assets/index/activity/actcard1.png"></image>
+							<view class="coupon_card_left_icon1"></view>
+
+						</view>
+					</block>
+					<view class="coupon_card_right">
+						<view>去使用</view>
+					</view>
+
+				</view>
+			</swiper-item>
+			<!-- 已使用 -->
+			<swiper-item class='swiper' class='swiper'>
+				<view class="coupon_card" wx:for="{{couponlist}}" wx:key="index">
+					<block wx:if="{{item.status == 2}}">
+						<view class="coupon_card_left">
+							<view class="coupon_card_left_text">
+								<view class="coupon_card_left_price" style="border-right: #999 dashed 2rpx;">
+									<view class="coupon_card_left_price01" style="color:#999 ;">¥{{item.discount}}</view>
+									<view class="coupon_card_left_price02" style="color:#999 ;">满{{item.use_where}}使用</view>
+								</view>
+								<view class="coupon_card_left_msg">
+									<view class="coupon_card_left_msg_name">{{item.title}}</view>
+									<view class="coupon_card_left_msg_con">
+										<view>{{item.desc}}</view>
+										<view>
+											<text>{{item.star_time}}</text>
+											-
+											<text>{{item.end_time}}</text>
+										</view>
+									</view>
+								</view>
+							</view>
+							<image class="coupon_card_left_img" src="http://zxty.mrhkj.com/assets/index/activity/actcard2.png"></image>
+							<view class="coupon_card_left_icon1" style="background: #999;"></view>
+
+						</view>
+						<view class="coupon_card_right" style="background: #999;">
+							<view>已使用</view>
+						</view>
+					</block>
+
+				</view>
+			</swiper-item>
+			<!-- 已过期 -->
+			<swiper-item class='swiper' class='swiper'>
+				<view class="coupon_card" wx:for="{{couponlist}}" wx:key="index">
+				<block  wx:if="{{item.status==3}}">
+					<view class="coupon_card_left">
+						<view class="coupon_card_left_text">
+							<view class="coupon_card_left_price" style="border-right: #333 dashed 2rpx;">
+								<view class="coupon_card_left_price01" style="color:#333 ;">¥{{item.discount}}</view>
+								<view class="coupon_card_left_price02" style="color:#333 ;">满{{item.use_where}}使用</view>
+							</view>
+							<view class="coupon_card_left_msg">
+								<view class="coupon_card_left_msg_name">{{item.title}}</view>
+								<view class="coupon_card_left_msg_con">
+									<view>{{item.desc}}</view>
+									<view>
+											<text>{{item.star_time}}</text>
+											-
+											<text>{{item.end_time}}</text>
+										</view>
+								</view>
+							</view>
+						</view>
+						<image class="coupon_card_left_img" src="http://zxty.mrhkj.com/assets/index/activity/actcard3.png"></image>
+						<view class="coupon_card_left_icon1" style="background: #333;"></view>
+					</view>
+					<view class="coupon_card_right" style="background: #333;">
+						<view>已过期</view>
+					</view>
+				</block>
+
+				</view>
+			</swiper-item>
+		</swiper>
+	</view>
+
+
+
+
+</view>

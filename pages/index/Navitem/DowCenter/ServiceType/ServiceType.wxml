@@ -1,0 +1,17 @@
+<view class="ServiceType">
+
+	<view class="ServiceTypeSelection">
+		<view class="SelectionItems" wx:for="{{SelectionList}}" wx:key="index" wx:for-index="index">
+			<text>{{item.itemName}}</text>
+			<image style="width:23rpx;margin-left: 10rpx;" src="/assets/image/index/del.png" mode="widthFix" bindtap="delItem" data-item="{{index}}"></image>
+		</view>
+	</view>
+
+	<view class="Candidate">
+		<view class="CandidateItem" wx:for="{{CandidateList}}" wx:key="index" bindtap="pushForSelection" data-item="{{item}}">{{item.itemName}}</view>
+	</view>
+</view>
+<view class="ServiceTypeFooter">
+	<view class="ServiceTypeCancel" bindtap="ServiceTypeCancel">取消</view>
+	<view class="ServiceTypeSave " bindtap="ServiceTypeSave">立即保存</view>
+</view>

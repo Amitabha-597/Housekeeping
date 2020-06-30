@@ -1,0 +1,104 @@
+<view class="Apply">
+	<view class="border30"></view>
+	<view class="Apply_Item Apply_Info">
+		<view class="Apply_ItemTitle">个人信息</view>
+		<view class="Apply_ItemName">
+			<text>姓名</text>
+			<input placeholder="输入真实姓名" bindinput="username"></input>
+		</view>
+		<view class="Apply_ItemName">
+			<text>性别</text>
+			<view bindtap="showGender">
+				<text>{{Genders}}</text>
+				<image style="width:13rpx; margin-left: 40rpx;" src="/assets/image/index/next.png" mode="widthFix"></image>
+			</view>
+		</view>
+		<view class="Apply_ItemName" bindtap="showEducation">
+			<text>学历</text>
+			<view>
+				<text>{{Education}}</text>
+				<image style="width:13rpx; margin-left: 40rpx;" src="/assets/image/index/next.png" mode="widthFix"></image>
+			</view>
+		</view>
+	</view>
+	<view class="border30"></view>
+	<view class="Apply_Item Apply_Contact ">
+		<view class="Apply_ItemTitle">联系方式</view>
+		<view class="Apply_ItemName">
+			<text>手机号</text>
+			<input placeholder="输入手机号" maxlength="11" bindinput="Mobile"></input>
+		</view>
+
+		<view class="Apply_ItemName">
+			<text>验证码</text>
+			<view>
+				<view class="VerCode">
+					<input placeholder="输入验证码" bindinput="Yzma" maxlength="6"></input>
+					<text>获取验证码</text>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="border30"></view>
+	<view class="AppliedPosition">
+		<view class="PositionTitle">
+			<text>应聘职位</text>
+			<navigator url="./Applycomp/PositionAdd/PositionAdd">
+				<text class="PositionTitleAdd">添加</text>
+			</navigator>
+		</view>
+
+
+		<view class="Position">
+			<text>职位1 </text>
+			<text wx:for="{{job}}" wx:key="*this">{{item}}</text>
+		</view>
+	</view>
+	<view class="border30"></view>
+	<view class="WorkExp">
+		<view class="WorkExpTitle">
+			<text>工作经历</text>
+
+			<navigator url="./Applycomp/AddExp/AddExp">
+				<text class="PositionTitleAdd">添加</text>
+			</navigator>
+		</view>
+		<view class="WorkExpList">
+			<view class="WorkExpListLeft"></view>
+			<view class="WorkExpListRight">
+				<view class="WorkExpItem" wx:for="{{applyFrom.job_data}}" wx:key="*this">
+					<view class="WorkExpItemdate">
+						<text wx:if="{{item.startime != ''}}">{{item.startime}}-{{item.endtime}}</text>
+						<text wx:if="{{item.startime == ''}}"></text>
+						<view class="WorkExpItemdel"></view>
+					</view>
+					<view class="WorkExpItemConent">{{item.content}}</view>
+				</view>
+			</view>
+		</view>
+	</view>
+
+	<view class="worlapply" bindtap="Applynow">立即申请</view>
+</view>
+
+<view class="Gender" style="display:{{isShowgender ? 'block' : 'none'}}">
+	<view class="GenderBox">
+		<view class="Gender_item">
+			<view>性别</view>
+			<view bindtap="Gender" data-gender="2">女</view>
+			<view bindtap="Gender" data-gender="1">男</view>
+		</view>
+	</view>
+</view>
+<view class="Gender " style="display:{{isShowEducation ? ' block' : 'none'}}">
+	<view class="GenderBox">
+		<view class="Education_item">
+			<view>学历</view>
+			<view bindtap="Education" data-education="本科">本科</view>
+			<view bindtap="Education" data-education="大专">大专</view>
+			<view bindtap="Education" data-education="高中">高中</view>
+			<view bindtap="Education" data-education="初中">初中</view>
+			<view bindtap="Education" data-education="小学">小学</view>
+		</view>
+	</view>
+</view>

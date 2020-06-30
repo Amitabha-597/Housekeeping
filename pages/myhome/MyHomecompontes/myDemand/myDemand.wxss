@@ -1,0 +1,70 @@
+.myDemand {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.myDemand_item {
+  width: 100%;
+  height: 230rpx;
+  background: rgb(255, 255, 255);
+  border-bottom: 12rpx solid #f1f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.myDemand_item_imgbox {
+  width: 171rpx;
+  height: 171rpx;
+}
+
+.myDemand_item_conect {
+  width: 496rpx;
+  height: 171rpx;
+  margin-left: 30rpx;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+
+.myDemand_item_conectA {
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(34, 34, 34, 1);
+}
+
+.myDemand_item_conectB {
+  font-size: 24rpx;
+  font-family: SimHei;
+  font-weight: 400;
+  color: rgba(153, 153, 153, 1);
+  line-height: 40rpx;
+}
+
+.myDemand_item_conectC {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: rgba(153, 153, 153, 1);
+}
+
+.myDemand_item_conectC>view {
+  width: 100rpx;
+  height: 40rpx;
+  color: #999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1rpx solid #999;
+  border-radius: 10rpx;
+
+}
+

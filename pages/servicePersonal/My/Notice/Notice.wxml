@@ -1,0 +1,21 @@
+<view class="Notice">
+
+	<view class="NoticeItem">
+		<view class="NoticeItemtitle">
+			<text>店铺通知</text>
+			<text>2020-02-26 13:08</text>
+		</view>
+		<view class="NoticeItemconect">
+			恭喜勤鸽家政服务有限公司001号员工：方秀英正式晋升为金牌 员工！
+		</view>
+	</view>
+	<view class="NoticeItem">
+		<view class="NoticeItemtitle">
+			<text>平台通知</text>
+			<text>2020-02-26 13:08</text>
+		</view>
+		<view class="NoticeItemconect">
+			2020年03月28日起，平台将陆续上传【家政育婴培训】相关视 频，家政员工可以在小程序用户端【就业培训】观看并学习
+		</view>
+	</view>
+</view>

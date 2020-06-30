@@ -1,0 +1,40 @@
+<view class="Account">
+	<view class="Accountmsg">
+		<view class="avatar">
+			<text>头像</text>
+			<view class="avatarbox">
+  
+			<image style="width:100%;height:100%;border-radius: 50%;" src="{{item.himg}}"></image>
+			</view>
+		</view>
+		<view class="name">
+			<text>姓名</text>
+			<text>{{usrinfo.names}}</text>
+		</view>
+		<view >
+			<text>当前账号</text>
+			<text>{{usrinfo.mobile}}</text>
+		</view>
+	</view>
+
+	<view class="company">
+		<view>
+			<text>所属公司店铺</text>
+			<text>{{usrinfo.shop_name}}</text>
+		</view>
+		<view>
+			<text>主要职务</text>
+			<text>{{usrinfo.type_cn}}</text>
+		</view>
+		<view>
+			<text>所在区域</text>
+			<text>{{usrinfo.area}}</text>
+		</view>
+
+	</view>
+  <view class="outlogin">
+  <view class="outlogin_btn">退出登录</view>
+  </view>
+
+
+</view>

@@ -1,0 +1,70 @@
+/*搜索 开始*/
+.serchBox {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100rpx;
+}
+
+.serchBox .address {
+  height: 78rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.serchBox .address .address_txt {
+  font-size: 34rpx;
+  color: #222;
+  letter-spacing: 4rpx;
+  font-weight: 400;
+}
+
+.serchBox .address .address_icon {
+  width: 23rpx;
+  height: 12rpx;
+  margin-left: 10rpx;
+}
+
+.tit_seabox {
+  width: 70%;
+  height: 60rpx;
+  padding: 20rpx 32rpx;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.tit_seabox_bar {
+  width: calc(100% - 32rpx);
+  height: 78rpx;
+  display: flex;
+  align-items: center;
+  border-radius: 50rpx;
+  background: rgb(247, 242, 242);
+  padding-left: 32rpx;
+
+}
+
+/*开始搜索时*/
+.tit_seabox_bar.tit_start_search {
+  width: 100%;
+}
+
+/*开始搜索且有权限添加*/
+.tit_seabox_bar.tit_start_search.tit_seabox_add {
+  width: 100%;
+}
+
+.tit_seabox_bar .icon {
+  margin-right: 20rpx;
+}
+
+.tit_seabox .input {
+  height: 78rpx;
+  line-height: 78rpx;
+  font-size: 28rpx;
+  width: 100%;
+
+}

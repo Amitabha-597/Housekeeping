@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+      "CancelOrder":"/pages/myhome/MyHomecompontes/MyOrder/OrderDetalis/waitforpay/CancelOrder/actionsheet"
+  },
+  "navigationBarTitleText": "订单详情",
+  "backgroundTextStyle":"dark",
+  "navigationBarTextStyle":"black",
+  "navigationBarBackgroundColor":"#fff"
+}

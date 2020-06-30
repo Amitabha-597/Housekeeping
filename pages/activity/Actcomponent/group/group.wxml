@@ -1,0 +1,21 @@
+<view class="group">
+
+	<view class="group_item" wx:for="{{groupList}}" wx:key="*this">
+		<view class="group_item_imgbox">
+			<image class="group_item_img" src="{{item.thumbnail}}"></image>
+			<view class="group_item_countdown"> 倒计时: {{item.end_time}}</view>
+		</view>
+		<view class="group_item_info">{{item.name}}</view>
+		<view class="group_item_price">
+			<view class="group_item_num_newprice">￥{{item.money}}</view>
+			<view class="group_item_num_oldprice">￥{{item.collage_price}}</view>
+		</view>
+		<view class="group_item_num">
+			<view class="group_item_num_poper">{{item.collage_where}}人团</view>
+			<view class="group_item_num_remain">剩余{{item.subscribe_num}}</view>
+			<view class="group_item_num_btn" bindtap="Goandmakeaist" data-id="{{item.id}}">去拼单</view>
+		</view>
+
+	</view>
+
+</view>

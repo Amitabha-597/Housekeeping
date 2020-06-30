@@ -1,0 +1,91 @@
+.ServiceType {
+  padding: 38rpx 30rpx 0 30rpx;
+}
+
+.ServiceTypeSelection {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100rpx;
+}
+
+.SelectionItems {
+  padding: 16rpx 16rpx 16rpx 25rpx;
+  border-radius: 30rpx;
+  border: 1rpx solid #EB8000;
+  font-size: 28rpx;
+  font-family: SimHei;
+  font-weight: 400;
+  color: rgba(235, 128, 0, 1);
+  margin-bottom: 50rpx;
+  margin-right: 40rpx;
+}
+
+.Candidate {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.CandidateItem {
+  font-size: 28rpx;
+  font-family: SimHei;
+  font-weight: 400;
+  color: rgba(34, 34, 34, 1);
+  padding: 16rpx 25rpx;
+  border: 1rpx solid #EFEFEF;
+  border-radius: 30rpx;
+margin-right: 30rpx;
+margin-bottom: 32rpx;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.ServiceTypeFooter {
+  width: 750rpx;
+  height: 143rpx;
+  border: 1px solid rgba(233, 233, 233, 1);
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.ServiceTypeFooter>view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  border-radius: 10px;
+}
+
+.ServiceTypeCancel {
+  width: 197rpx;
+  height: 86rpx;
+  background: rgba(245, 245, 245, 1);
+  color: rgba(34, 34, 34, 1);
+
+}
+
+.ServiceTypeSave {
+  width: 443rpx;
+  height: 86rpx;
+  background: rgba(236, 132, 1, 1);
+  color: #fff;
+
+}

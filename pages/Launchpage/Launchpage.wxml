@@ -1,0 +1,32 @@
+<view style="background-image: url(/assets//image//Launchpage//Launchpage.png); " class="Launchpage">
+	<image style="width:544rpx;height:86rpx" src="/assets/image/Launchpage/title.png"></image>
+	<view class="kouhao">在线预约家政服务 细心呵护温暖家园</view>
+	<image style="width:546rpx;height:684rpx" src="/assets/image/Launchpage/banner.png"></image>
+
+	<view class="ljty" bindtap="goCustomer" >立即体验</view>
+	<view class="writer">
+
+		<image style="width:80rpx;height:80rpx" src="/assets/image/Launchpage/writer.png" bindtap="goWriter"></image>
+
+	</view>
+
+
+
+<!-- <view class="box_pop flex_coum_center" wx:if='{{isShowLoginBox}}'>
+<view class="popcontent">
+<view class="flex_center sq_title">提示</view>
+<view class="sq_content flex_center">您还未登录，请登录</view>
+<button class="sss" open-type="getUserInfo" bindgetuserinfo="userLogin">登录</button>
+</view>
+</view> -->
+
+
+
+
+
+
+
+
+
+
+</view>

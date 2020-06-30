@@ -1,0 +1,104 @@
+<view class="DowCenter">
+	<view class="DowCenter_hrader">
+		<view class="DowCenter_hrader_mun">
+			<image style="width:34rpx" src="/assets/image/index/Step1.png" mode="widthFix"></image>
+			<view class="line"></view>
+			<image style="width:34rpx" src="/assets/image/index/Step2.png" mode="widthFix"></image>
+			<view class="line"></view>
+			<image style="width:34rpx" src="/assets/image/index/Step3.png" mode="widthFix"></image>
+		</view>
+		<view class="DowCenter_hrader_text">
+			<text>店铺资料</text>
+			<text>更多资料</text>
+			<text>入驻费用</text>
+		</view>
+	</view>
+	<view class="DowCenter_main">
+		<view class="ShopName">
+			<view>店铺名称</view>
+			<view>
+				<input bindinput="Shopname" placeholder="请输入店铺名称"></input>
+				<image style="width:13rpx;margin-left: 20rpx;" src="/assets/image/index/next.png" mode="widthFix"></image>
+			</view>
+
+		</view>
+		<view class="ShopName">
+			<view>企业名称</view>
+			<view>
+				<input bindinput="Enterprisename" placeholder="请输入企业名称"></input>
+				<image style="width:13rpx;margin-left: 20rpx;" src="/assets/image/index/next.png" mode="widthFix"></image>
+			</view>
+		</view>
+		<view class="ShopName">
+			<view>店铺地址</view>
+			<view bindtap="Shopadress">
+
+				<view style="width:306rpx;color:#999999"> {{shoplista.shop_addr}} </view>
+				<image style="width:13rpx;margin-left: 20rpx;" src="/assets/image/index/next.png" mode="widthFix"></image>
+			</view>
+		</view>
+		<view class="ShopName2" bindtap="SelectServiceType">
+
+			<view>服务类型</view>
+			<view class="ShopName2_type">
+				<text>点击选择服务类型</text>
+			</view>
+			<view>
+				<image style="width:13rpx;margin-left: 20rpx;" src="/assets/image/index/next.png" mode="widthFix"></image>
+			</view>
+		</view>
+		<view class="ShopName2">
+			<view style="width:140rpx">所属地区</view>
+			<picker class="ShopNamea_add" mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+				{{region[0]}}，{{region[1]}}，{{region[2]}}
+			</picker>
+			<image style="width:13rpx;margin-left: 20rpx;" src="/assets/image/index/next.png" mode="widthFix"></image>
+			<view>
+			</view>
+		</view>
+		<view class="certificate">
+			<view class="certificate_title">营业执照及相关证书</view>
+			<view class="certificate_main">
+				<view class="certificate_main_item">
+					<view class="certificate_main_item_img" bindtap="businesslicense">
+						<image style="width:65rpx" wx:if="{{shoplista.bus_photo ==''}}" src="/assets/image/index/xaingji.png" mode="widthFix"> </image>
+
+						<image style="width:284rpx;height:174rpx" wx:if="{{shoplista.bus_photo !=''}}" src="{{URl}}{{shoplista.bus_photo}}"> </image>
+
+					</view>
+					<view>营业执照</view>
+				</view>
+
+				<view class="certificate_main_item" wx:for="{{shoplista.other_photo}}" wx:key="*this">
+					<view class="certificate_main_item_img">
+						<image style="width:284rpx;height:174rpx" src="{{URl}}{{item}}"> </image>
+
+					</view>
+					<view>其他证件</view>
+				</view>
+				<view class="certificate_main_item" v-if="{{shoplista.other_photo.length < 4}}">
+					<view class="certificate_main_item_img" bindtap="Otherdocuments">
+						<image style="width:65rpx" src="/assets/image/index/xaingji.png" mode="widthFix"> </image>
+
+
+					</view>
+					<view>其他证件</view>
+				</view>
+
+
+
+
+
+			</view>
+		</view>
+
+
+
+	</view>
+	<view class="DowCenter_footer">
+		<view class="DowCenter_footer_btn" bindtap="NextStep">下一步
+		</view>
+	</view>
+</view>
+
+<typeList bind:mytypeList="typeList" />

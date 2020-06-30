@@ -1,0 +1,201 @@
+@import '../ApplyRefund//ApplyRefund.wxss';
+
+.EvaOrder {
+  width: 100%;
+  max-height: 100vh;
+}
+
+.EvaOrderline {
+  height: 15rpx;
+  width: 100%;
+  background: #F1F2F2;
+}
+
+.EvaOrderB {
+  width: 100%;
+  padding: 15rpx 40rpx;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+.EvaluateBA {
+  height: 78rpx;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.EvaluateBAitem {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28rpx;
+  color: #B6B6B6;
+
+}
+
+.EvaluateBAimgbox {
+  width: 32rpx;
+  height: 37rpx;
+  margin-right: 20rpx;
+}
+
+.EvaluateBB {
+  width: 100%;
+  background: #F8F8F8;
+  box-sizing: border-box;
+}
+
+.EvaluateBB>textarea {
+  width: 100%;
+  height: 190rpx;
+  box-sizing: border-box;
+  padding: 24rpx;
+  font-size: 26rpx;
+  font-family: SimHei;
+}
+
+.EvaluateBBImg {
+  padding-left: 19rpx;
+  min-width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.EvaluateImgbox {
+  width: 100rpx;
+  height: 100rpx;
+  background: indianred;
+  margin-right: 30rpx;
+  margin-bottom: 30rpx;
+}
+
+.EvaOrderC {
+  width: 100%;
+  height: 310rpx;
+  box-sizing: border-box;
+}
+
+.EvaOrderC_title {
+  width: 100%;
+  padding: 30rpx 39rpx;
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(51, 51, 51, 1);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.EvaOrderC_content {
+  width: 100%;
+  height: 155rpx;
+  display: flex;
+}
+
+.EvaOrderC_content>view {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.EvaOrderC_contentLeft {
+  width: 225rpx;
+  align-items: center;
+  font-size: 28rpx;
+  font-family: SimHei;
+  font-weight: 400;
+  color: rgba(51, 51, 51, 1);
+
+}
+
+.EvaOrderC_contentRight>view {
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.EvaOrderC_contentRight_icon {
+
+  width: 29rpx;
+  height: 25rpx;
+  background: red;
+  margin-right: 30rpx;
+}
+
+.EvaOrderD {}
+
+.Anonymousbox {
+  box-sizing: border-box;
+  height: 97rpx;
+  width: 100%;
+  font-size: 26rpx;
+  font-family: SimHei;
+  font-weight: 400;
+  color: rgba(51, 51, 51, 1);
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 40rpx;
+}
+
+.SubmitEvaluation {
+  width: 314rpx;
+  height: 84rpx;
+  border-radius: 40rpx;
+  margin: 0 auto;
+  background-image: linear-gradient(#F7B904, #F18701);
+  font-size: 36rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Eva_Success {
+
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Eva_Success_item {
+  width: 404rpx;
+  height: 272rpx;
+  background: #fff;
+  border-radius: 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  box-sizing: border-box;
+  padding: 30rpx 0 37rpx 0;
+
+}
+
+.Eva_Success_itemB {
+  font-size: 36rpx;
+  font-family: SimHei;
+  font-weight: 400;
+  color: rgba(51, 51, 51, 1);
+}
+
+
+.Eva_SuccessBOX {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+}

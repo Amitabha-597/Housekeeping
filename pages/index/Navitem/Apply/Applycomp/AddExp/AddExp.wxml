@@ -1,0 +1,21 @@
+<view class="AddExp">
+	<view class="AddExpCard">
+		<view class="AddExpCarddate">
+			<view class="AddExpCarddate_title">工作时间</view>
+			<view class="AddExpCarddate_conent">
+				<input placeholder="入职时间" bindinput="Startime"> </input>
+				<view class="AddExpCarddate_conentline"></view>
+				<input placeholder="离职时间" bindinput="Endtime"></input>
+			</view>
+		</view>
+		<view class="WorkConemt">
+			<view class="AddExpCarddate_title">工作内容 ({{conentLength}}/200)</view>
+			<textarea class="WorkConemt_conent" maxlength="200" bindinput="Maxlength" value="{{conent}}">
+			</textarea>
+		</view>
+	</view>
+</view>
+<view class="ServiceTypeFooter">
+	<view class="ServiceTypeCancel" bindtap="ServiceTypeCancel">取消</view>
+	<view class="ServiceTypeSave " bindtap="ServiceTypeSave">立即保存</view>
+</view>

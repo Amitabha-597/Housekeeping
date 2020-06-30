@@ -1,0 +1,53 @@
+<SPtabbar setectNav='2'></SPtabbar>
+
+<view class="My">
+	<view class="Myheader">
+		<image style="width:154rpx;height:154rpx" src="{{usrinfo.himg}}"></image>
+		<view class="Myname">{{usrinfo.names}}</view>
+		<view class="Mytel">{{usrinfo.mobile   }}</view>
+		<view class="Myaccount " bindtap="toAccount">账号管理</view>
+	</view>
+	<view class="Myorder">
+		<view class="toMyorder" bindtap="toOrder" data-selects="0">
+			<view style=" display: flex;align-items: center;">
+				<view style="margin-right: 15rpx;border-radius: 5rpx;width:8rpx ;height: 30rpx;background:#EC8401 ;"></view>
+				<text >全部任务订单</text>
+			</view>
+			<image style="width:16rpx ;height: 30rpx;" src="/assets/image/index/next.png"></image>
+		</view>
+		<view class="MyuorderNav">
+			<view class="MyuorderNavItem" bindtap="toOrder" data-selects="1">
+				<image style="width:73rpx;height:65rpx" src="http://zxty.mrhkj.com/assets/servicePersonal/writefordoor.png"></image>
+				<text>待上门</text>
+			</view>
+			<view class="MyuorderNavItem" bindtap="toOrder" data-selects="2">
+				<image style="width:73rpx;height:65rpx" src="http://zxty.mrhkj.com/assets/servicePersonal/writeforsever.png"></image>
+				<text>待服务</text>
+			</view>
+			<view class="MyuorderNavItem" bindtap="toOrder" data-selects="3">
+				<image style="width:73rpx;height:65rpx" src="http://zxty.mrhkj.com/assets/servicePersonal/success.png"></image>
+				<text>已完成</text>
+			</view>
+			<view class="MyuorderNavItem" bindtap="toOrder" data-selects="4">
+				<image style="width:73rpx;height:65rpx" src="http://zxty.mrhkj.com/assets/servicePersonal/eva.png"></image>
+				<text>已评价</text>
+			</view>
+		</view>
+		<view class="MyuorderOther">
+			<view class="MyuorderOtherItem"  bindtap="towriterdata" data-url="./wtiterData/wtiterData">
+				<view>
+					<image style="width:45rpx ;height: 50rpx; margin-right: 30rpx;" src="http://zxty.mrhkj.com/assets/servicePersonal/data.png"></image>
+					<text>认证资料</text>
+				</view>
+				<image style="width:16rpx ;height: 30rpx;" src="/assets/image/index/next.png"></image>
+			</view>
+			<view class="MyuorderOtherItem" bindtap="towriterdata" data-url="./Notice/Notice">
+				<view>
+					<image style="width:45rpx ;height: 50rpx; margin-right: 30rpx;" src="http://zxty.mrhkj.com/assets/servicePersonal/notice.png"></image>
+					<text>消息通知</text>
+				</view>
+				<image style="width:16rpx ;height: 30rpx;" src="/assets/image/index/next.png"></image>
+			</view>
+		</view>
+	</view>
+</view>

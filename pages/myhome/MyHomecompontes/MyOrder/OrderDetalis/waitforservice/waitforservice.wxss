@@ -1,0 +1,312 @@
+.OrderDetalis {
+  background: #F1F2F2;
+  font-family: SimHei;
+  font-weight: 400;
+  width: 100%;
+}
+
+
+
+.OrderDetalis_header {
+  width: 100%;
+  height: 141rpx;
+  background-image: linear-gradient(to right, #EE8F17, #ED8E16);
+
+  color: rgba(255, 255, 255, 1);
+  padding-left: 30rpx;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.OrderDetalis_header_type {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 34rpx;
+  padding: 10rpx 0;
+
+}
+
+.OrderDetalis_header_time {
+  font-size: 24rpx;
+  padding: 10rpx 0;
+  letter-spacing: 3rpx;
+
+}
+
+.OrderDetalis_state {
+  box-sizing: border-box;
+  width: 100%;
+  height: 136rpx;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 10rpx 30rpx;
+  background: #fff;
+  border-bottom: 13rpx solid #F1F2F2;
+}
+
+.OrderDetalis_state_text {
+  width: 100%;
+  font-size: 26rpx;
+  color: rgba(43, 43, 43, 1);
+  display: flex;
+  justify-content: space-between;
+}
+
+.OrderDetalis_state_adress {
+  font-size: 24rpx;
+  color: rgba(153, 153, 153, 1);
+  margin-top: 0rpx;
+}
+
+.CommodityList {
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  width: 100%;
+  height: 260rpx;
+  background: #fff;
+  border-bottom: 13rpx solid #F1F2F2;
+}
+
+.CommodityList_title {
+  font-size: 30rpx;
+  padding: 16rpx 0;
+}
+
+.CommodityList_conent {
+  height: 160rpx;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.CommodityList_conent_imgbox {
+  width: 160rpx;
+  height: 160rpx;
+  background: green;
+}
+
+.CommodityList_conent_text {
+  height: 160rpx;
+  margin-left: 30rpx;
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-around;
+
+}
+
+.conent_text_msg>text {
+  margin-right: 30rpx;
+
+}
+
+.conent_text_price {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.OdPersonneInfo {
+  width: 100%;
+  height: 331rpx;
+  background-color: #fff;
+  padding: 0 30rpx 30rpx 30rpx;
+  box-sizing: border-box;
+  border-bottom: 13rpx solid #F1F2F2;
+}
+
+.OdPersonneInfo_conent {
+  display: flex;
+  box-sizing: border-box;
+  border-bottom: 1rpx solid #F1F2F2;
+  padding-bottom: 24rpx;
+
+}
+
+.OdPersonneInfo_conent_imgbox {
+  width: 160rpx;
+  height: 160rpx;
+  background: #ED8E16;
+}
+
+.OdPersonneInfo_conent_text {
+  width: 100%;
+  flex: 1;
+  margin-left: 30rpx;
+  font-size: 24rpx;
+  font-family: SimHei;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+}
+
+.OdPersonneInfo_conent_text>view {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 26rpx;
+  font-family: SimHei;
+  font-weight: 400;
+}
+
+.OdPersonneInfo_date {
+  height: 73rpx;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 26rpx;
+  font-family: SimHei;
+  font-weight: 400;
+  color: rgba(43, 43, 43, 1);
+
+}
+
+.OdPersonneInfo_date>view {
+  width: 251rpx;
+}
+
+.OdPersonneInfo_date>view:first-child {
+  text-align: left;
+  color: #999999;
+}
+
+.OdPersonneInfo_date>view:last-child {
+  text-align: right;
+  font-weight: 400;
+
+}
+
+.Bill {
+  width: 100%;
+  height: 350rpx;
+  background: #fff;
+  border-bottom: 13rpx solid #F1F2F2;
+  padding: 0 30rpx 30rpx 30rpx;
+  box-sizing: border-box;
+
+}
+
+.Bill_itembox {
+  height: 178rpx;
+  border-bottom: 1rpx solid #F1F2F2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-bottom: 6rpx;
+}
+
+.Bill_item {
+  font-size: 28rpx;
+  font-family: SimHei;
+  font-weight: 400;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Bill_item>text:first-child {
+  color: rgba(107, 107, 107, 1);
+}
+
+.Bill_total {
+  height: 85rpx;
+  width: 100%;
+  font-size: 30rpx;
+  font-family: SimHei;
+  font-weight: 400;
+  color: rgba(44, 44, 44, 1);
+  display: flex;
+  align-items: center;
+
+
+}
+
+
+
+.Bill_total_operation {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(107, 107, 107, 1);
+}
+
+.Bill_total_operation>view {
+  width: 50%;
+}
+
+.Bill_total_price {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+}
+
+.order_info {
+  width: 750rpx;
+  background: #fff;
+  font-size: 30rpx;
+  font-family: SimHei;
+  font-weight: 400;
+  box-sizing: border-box;
+  padding: 0rpx 30rpx;
+}
+
+.order_info_itembox {
+  height: 184rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-bottom: 1rpx solid #F1F2F2;
+}
+
+.order_info_itembox>view {
+
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.order_info_btn {
+  width: 100%;
+  height: 126rpx;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size:24rpx;
+}
+
+.order_info_btn>view {
+  width: 144rpx;
+  height: 54rpx;
+  border-radius: 30rpx;
+  display: flex;
+ justify-content: center;
+  align-items: center;
+
+}
+
+.order_info_btnA {
+margin-right: 30rpx;
+border: 1rpx solid rgba(153,153,153,1);
+color:rgba(153,153,153,1)
+}
+
+
+.order_info_btnB{
+  margin-right: 30rpx;
+  border: 1rpx solid #EC8502;
+  color:#EC8502
+  }

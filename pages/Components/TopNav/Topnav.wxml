@@ -1,0 +1,6 @@
+<view class="TopNav">
+	<view class="TopNav_title">
+		<image style="width:18rpx;margin-left: 30rpx;" src="./left arrow.png" mode="widthFix" bindtap="baack"></image>
+		<view class="TopNav_titletxt;" >就业申请</view>
+	</view>
+</view>

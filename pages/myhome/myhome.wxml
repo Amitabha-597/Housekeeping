@@ -1,0 +1,59 @@
+<view id="myhome">
+	<view id="header">
+		<view class="netName">
+
+			<view bindtap="goMyInfo">{{userinfo.nickName}}</view>
+			<view>{{userinfo.sign}}</view>
+		</view>
+		<view class="avatar" bindtap="goMyInfo">
+			<image src="{{userinfo.avatarUrl}}"></image>
+		</view>
+	</view>
+	<view id="main">
+		<view class="order" bindtap="toMyOrder" data-orderType="0">
+			<text>全部订单</text>
+			<image class="order_icon" src="http://zxty.mrhkj.com/assets/index/myhome/next.png"></image>
+		</view>
+		<view class="tab_card">
+			<view class="tab_card_item " wx:for="{{tabCard}}" wx:key="*this" bindtap="toMyOrder" data-orderType="{{item.orderType}}">
+				<image src="http://zxty.mrhkj.com/assets/index/myhome/{{item.icon}}.png" mode="widthFix"></image>
+				<text>{{item.msg}}</text>
+			</view>
+		</view>
+		<view class="link_list">
+			<view class="link_item" wx:for="{{navList}}" wx:key="index">
+				<navigator class="link_item" url="{{item.url}}">
+					<view class="link_item_iconbox">
+						<image style="width: 40rpx; vertical-align: middle; margin-right: 30rpx;" src="http://zxty.mrhkj.com/assets/index/myhome/{{item.icon}}.png" mode="widthFix"></image>
+						<text class="link_item_name"> {{item.name}}</text>
+					</view>
+					<image style="width: 16rpx;" src="http://zxty.mrhkj.com/assets/index/myhome/next.png" mode="widthFix"></image>
+				</navigator>
+			</view>
+		</view>
+	</view>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<view class="box_pop flex_coum_center" wx:if='{{isShowLoginBox}}'>
+	<view class="popcontent">
+		<view class="flex_center sq_title">提示</view>
+		<view class="sq_content flex_center">您还未登录，请登录</view>
+		<button class="sss" open-type="getUserInfo" bindgetuserinfo="userLogin">登录</button>
+	</view>
+</view>
+
+
+
+<home-item selected='4' />

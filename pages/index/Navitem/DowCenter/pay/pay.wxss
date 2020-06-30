@@ -1,0 +1,109 @@
+.Pay {
+  width: 100%;
+  background: #EAEBF0;
+  height: 100%;
+}
+
+.Pay_hrader {
+  width: 100%;
+  height: 235rpx;
+  background: #EC9D01;
+  border-radius: 0 0 30rpx 30rpx;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Pay_hrader_mun {
+  width: 617rpx;
+  height: 34rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.Pay_hrader_text {
+  margin-top: 30rpx;
+  margin-bottom: 63rpx;
+  box-sizing: border-box;
+  padding: 0rpx 30rpx;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 28rpx;
+  font-family: SimHei;
+  letter-spacing: 4rpx;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+
+}
+
+
+
+.line {
+  width: 228rpx;
+  height: 5rpx;
+  background: #fff;
+}
+
+.Pay_main {
+  width: 690rpx;
+  box-sizing: border-box;
+  height: 1100rpx;
+  margin: 0 auto;
+  background: #fff;
+  margin-top: -54rpx;
+  padding: 11rpx 23rpx 0 23rpx;
+  border-radius: 20rpx;
+  font-family: PingFang SC;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.Pay_main_title{
+font-size: 36rpx;
+margin-bottom: 30rpx;
+}
+.Pay_main_price{
+  color: #EC8401;
+  margin-bottom: 30rpx;
+}
+.Pay_main_date{
+  font-size: 24rpx;
+  color: #999;
+  background:#F5F6F8;
+  padding: 14rpx 23rpx;
+  border-radius:30rpx;
+}
+
+
+
+.Pay_footer {
+  width: 100%;
+  height: 143rpx;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+
+
+}
+
+.Pay_footer_btn {
+  width: 443rpx;
+  height: 86rpx;
+  background: #EC8401;
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: rgba(254, 254, 254, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

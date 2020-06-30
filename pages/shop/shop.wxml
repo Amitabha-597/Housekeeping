@@ -1,0 +1,56 @@
+<view class="moreshop">
+	<Search class="moreshop_search"></Search>
+	<view class="moreshop_tabcard">
+		<view class="moreshop_tabcard_item  {{select==1?'active':''}}" data-index="1" bindtap="selectType">综合</view>
+		<view class="moreshop_tabcard_item  {{select==2?'active':''}}" data-index="2" bindtap="selectType">附近</view>
+		<view class="moreshop_tabcard_item  {{select==3?'active':''}}" data-index="3" bindtap="selectType">成交量</view>
+		<view class="moreshop_tabcard_item  {{select==4?'active':''}}" data-index="4" bindtap="selectType">好评度</view>
+		<view class="moreshop_tabcard_item  {{select==5?'active':''}}" bindtap="selectType" data-index="5">服务类型 <image class="moreshop_tabcard_item_img" src="http://zxty.mrhkj.com/assets/index/index/shoplist/selectss.png"></image>
+		</view>
+	</view>
+	<view id="moreshop_list">
+		<view wx:for="{{shoplist}}" wx:key="*this" class="goldshop_item" bindtap="toservicedetails" data-id="{{item.id}}">
+			<image wx:if="{{item.shop_type == 2}}" class="goldl" src="http://zxty.mrhkj.com/assets/index/index/shoplist/goldl.png"></image>
+			<image style="width: 100%;height:274rpx;" src="{{item.logo}}" wx:if="{{item.logo != ''}}"></image>
+			<image style="width: 100%;height:274rpx;" wx:if="{{item.logo == ''}}" src="/assets/image/index/shopdefual.jpg"></image>
+			<view class="shop_msg">
+				<view class="shop_msg_text">
+					<view class="shop_name">
+						{{item.shop_name}}</view>
+					<view class="shop_volume">
+						<image class="heart" src="http://zxty.mrhkj.com/assets/index/index/shoplist/heart.png"></image>
+						<text>好评率{{item.rate}}%</text>
+						<text>成交量{{item.deal_num}}</text>
+					</view>
+				</view>
+				<view class="shop_goshop">
+					<button>进店</button>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="shop_type " style="display:{{typeshow ? 'block' : 'none'}}">
+		<view class="shop_type_child">
+
+			<view class="shop_type_name">服务类型</view>
+			<view class="shop_type_itembox">
+				<view class="shop_type_item {{shopSelect==1?'active':''}}" bindtap="shopType" data-shopType="1">金牌店铺</view>
+				<view class="shop_type_item  {{shopSelect==2?'active':''}}" bindtap="shopType" data-shopType="2">普通店铺</view>
+				<view class="shop_type_item  {{severtypeselect==index?'active':''}}" wx:for="{{serviceType}}" wx:key="index" bindtap="severType" data-severid="{{item.id}}" data-index="{{index}}">{{item.names}}</view>
+
+			</view>
+
+			<view class="shop_type_itembtn">
+
+				<view class="shop_type_item_rest">重置</view>
+				<view class="shop_type_item_see" bindtap="seeShop">查看店铺</view>
+			</view>
+
+		</view>
+	</view>
+	
+	
+	
+	
+</view>
+<home-item wx:if="{{bottomShow}}" selected='1' />

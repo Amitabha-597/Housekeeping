@@ -1,0 +1,44 @@
+<!--pages/myhome/MyHomeComs/ServiceAddress/index.wxml-->
+<view class="ServiceAddress">
+
+
+	<view class="ServiceAddress_card" wx:for="{{adresslist}}" wx:key="id" bindtap="selectaddress" data-id="{{item.id}}" data-item="{{item}}">
+		<view class="ServiceAddress_card_top">
+			<view class="ServiceAddress_card_name">
+				<view>
+					<text>雇主：</text>
+					<text>{{item.name}}</text>
+				</view>
+				<view>{{item.mobile}}</view>
+			</view>
+			<view class="ServiceAddress_card_add">{{item.province}}{{item.city}}{{item.area}}{{item.area}}{{item.address}}{{item.house_number}}</view>
+		</view>
+		<view class="ServiceAddress_card_bottom">
+			<view class="ServiceAddress_card_bottom_Left" catchtap="defualAdress" data-id="{{item.id}}">
+				<view class="ischeck" wx:if="{{item.is_default != 1}}"  > </view>
+				<image wx:if="{{item.is_default == 1}}" style="width:31rpx;vertical-align: middle;margin-right: 17rpx;" src="http://zxty.mrhkj.com/assets/index/myhome/ServiceAddress/caheck.png" mode="widthFix"></image>
+				<text>默认地址</text>
+			</view>
+			<view class="ServiceAddress_card_bottom_Right">
+				<view class="ServiceAddress_card_bottom_Rightbox" catchtap="changeAdress"  data-item="{{item.id}}">
+					<image style="width:27rpx;vertical-align: middle; margin-right: 20rpx;" src="http://zxty.mrhkj.com/assets/index/myhome/ServiceAddress/edit.png" mode="widthFix"></image>
+					<text >编辑</text>
+				</view>
+				<view class="ServiceAddress_card_bottom_Rightbox" catchtap="DeltAddress" data-id="{{item.id}}">
+					<image style="width:27rpx;vertical-align: middle; margin-right: 20rpx;" src="http://zxty.mrhkj.com/assets/index/myhome/ServiceAddress/del.png" mode="widthFix"></image>
+					<text>删除</text>
+				</view>
+			</view>
+
+		</view>
+	</view>
+</view>
+<view class="AddAddress">
+
+	<view class="AddAddress_child">
+		<navigator class="AddAddress_child" url="/pages/myhome/MyHomecompontes/AddNewAddress/index">
+			<image style="width:40rpx;margin-right: 36rpx;" src="http://zxty.mrhkj.com/assets/index/myhome/ServiceAddress/add.png" mode="widthFix"></image>
+			<text>添加新地址</text>
+		</navigator>
+	</view>
+</view>

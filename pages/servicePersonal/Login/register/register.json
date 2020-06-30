@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "SelectShop":"../register/RegisterCom/SelectShop/actionsheet",
+    "SelectJob":"../register/RegisterCom/SelectJob/actionsheet"
+  },
+  "navigationBarTitleText": "家政人员注册"
+}

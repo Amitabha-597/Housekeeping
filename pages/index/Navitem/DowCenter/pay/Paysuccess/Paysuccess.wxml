@@ -1,0 +1,29 @@
+<view class="Paysuccess">
+	<view class="Paysuccess_hrader">
+		<view class="Paysuccess_hrader_mun">
+			<image style="width:34rpx" src="/assets/image/index/Step1.png" mode="widthFix"></image>
+			<view class="line"></view>
+			<image style="width:34rpx" src="/assets/image/index/Step201.png" mode="widthFix"></image>
+			<view class="line"></view>
+			<image style="width:34rpx" src="/assets/image/index/Step3.png" mode="widthFix"></image>
+		</view>
+		<view class="Paysuccess_hrader_text">
+			<text>店铺资料</text>
+			<text>更多资料</text>
+			<text>入驻费用</text>
+		</view>
+	</view>
+	<view class="Paysuccess_main">
+		<image src="../../DowCenterImg/sucsseebj.png"></image>
+		<view class="Paysuccess_main_shop">
+			<image style="width:179rpx" src="/assets/image/index/shopicon.png" mode="widthFix"></image>
+			<view class="Paysuccess_main_msg">恭喜你，入驻成功</view>
+			<view class="Paysuccess_main_otice">稍后平台客服会联系并告知您商家账号</view>
+
+
+		</view>
+	</view>
+	<view class="Paysuccess_footer">
+			<view class="Paysuccess_footer_btn" bindtap="ToIndex">完成</view>
+	</view>
+</view>

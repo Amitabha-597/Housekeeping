@@ -1,0 +1,197 @@
+<wxs module="filter" src="../../../../utils/timer.wxs"></wxs>
+<view class="MyCollage">
+
+	<view class='MyCollage_container'>
+		<!--Tab布局-->
+		<view class='title'>
+			<view class='titleSel' bindtap='titleClick' data-idx='0'>
+				<view class="titleSel_name" style="color:{{0 == currentIndex ? '#EC8401' : ''}}">全部</view>
+				<hr class="{{0 == currentIndex ? 'headerLineSel' : 'headerLineUnsel'}}" />
+			</view>
+
+			<view class='titleSel' bindtap='titleClick' data-idx='1'>
+				<view class="titleSel_name" style="color:{{1 == currentIndex ? '#EC8401' : ''}}">待成团</view>
+				<hr class="{{1 == currentIndex ? 'headerLineSel' : 'headerLineUnsel'}} " />
+			</view>
+			<view class='titleSel' bindtap='titleClick' data-idx='2'>
+				<view style="color:{{2 == currentIndex ? '#EC8401' : ''}}" class="titleSel_name">已成团</view>
+				<hr class="{{2 == currentIndex ? 'headerLineSel' : 'headerLineUnsel'}} " />
+			</view>
+			<view class='titleSel' bindtap='titleClick' data-idx='3'>
+				<view class="titleSel_name" style="color:{{3 == currentIndex ? '#EC8401' : ''}}">拼团失败</view>
+				<hr class="{{3 == currentIndex ? 'headerLineSel' : 'headerLineUnsel'}} " />
+			</view>
+
+		</view>
+
+		<!--内容布局-->
+		<swiper class='swiper' bindchange='pagechange' current='{{currentIndex}}'>
+			<!-- 全部 -->
+			<swiper-item class='swiper'>
+				<view class="MyCollage_box">
+					<view class="MyCollage_all" wx:for="{{collagelist}}" wx:key="id">
+						<view class="MyCollage_all_item">
+							<view class="MyCollage_all_item_imgbox">
+								<image style="width:201rpx;height:186rpx" src="{{item.thumbnail}}"></image>
+								<view class="MyCollage_outtime">
+									<text>倒计时：</text>
+									<text>{{filter.getDateTime(item.end_time)}}</text>
+								</view>
+
+							</view>
+							<view class="MyCollage_all_item_text">
+								<view class="MyCollage_all_item_text_conent">{{item.name}}</view>
+								<view class="MyCollage_all_item_text_msg">
+									<view>
+										<text style="font-size:24rpx;">{{item.collage_where}}人团</text>
+										<text style="color: #EC8401;font-size:36rpx;">￥{{item.collage_price}}</text>
+										<text style="text-decoration:line-through;font-size:22rpx;">¥{{item.money}}</text>
+									</view>
+									<text style="color: #EC8401;" wx:if="{{item.status == 1}}">待成团</text>
+									<text style="color: #EC8401;" wx:if="{{item.status == 2}}">已成团</text>
+									<text style="color: #EC8401;" wx:if="{{item.status == 3}}">拼团失败</text>
+								</view>
+
+
+							</view>
+						</view>
+						<view class="MyCollage_all_btnbox">
+							<view class="MyCollage_all_btnA">查看订单详情</view>
+							<view class="MyCollage_all_btnB">邀请好友拼团</view>
+						</view>
+					</view>
+					<view class="AddCollage">
+						<view class="AddCollage_item">添加新的拼团</view>
+					</view>
+				</view>
+			</swiper-item>
+			<!-- 待成团 -->
+			<swiper-item class='swiper' class='swiper'>
+					<block wx:if="{{item.status == 1}}"  wx:for="{{collagelist}}" wx:key="id">
+				<view class="MyCollage_box">
+						<view class="MyCollage_all">
+							<view class="MyCollage_all_item">
+								<view class="MyCollage_all_item_imgbox">
+									<image style="width:201rpx;height:186rpx" src="{{item.thumbnail}}"></image>
+									<view class="MyCollage_outtime">
+										<text>倒计时：</text>
+										<text>{{filter.getDateTime(item.end_time)}}</text>
+									</view>
+
+								</view>
+								<view class="MyCollage_all_item_text">
+									<view class="MyCollage_all_item_text_conent">{{item.name}}</view>
+									<view class="MyCollage_all_item_text_msg">
+										<view>
+											<text style="font-size:24rpx;">{{item.collage_where}}人团</text>
+											<text style="color: #EC8401;font-size:36rpx;">￥{{item.collage_price}}</text>
+											<text style="text-decoration:line-through;font-size:22rpx;">¥{{item.money}}</text>
+										</view>
+										<text style="color: #EC8401;" wx:if="{{item.status == 1}}">待成团</text>
+										<text style="color: #EC8401;" wx:if="{{item.status == 2}}">已成团</text>
+										<text style="color: #EC8401;" wx:if="{{item.status == 3}}">拼团失败</text>
+									</view>
+
+
+								</view>
+							</view>
+							<view class="MyCollage_all_btnbox">
+								<view class="MyCollage_all_btnA">查看订单详情</view>
+								<view class="MyCollage_all_btnB">邀请好友拼团</view>
+							</view>
+						</view>
+						<view class="AddCollage">
+							<view class="AddCollage_item">添加新的拼团</view>
+						</view>
+				</view>
+					</block>
+			</swiper-item>
+			<!-- 已成团 -->
+			<swiper-item class='swiper' class='swiper'>
+					<block wx:if="{{item.status == 2}}" wx:for="{{collagelist}}" wx:key="id">
+				<view class="MyCollage_box" >
+						<view class="MyCollage_all">
+							<view class="MyCollage_all_item">
+								<view class="MyCollage_all_item_imgbox">
+									<image style="width:201rpx;height:186rpx" src="{{item.thumbnail}}"></image>
+									<view class="MyCollage_outtime">
+										<text>倒计时：</text>
+										<text>{{filter.getDateTime(item.end_time)}}</text>
+									</view>
+
+								</view>
+								<view class="MyCollage_all_item_text">
+									<view class="MyCollage_all_item_text_conent">{{item.name}}</view>
+									<view class="MyCollage_all_item_text_msg">
+										<view>
+											<text style="font-size:24rpx;">{{item.collage_where}}人团</text>
+											<text style="color: #EC8401;font-size:36rpx;">￥{{item.collage_price}}</text>
+											<text style="text-decoration:line-through;font-size:22rpx;">¥{{item.money}}</text>
+										</view>
+										<text style="color: #EC8401;" wx:if="{{item.status == 1}}">待成团</text>
+										<text style="color: #EC8401;" wx:if="{{item.status == 2}}">已成团</text>
+										<text style="color: #EC8401;" wx:if="{{item.status == 3}}">拼团失败</text>
+									</view>
+
+
+								</view>
+							</view>
+							<view class="MyCollage_all_btnbox">
+								<view class="MyCollage_all_btnA">查看订单详情</view>
+								<view class="MyCollage_all_btnB">邀请好友拼团</view>
+							</view>
+						</view>
+						<view class="AddCollage">
+							<view class="AddCollage_item">添加新的拼团</view>
+						</view>
+				</view>
+					</block>
+			</swiper-item>
+			<!-- 拼团失败 -->
+			<swiper-item class='swiper' class='swiper'>
+					<block wx:if="{{item.status == 3}}" wx:for="{{collagelist}}" wx:key="id">
+				<view class="MyCollage_box" >
+						<view class="MyCollage_all">
+							<view class="MyCollage_all_item">
+								<view class="MyCollage_all_item_imgbox">
+									<image style="width:201rpx;height:186rpx" src="{{item.thumbnail}}"></image>
+									<view class="MyCollage_outtime">
+										<text>倒计时：</text>
+										<text>{{filter.getDateTime(item.end_time)}}</text>
+									</view>
+
+								</view>
+								<view class="MyCollage_all_item_text">
+									<view class="MyCollage_all_item_text_conent">{{item.name}}</view>
+									<view class="MyCollage_all_item_text_msg">
+										<view>
+											<text style="font-size:24rpx;">{{item.collage_where}}人团</text>
+											<text style="color: #EC8401;font-size:36rpx;">￥{{item.collage_price}}</text>
+											<text style="text-decoration:line-through;font-size:22rpx;">¥{{item.money}}</text>
+										</view>
+										<text style="color: #EC8401;" wx:if="{{item.status == 1}}">待成团</text>
+										<text style="color: #EC8401;" wx:if="{{item.status == 2}}">已成团</text>
+										<text style="color: #EC8401;" wx:if="{{item.status == 3}}">拼团失败</text>
+									</view>
+
+
+								</view>
+							</view>
+							<view class="MyCollage_all_btnbox">
+								<view class="MyCollage_all_btnA">查看订单详情</view>
+								<view class="MyCollage_all_btnB">邀请好友拼团</view>
+							</view>
+						</view>
+						<view class="AddCollage">
+							<view class="AddCollage_item">添加新的拼团</view>
+						</view>
+				</view>
+					</block>
+			</swiper-item>
+		</swiper>
+	</view>
+
+
+
+
+</view>

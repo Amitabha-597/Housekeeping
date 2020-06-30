@@ -1,0 +1,209 @@
+.ConfirmOrder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: #F1F2F2;
+  height: 100%;
+}
+
+.OrderMsg {
+  width: 690rpx;
+  height: 154rpx;
+  background: #fff;
+  border-radius: 20rpx;
+  margin: 30rpx 0;
+  display: flex;
+  justify-content: space-between;
+
+}
+.OrdeOptionr_itemListinput{
+  text-indent: 20rpx;
+  margin-left:30rpx;
+}
+
+.OrderMsg_Left {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 45rpx;
+  width: 56rpx;
+  height: 100%;
+}
+
+.OrderMsg_Middle {
+  width: 587rpx;
+  height: 100%;
+
+}
+
+.OrderUser {
+  padding: 37rpx 0 20rpx 0;
+  width: 100%;
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(51, 51, 51, 1);
+  display: flex;
+  justify-content: space-between;
+}
+
+.OrderAdd {
+  font-size: 22rpx;
+  font-family: SimHei;
+  font-weight: 400;
+  color: rgba(112, 110, 110, 1);
+}
+
+.OrderMsg_Right {
+  width: 45rpx;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.OrdeOptionr {
+  box-sizing: border-box;
+  width: 690rpx;
+  padding: 40rpx 20rpx 50rpx 30rpx;
+  background: #fff;
+  border-radius: 20rpx;
+
+}
+
+.OrdeContent {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.OrdeContent_img {
+  margin-right: 28rpx;
+}
+
+.OrdeContent_txtcont {
+  font-size: 32rpx;
+  font-family: SimHei;
+  font-weight: 400;
+  color: rgba(34, 34, 34, 1);
+  margin-bottom: 5rpx;
+
+}
+
+.OrdeContent_txtname {
+  font-size: 25rpx;
+  font-family: SimHei;
+  font-weight: 400;
+  padding: 6rpx 0;
+
+
+  color: rgba(153, 153, 153, 1);
+}
+
+.OrdeContent_txtnum {
+  margin-top: 5rpx;
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(236, 132, 1, 1);
+  display: flex;
+  justify-content: space-between;
+}
+
+.OrdeContent_txtcut {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.OrdeContent_txtval {
+  width: 68rpx;
+  height: 34rpx;
+  text-align: center;
+  background: #F2F2F2;
+  line-height: 38rpx;
+  color: #333333;
+}
+
+.OrdeOptionr_item {
+  width: 100%;
+  margin-top: 50rpx;
+  background: #fff;
+
+}
+
+.OrdeOptionr_itemList {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: rgba(51, 51, 51, 1);
+  padding: 20rpx 0;
+  padding-right: 20rpx;
+
+
+}
+
+.OrdeOptionr_itemListb {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: rgba(51, 51, 51, 1);
+  padding: 20rpx 0;
+  padding-right: 20rpx;
+
+}
+
+.Gratuity {
+  padding-left: 20rpx;
+  font-size: 26rpx;
+  color: #999999;
+  text-indent: 30rpx;
+}
+
+.placeOrder {
+  background: #fff;
+  width: 750rpx;
+  height: 110rpx;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+padding: 0 30rpx;
+box-sizing: border-box;}
+
+.placeOrdermun {
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(153, 153, 153, 1);
+  margin-right: 20rpx;
+}
+
+.placeOrderprice {
+  margin-right: 20rpx;
+  font-size: 28rpx;
+  color: #EC8401;
+  font-family: PingFang SC;
+  font-weight: bold
+}
+
+.placeOrderbtn {
+  width: 188rpx;
+  height: 60rpx;
+  background: #EC9C01;
+  border-radius: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1)
+}

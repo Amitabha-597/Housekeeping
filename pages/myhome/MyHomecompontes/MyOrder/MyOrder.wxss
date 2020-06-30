@@ -1,0 +1,185 @@
+.Myorder_main {
+  height: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.title {
+  width: 100%;
+  height: 93rpx;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+ 
+}
+
+.titleSel {
+  height: 93rpx;
+  width: 20%;
+  color: #A9A9A9;
+  font-size: 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: PingFang SC;
+  font-weight: bold;
+}
+
+.titleSel_name {
+  height: 87rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.headerLineSel {
+  background: #EC8401;
+  height: 4rpx;
+  width: 53rpx;
+  position: relative;
+}
+
+.headerLineUnsel {
+  background: #fff;
+  height: 4rpx;
+  width: 53rpx;
+  position: relative;
+}
+
+.swiper {
+  width: 100%;
+  flex: 1;
+  height: 92vh;
+  overflow: scroll;
+}
+
+.Myorder_line {
+  width: 100%;
+  height: 10rpx;
+  background: #F1F2F2;
+}
+
+.OrderBox {
+  font-size: 30rpx;
+  font-family: SimHei;
+  font-weight: 400;
+  color: rgba(34, 34, 34, 1);
+}
+.order_Tobepaid{
+border-bottom: 10rpx solid #F1F2F2;
+}
+
+
+
+.order_Tobepaid_title {
+  box-sizing: border-box;
+  padding: 0 39rpx 0 36rpx;
+  display: flex;
+  justify-content: space-between;
+  height: 84rpx;
+  align-items: center;
+  border-bottom: 1rpx solid #F1F2F2;
+}
+
+.OrderBox_conent {
+  height: 220rpx;
+  padding: 0 39rpx 0 37rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.OrderBox_conent_img {
+  width: 160rpx;
+  height: 160rpx;
+}
+
+.OrderBox_conent_txt {
+  height: 160rpx;
+  width: 515rpx;
+  margin-left: 35rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.OrderBo_ServiceContent {
+  font-size: 30rpx;
+  font-family: SimHei;
+  font-weight: 400;
+}
+
+.conent_txt_info {
+  font-size: 22rpx;
+  color: rgba(153, 153, 153, 1);
+}
+
+.conent_txt_price {
+  width: 100%;
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(236, 132, 1, 1);
+  display: flex;
+  justify-content: space-between;
+}
+
+.OrderBox_Statistics {
+  box-sizing: border-box;
+  height: 78rpx;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 30rpx;
+  color: #767676;
+  font-size: 28rpx;
+  font-weight: 400;
+  border-bottom: 1rpx solid #F1F2F2;
+  border-top: 1rpx solid #F1F2F2;
+}
+
+.OrderBox_Statistics>view:first-child {
+  margin-right: 30rpx;
+}
+
+.OrderBox_operation {
+  height: 86rpx;
+  width: 100%;
+  display: flex;
+  padding-right: 35rpx;
+  align-items: center;
+  justify-content: flex-end;
+  box-sizing: border-box;
+
+
+}
+
+.OrderBox_operation>view {
+  width: 128rpx;
+  height: 39rpx;
+  border-radius: 20rpx;
+  font-size: 24rpx;
+  font-family: SimHei;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 30rpx;
+}
+
+.OrderBox_operationA {
+  border: 1rpx solid #F1F2F2;
+  color: #767676;
+
+}
+
+.OrderBox_operationB {
+  color: #ec8401;
+  border: 1rpx solid #ec8401;
+
+}

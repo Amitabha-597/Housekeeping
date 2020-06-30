@@ -1,0 +1,163 @@
+.newAdds {
+  width: 100%;
+  height: 100%;
+  background: #F1F2F2;
+  padding-top: 24rpx;
+}
+
+.newAddsCard {
+  margin-bottom: 24rpx;
+  height: 578rpx;
+  width: 100%;
+  background: #fff;
+  font-size: 32rpx;
+  color: #3E3D3D;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 0 31rpx;
+
+}
+
+.newAddsCard>view {
+  display: flex;
+  justify-content: space-between;
+}
+
+.newAddsCard>view>text {
+  width: 200rpx;
+}
+
+.newAddsCard>view>input {
+  color: #999999;
+  font-size: 30rpx;
+  font-family: SimHei;
+}
+
+
+
+.newAddressChild {
+  width: 586rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 30rpx;
+  font-family: SimHei;
+}
+
+.newAddsCardVerificationCode {
+  width: 98%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.newAddsCardVerificationCode>input {
+  font-size: 30px;
+  font-family: SimHei;
+  font-weight: 400;
+  color: rgba(153, 153, 153, 1);
+  
+}
+
+.getVerificationCode {
+  color: #FA8A3F;
+}
+
+.newAddressChild>view {
+  color: #FF743D;
+}
+
+.newAddressChild>input {
+  width: 360rpx;
+}
+
+.newACRbox {
+  width: 468rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sasdas {
+  display: flex;
+}
+
+
+.newACRboxpicker {
+  color: #999999;
+  font-size: 30rpx;
+  font-family: SimHei;
+}
+
+.SetDefaultAddress {
+  height: 92rpx;
+  width: 100%;
+  background: rgba(255, 255, 255, 1);
+  font-size: 32rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(18, 18, 18, 1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 31rpx 0 22rpx;
+  box-sizing: border-box;
+}
+
+.wx-switch-input {
+  width: 108rpx !important;
+  height: 62rpx !important;
+  background: #E5E5E5 !important;
+  border: #E5E5E5 !important;
+  box-sizing: border-box;
+
+}
+
+.wx-switch-input::before {
+  width: 108rpx !important;
+  height: 62rpx !important;
+}
+
+.wx-switch-input::after {
+  width: 50rpx !important;
+  height: 50rpx !important;
+  margin-top: 6rpx;
+}
+
+
+.newAddFooter {
+  height: 120rpx;
+  width: 100%;
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+
+}
+
+.newAddPreservationbox {
+  height: 90rpx;
+  width: 100%;
+  position: fixed;
+  bottom: 96rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.newAddPreservation {
+  height: 90rpx;
+  width: 690rpx;
+  background: #FA8A3F;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+  border-radius: 10rpx;
+}

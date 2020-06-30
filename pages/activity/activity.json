@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "Group":"./Actcomponent/group/group",
+    "Setmeal":"./Actcomponent/setmeal/setmeal",
+    "Coupon":"./Actcomponent/coupon/coupon",
+    "home-item": "../../../custom-tab-bar/index"
+
+  },
+  "navigationBarTitleText": "优惠活动",
+  "enablePullDownRefresh":true,
+  "backgroundTextStyle":"dark"
+}

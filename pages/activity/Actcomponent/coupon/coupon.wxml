@@ -1,0 +1,28 @@
+<wxs module="filter" src="../../../../utils/timer.wxs"></wxs>
+<view class="coupon">
+	<view class="coupon_card" wx:for="{{couponlist}}" wx:key="index" wx:if="{{couponlist !=''}}">
+		<view class="coupon_card_left">
+			<view class="coupon_card_left_text">
+				<view class="coupon_card_left_price">
+					<view class="coupon_card_left_price01">¥{{item.discount}}</view>
+					<view class="coupon_card_left_price02">满{{item.use_where}}使用</view>
+				</view>
+				<view class="coupon_card_left_msg">	
+					<view class="coupon_card_left_msg_name">{{item.biz_name}}</view>
+					<view class="coupon_card_left_msg_con">
+						<view>{{item.desc}}</view>
+						<view>{{filter.getDateTime(item.star_time)}} - {{filter.getDateTime(item.end_time)}}</view>
+					</view>
+				</view>
+			</view>
+			<image class="coupon_card_left_img" src="http://zxty.mrhkj.com/assets/index/activity/actcard1.png"></image>
+			<view class="coupon_card_left_icon1"></view>
+
+		</view>
+		<view class="coupon_card_right" bindtap="Receive" data-coupon_id="{{item.id}}">
+			<view>立即</view>
+			<view>领取</view>
+		</view>
+
+	</view>
+</view>

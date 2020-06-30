@@ -1,0 +1,270 @@
+<wxs module="filter" src="../../../utils/timer.wxs"></wxs>
+
+<view class="order">
+	<view class='title'>
+		<view class='titleSel' bindtap='titleClick' data-idx='0'>
+			<view class="titleSel_name" style="color:{{0 == currentIndex ? '#EC8401' : ''}}">全部</view>
+			<hr class="{{0 == currentIndex ? 'headerLineSel' : 'headerLineUnsel'}}" />
+		</view>
+
+		<view class='titleSel' bindtap='titleClick' data-idx='1'>
+			<view class="titleSel_name" style="color:{{1 == currentIndex ? '#EC8401' : ''}}">待上门</view>
+			<hr class="{{1 == currentIndex ? 'headerLineSel' : 'headerLineUnsel'}} " />
+		</view>
+		<view class='titleSel' bindtap='titleClick' data-idx='2'>
+			<view style="color:{{2 == currentIndex ? '#EC8401' : ''}}" class="titleSel_name">待服务</view>
+			<hr class="{{2 == currentIndex ? 'headerLineSel' : 'headerLineUnsel'}} " />
+		</view>
+		<view class='titleSel' bindtap='titleClick' data-idx='3'>
+			<view style="color:{{3 == currentIndex ? '#EC8401' : ''}}" class="titleSel_name">已完成</view>
+			<hr class="{{3 == currentIndex ? 'headerLineSel' : 'headerLineUnsel'}} " />
+		</view>
+		<view class='titleSel' bindtap='titleClick' data-idx='4'>
+			<view style="color:{{4 == currentIndex ? '#EC8401' : ''}}" class="titleSel_name">已评价</view>
+			<hr class="{{4 == currentIndex ? 'headerLineSel' : 'headerLineUnsel'}} " />
+		</view>
+
+
+
+	</view>
+	<swiper class='swiper' bindchange='pagechange' current='{{currentIndex}}'>
+		<swiper-item class='swiper'>
+			<view class="orderItem" wx:for="{{writeIndoorlust}}" wx:key="*this">
+				<view class="orderItemTitle">
+					<view>
+						<text>订单编号：</text>
+						<text>{{item.order_no}}</text>
+					</view>
+					<view style="color:#EC8401" wx:if="{{item.status == 0}}">全部 </view>
+					<view style="color:#EC8401" wx:if="{{item.status == 1}}">待上门</view>
+					<view style="color:#EC8401" wx:if="{{item.status == 2}}">待服务</view>
+					<view style="color:#EC8401" wx:if="{{item.status == 3}}">待服务</view>
+					<view style="color:#EC8401" wx:if="{{item.status == 4}}">已评价</view>
+
+				</view>
+				<view class="orderItemconect">
+					<view class="orderItemconectimg">
+						<image style="width:100%;height:100%" src="{{item.thumbnail}}"></image>
+					</view>
+					<view class="orderItemconectmsg">
+						<view class="orderItemconectmsgtitle">{{item.title}}</view>
+						<view class="orderItemconectmsgCompany">
+							<text>{{item.shop_name}}</text>
+							<text>{{item.tag}}</text>
+							<text>{{item.area}}</text>
+						</view>
+						<view class="orderItemconectmsgdate">
+							<text>预约上门服务时间：</text>
+							<text style="color:#EC840">{{filter.getDateTime(item.subscribe_time)}} </text>
+						</view>
+					</view>
+				</view>
+				<view class="orderItemadress">
+					<view>
+						<text style="color:#767676">服务地址：</text>
+						<text>{{item.address}}</text>
+						<image style="width:18rpx; height:30rpx; margin-left: 30rpx;" src="http://zxty.mrhkj.com/assets/servicePersonal/adressicon.png"></image>
+					</view>
+				</view>
+				<view class="orderItemBtn">
+					<view class="orderItemBtnA" wx:if="{{item.status == 1}}">联系客户</view>
+					<view class="orderItemBtnB" wx:if="{{item.status == 1}}" bindtap="reachDoor" data-orderno="{{item.order_no}}">到达门口</view>
+					<view class="orderItemBtnA" wx:if="{{item.status == 2}}" bindtap="startService" data-orderno="{{item.order_no}}">开始服务</view>
+					<view class="orderItemBtnB" wx:if="{{item.status == 2}} " bindtap="serviceCompletent" data-orderno="{{item.order_no}}">服务完成</view>
+					<view class="orderItemBtnA" wx:if="{{item.status == 3}}" bindtap="seeOrder" data-orderno="{{item.order_no}}">查看订单</view>
+					<view class="orderItemBtnB" wx:if="{{item.status == 3}}" bindtap="remindEva">提醒评价</view>
+					<view class="orderItemBtnA" wx:if="{{item.status == 4}}" bindtap="seeOrder" data-orderno="{{item.order_no}}">查看订单</view>
+
+
+				</view>
+			</view>
+		</swiper-item>
+		<!-- 待上门 -->
+		<swiper-item class='swiper'>
+			<block wx:if="{{item.status == 1}}" wx:for="{{writeIndoorlust}}" wx:key="*this">
+				<view class="orderItem">
+					<view class="orderItemTitle">
+						<view>
+							<text>订单编号：</text>
+							<text>{{item.order_no}}</text>
+						</view>
+						<view style="color:#EC8401" wx:if="{{item.status == 0}}">全部 </view>
+						<view style="color:#EC8401" wx:if="{{item.status == 1}}">待上门</view>
+						<view style="color:#EC8401" wx:if="{{item.status == 2}}">待服务</view>
+						<view style="color:#EC8401" wx:if="{{item.status == 3}}">待服务</view>
+						<view style="color:#EC8401" wx:if="{{item.status == 4}}">已评价</view>
+
+					</view>
+					<view class="orderItemconect">
+						<view class="orderItemconectimg">
+							<image style="width:100%;height:100%" src="{{item.thumbnail}}"></image>
+						</view>
+						<view class="orderItemconectmsg">
+							<view class="orderItemconectmsgtitle">{{item.title}}</view>
+							<view class="orderItemconectmsgCompany">
+								<text>{{item.shop_name}}</text>
+								<text>{{item.tag}}</text>
+								<text>{{item.area}}</text>
+							</view>
+							<view class="orderItemconectmsgdate">
+								<text>预约上门服务时间：</text>
+								<text style="color:#EC840">{{filter.getDateTime(item.subscribe_time)}} </text>
+							</view>
+						</view>
+					</view>
+					<view class="orderItemadress">
+						<view>
+							<text style="color:#767676">服务地址：</text>
+							<text>{{item.address}}</text>
+							<image style="width:18rpx; height:30rpx; margin-left: 30rpx;" src="http://zxty.mrhkj.com/assets/servicePersonal/adressicon.png"></image>
+						</view>
+					</view>
+					<view class="orderItemBtn">
+						<view class="orderItemBtnA" wx:if="{{item.status == 1}}">联系客户</view>
+						<view class="orderItemBtnB" wx:if="{{item.status == 1}}" bindtap="reachDoor" data-orderno="{{item.order_no}}">到达门口</view>
+					</view>
+				</view>
+			</block>
+
+		</swiper-item>
+		<!-- 待服务 -->
+		<swiper-item class='swiper'>
+			<block wx:if="{{item.status == 2}}" wx:for="{{writeIndoorlust}}" wx:key="*this">
+				<view class="orderItem">
+					<view class="orderItemTitle">
+						<view>
+							<text>订单编号：</text>
+							<text>{{item.order_no}}</text>
+						</view>
+						<view style="color:#EC8401" wx:if="{{item.status == 0}}">全部 </view>
+						<view style="color:#EC8401" wx:if="{{item.status == 1}}">待上门</view>
+						<view style="color:#EC8401" wx:if="{{item.status == 2}}">待服务</view>
+						<view style="color:#EC8401" wx:if="{{item.status == 3}}">已完成</view>
+						<view style="color:#EC8401" wx:if="{{item.status == 4}}">已评价</view>
+
+					</view>
+					<view class="orderItemconect">
+						<view class="orderItemconectimg">
+							<image style="width:100%;height:100%" src="{{item.thumbnail}}"></image>
+						</view>
+						<view class="orderItemconectmsg">
+							<view class="orderItemconectmsgtitle">{{item.title}}</view>
+							<view class="orderItemconectmsgCompany">
+								<text>{{item.shop_name}}</text>
+								<text>{{item.tag}}</text>
+								<text>{{item.area}}</text>
+							</view>
+							<view class="orderItemconectmsgdate">
+								<text>预约上门服务时间：</text>
+								<text style="color:#EC840">{{filter.getDateTime(item.subscribe_time)}} </text>
+							</view>
+						</view>
+					</view>
+					<view class="orderItemadress">
+						<view>
+							<text style="color:#767676">服务地址：</text>
+							<text>{{item.address}}</text>
+							<image style="width:18rpx; height:30rpx; margin-left: 30rpx;" src="http://zxty.mrhkj.com/assets/servicePersonal/adressicon.png"></image>
+						</view>
+					</view>
+					<view class="orderItemBtn">
+						<view class="orderItemBtnA" wx:if="{{item.status == 2}}" bindtap="startService" data-orderno="{{item.order_no}}">开始服务</view>
+						<view class="orderItemBtnB" wx:if="{{item.status == 2}} " bindtap="serviceCompletent" data-orderno="{{item.order_no}}">服务完成</view>
+					</view>
+				</view>
+			</block>
+
+		</swiper-item>
+		<!-- 已完成 -->
+		<swiper-item class='swiper'>
+			<block wx:if="{{item.status == 3}}" wx:for="{{writeIndoorlust}}" wx:key="*this">
+				<view class="orderItem">
+					<view class="orderItemTitle">
+						<view>
+							<text>订单编号：</text>
+							<text>{{item.order_no}}</text>
+						</view>
+						<view style="color:#EC8401" wx:if="{{item.status == 3}}">已完成</view>
+					</view>
+					<view class="orderItemconect">
+						<view class="orderItemconectimg">
+							<image style="width:100%;height:100%" src="{{item.thumbnail}}"></image>
+						</view>
+						<view class="orderItemconectmsg">
+							<view class="orderItemconectmsgtitle">{{item.title}}</view>
+							<view class="orderItemconectmsgCompany">
+								<text>{{item.shop_name}}</text>
+								<text>{{item.tag}}</text>
+								<text>{{item.area}}</text>
+							</view>
+							<view class="orderItemconectmsgdate">
+								<text>预约上门服务时间：</text>
+								<text style="color:#EC840">{{filter.getDateTime(item.subscribe_time)}} </text>
+							</view>
+						</view>
+					</view>
+					<view class="orderItemadress">
+						<view>
+							<text style="color:#767676">服务地址：</text>
+							<text>{{item.address}}</text>
+							<image style="width:18rpx; height:30rpx; margin-left: 30rpx;" src="http://zxty.mrhkj.com/assets/servicePersonal/adressicon.png"></image>
+						</view>
+					</view>
+					<view class="orderItemBtn">
+						<view class="orderItemBtnA" wx:if="{{item.status == 3}}" bindtap="seeOrder" data-orderno="{{item.order_no}}">查看订单</view>
+						<view class="orderItemBtnB" wx:if="{{item.status == 3}}" bindtap="remindEva">提醒评价</view>
+
+					</view>
+				</view>
+			</block>
+
+		</swiper-item>
+
+		<!-- 已评价 -->
+		<swiper-item class='swiper'>
+			<block wx:if="{{item.status == 4}}" wx:for="{{writeIndoorlust}}" wx:key="*this">
+				<view class="orderItem">
+					<view class="orderItemTitle">
+						<view>
+							<text>订单编号：</text>
+							<text>{{item.order_no}}</text>
+						</view>
+						<view style="color:#EC8401" wx:if="{{item.status == 4}}">已评价</view>
+
+					</view>
+					<view class="orderItemconect">
+						<view class="orderItemconectimg">
+							<image style="width:100%;height:100%" src="{{item.thumbnail}}"></image>
+						</view>
+						<view class="orderItemconectmsg">
+							<view class="orderItemconectmsgtitle">{{item.title}}</view>
+							<view class="orderItemconectmsgCompany">
+								<text>{{item.shop_name}}</text>
+								<text>{{item.tag}}</text>
+								<text>{{item.area}}</text>
+							</view>
+							<view class="orderItemconectmsgdate">
+								<text>预约上门服务时间：</text>
+								<text style="color:#EC840">{{filter.getDateTime(item.subscribe_time)}} </text>
+							</view>
+						</view>
+					</view>
+					<view class="orderItemadress">
+						<view>
+							<text style="color:#767676">服务地址：</text>
+							<text>{{item.address}}</text>
+							<image style="width:18rpx; height:30rpx; margin-left: 30rpx;" src="http://zxty.mrhkj.com/assets/servicePersonal/adressicon.png"></image>
+						</view>
+					</view>
+					<view class="orderItemBtn">
+						<view class="orderItemBtnA" wx:if="{{item.status == 4}}" bindtap="seeOrder" data-orderno="{{item.order_no}}">查看订单</view>
+
+					</view>
+				</view>
+			</block>
+
+		</swiper-item>
+	</swiper>
+</view>
+<SPtabbar>
+</SPtabbar>

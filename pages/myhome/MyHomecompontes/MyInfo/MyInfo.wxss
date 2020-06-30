@@ -1,0 +1,133 @@
+.MyInfo {
+  padding-top: 30rpx;
+  background: #F1F2F2;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(34, 34, 34, 1);
+}
+.MyInfo_hrader_avatar>image{
+  width: 103px;
+  height: 103px;
+  border-radius: 50%;
+}
+.MyInfo_hrader {
+  width: 690rpx;
+  height: 330rpx;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 8px;
+  font-size: 30rpx;
+  padding: 10rpx 15rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+}
+
+.MyInfo_hrader>view {
+  height: 104rpx;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.MyInfo_hrader_name>input {
+  width: 188rpx;
+}
+
+.MyInfo_main {
+  margin-top: 21rpx;
+  box-sizing: border-box;
+  width: 690rpx;
+  height: 410rpx;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 8px;
+  padding: 10rpx 15rpx;
+
+}
+
+.MyInfo_main>view {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.MyInfo_main_tel {
+  height: 25%;
+}
+
+.MyInfo_main_code {
+  height: 30%;
+  margin-bottom: 30rpx;
+}
+
+.MyInfo_main_tel>input {
+  width: 200rpx;
+}
+
+.MyInfo_main_code_get {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.MyInfo_main_code_get>input {
+  width: 150rpx;
+  margin-right: 20rpx;
+  font-size: 25rpx;
+}
+
+.MyInfo_main_autograph>input {
+  width: 664rpx;
+  height: 76rpx;
+  background: #F2F2F2;
+  padding: 0 31rpx;
+  box-sizing: border-box;
+
+}
+
+.MyInfo_main_autograph {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.MyInfo_main_autograph_title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20rpx;
+
+}
+
+.MyInfo_btnBox {
+  margin-top: 20rpx;
+  width: 690rpx;
+  height: 152rpx;
+  background:#fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.MyInfo_btn {
+  width: 443rpx;
+  height: 86rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(254, 254, 254, 1);
+  background: #EC8401;
+}

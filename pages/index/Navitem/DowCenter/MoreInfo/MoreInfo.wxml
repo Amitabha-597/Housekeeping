@@ -1,0 +1,71 @@
+<view class="MoreInfo">
+	<view class="MoreInfo_hrader">
+		<view class="MoreInfo_hrader_mun">
+			<image style="width:34rpx" src="/assets/image/index/Step1.png" mode="widthFix"></image>
+			<view class="line1"></view>
+			<image style="width:34rpx" src="/assets/image/index/Step201.png" mode="widthFix"></image>
+			<view class="line"></view>
+			<image style="width:34rpx" src="/assets/image/index/Step3.png" mode="widthFix"></image>
+		</view>
+		<view class="MoreInfo_hrader_text">
+			<text>店铺资料</text>
+			<text>更多资料</text>
+			<text>入驻费用</text>
+		</view>
+	</view>
+	<view class="MoreInfo_main">
+		<view class="MoreInfo_main_ShopTitle">
+			<view>店铺logo</view>
+			<view class="MoreInfo_main_ShopAvttar">
+				<image bindtap="Shoplogo" style="width:146rpx" wx:if="{{shoplistb.logo == ''}}" src="/assets/image/index/shopavatar.png" mode="widthFix"></image>
+				<image wx:if="{{shoplistb.logo != ''}}" style="width:146rpx;height:146rpx;border-radius: 50%;" src="{{URl}}{{shoplistb.logo}}"></image>
+				<image style="width:13rpx;height: 28rpx;margin-left: 13rpx;" src="/assets/image/index/next.png"></image>
+			</view>
+		</view>
+		<view class="Shopintr">
+			<view class="ShopintrTitle">店铺介绍（{{MaxLength}}/200）</view>
+			<textarea maxlength="200" bindblur="desccontent" class="ShopintrConent" placeholder="介绍一下自己的店铺吧~" bindinput="MaxLength"></textarea>
+
+		</view>
+		<view class="uploadIdCard">
+			<view class="uploadIdCard_title">上传法人身份证</view>
+			<view class="uploadIdCard_box">
+				<view class="IdCardPositive">
+					<view class="idcradbox" bindtap="IDcarfA">
+						<image wx:if="{{shoplistb.car_img == ''}}" style="width:65rpx" src="/assets/image/index/xaingji.png" mode="widthFix"></image>
+						<image wx:if="{{shoplistb.car_img != ''}}" style="width:288rpx;height:174rpx;margin-bottom: 20rpx;" src="{{URl}}{{shoplistb.car_img}}"></image>
+					</view>
+					<view>上传身份证正面</view>
+				</view>
+			<view class="IdCardPositive">
+					<view class="idcradbox" bindtap="IDcarfB">
+						<image wx:if="{{shoplistb.car_side_img == ''}}" style="width:65rpx" src="/assets/image/index/xaingji.png" mode="widthFix"></image>
+						<image wx:if="{{shoplistb.car_side_img != ''}}" style="width:288rpx;height:174rpx;margin-bottom: 20rpx;" src="{{URl}}{{shoplistb.car_side_img}}"></image>
+					</view>
+					<view>上传身份证反面</view>
+				</view>
+
+
+			</view>
+		</view>
+		<view class="MoreInfo_Boss">
+			<view class="MoreInfo_BossItem">
+				<text>联系人</text>
+				<input placeholder="请输入真实姓名" bindinput="userName"></input>
+			</view>
+			<view class="MoreInfo_BossItem">
+				<text>联系电话</text>
+				<input placeholder="请输入手机号码"  bindinput="userTel" maxlength="11"></input>
+			</view>
+
+
+
+		</view>
+
+	</view>
+	<view class="MoreInfo_footer">
+		<view class="MoreInfo_footer_btn" bindtap="ToPay">下一步
+		</view>
+
+	</view>
+</view>

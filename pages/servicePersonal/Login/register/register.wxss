@@ -1,0 +1,159 @@
+@import '../Login.wxss';
+.register {
+  min-height: 100vh;
+  width: 100%
+}
+
+.registerline {
+  height: 26rpx;
+  width: 100%;
+  background: #F2F2F2;
+
+}
+
+.register_banner {
+  height: 343rpx;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #F2F2F2;
+
+}
+
+.register_msg {
+  box-sizing: border-box;
+  padding: 0rpx 40rpx 30rpx 40rpx;
+
+}
+
+.register_msg_title {
+  font-size: 36rpx;
+  font-family: SimHei;
+  font-weight: 400;
+  color: rgba(51, 51, 51, 1);
+  padding: 27rpx 0;
+}
+
+.register_msgItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1rpx solid #f1f2f2;
+  height: 90rpx;
+  width: 100%;
+}
+.register_msgItem>button{
+  width: 110px;
+  height: 35px;
+}
+
+.register_msgItemLeft {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.register_msgItemLeft>view {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 122rpx;
+  font-size: 30rpx;
+  font-family: SimHei;
+  font-weight: 600;
+  color: #333333
+}
+
+.uploadIdCard {
+  width: 100%;
+  padding: 0 40rpx 40rpx 40rpx;
+  box-sizing: border-box;
+
+}
+
+.uploadIdCardTips {
+  font-size: 30rpx;
+  font-family: SimHei;
+  font-weight: 400;
+  color: rgba(153, 153, 153, 1);
+  line-height: 50rpx;
+}
+
+.uploadIdCardImgbox {
+  margin-top: 31rpx;
+  width: 100%;
+  height: 180rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.uploadIdCardImgboxb {
+  margin-top: 31rpx;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.IDcard {
+  margin-bottom: 40rpx;
+  width: 250rpx;
+  height: 180rpx;
+  
+}
+.IDcard>image{
+  width: 100%;
+  height: 100%;
+}
+
+.Remarks {
+  width: 100%;
+  height: 490rpx;
+  padding: 0 40rpx 60rpx 40rpx;
+  box-sizing: border-box;
+
+}
+
+.RemarksMsg_item {
+  padding: 10rpx 0;
+  width: 100%;
+  height: 90rpx;
+  border-bottom: 1rpx solid #f1f2f2;
+  display: flex;
+  align-items: center;
+  display: flex;
+}
+
+.RemarksMsg_itemLeft {
+  width: 226rpx;
+}
+
+.RemarksMsg_itemRight {
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.agreementrg{
+  height: 20rpx;
+  justify-content: center;
+}
+.registerBtn{
+margin:47rpx auto ;
+width: 624rpx;
+height: 90rpx;
+background-image: linear-gradient(#FAB000, #F08003);
+border-radius: 50rpx;
+font-size:32rpx;
+font-family:PingFang SC;
+font-weight:500;
+color:rgba(255,255,255,1);
+display: flex;
+align-items: center;
+justify-content: center
+;
+}

@@ -1,0 +1,370 @@
+#address_serch {
+  margin: 20rpx 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#address_serch .address {
+  width: 20%;
+  height: 78rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#address_serch .address .address_icon {
+  width: 23rpx;
+  height: 12rpx;
+  margin-left: 10rpx;
+  margin-bottom: 5rpx;
+}
+
+#address_serch .serch {
+  width: 75%;
+  height: 78rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.address_txt {
+  font-size: 30rpx;
+}
+
+.serch icon {
+  background: rgb(236, 231, 231);
+  border-radius: 40rpx 0 0 40rpx;
+  padding: 0 10rpx;
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input {
+  font-size: 28rpx;
+  height: 60rpx;
+  width: 100%;
+  background: rgb(236, 231, 231);
+  color: #aaa;
+  border-radius: 0 40rpx 40rpx 0;
+}
+
+.swiper {
+  width: 100%;
+  height: 260rpx;
+  margin-bottom: 20rpx;
+}
+
+
+.gold {
+  padding: 20rpx 0;
+  height: 34rpx;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gold .shop {
+  font-size: 34rpx;
+  font-weight: bold;
+}
+
+.gold .more {
+  font-size: 26rpx;
+  color: #ec8401;
+}
+
+#tab_list {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  margin-bottom: 20rpx;
+}
+
+#tab_list .tab_item {
+  width: 25%;
+  margin-top: 32rpx;
+
+}
+
+.tab_itemurl {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 10rpx 0;
+}
+
+
+#tab_list .tab_item .name {
+  margin-top: 19rpx;
+  padding: 5rpx;
+  color: #222;
+  font-size: 26rpx;
+  font-weight: bold;
+}
+
+#goldshop_list {
+  width: 100%;
+}
+
+#goldshop_list .goldshop_item {
+  position: relative;
+
+}
+
+#goldshop_list .goldshop_item .goldl {
+  width: 30rpx;
+  height: 38rpx;
+  position: absolute;
+  top: 0rpx;
+  right: 30rpx;
+
+}
+
+#goldshop_list .goldshop_item {
+  width: 100%;
+  margin-top: 20rpx;
+  box-shadow: 0rpx 5rpx 27rpx 0rpx rgba(0, 0, 0, 0.11);
+  border-radius: 10rpx;
+  padding-bottom: 20rpx;
+}
+
+#goldshop_list .goldshop_item image {
+  width: 100%;
+}
+
+#goldshop_list .goldshop_item .shop_msg {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#goldshop_list .goldshop_item .shop_msg .shop_msg_text {
+  width: 80%;
+}
+
+#goldshop_list .goldshop_item .shop_name {
+  font-size: 30rpx;
+  font-weight: bold;
+  padding: 5rpx 10rpx;
+}
+
+#goldshop_list .goldshop_item .shop_volume .heart {
+  width: 24rpx;
+  margin-left: 10rpx;
+  height: 20rpx;
+  vertical-align: middle;
+}
+
+#goldshop_list .goldshop_item .shop_volume text {
+  padding: 5rpx 10rpx;
+  font-size: 24rpx;
+  color: #9a9a9a;
+}
+
+#goldshop_list .goldshop_item .shop_msg .shop_goshop {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18rpx;
+}
+
+#goldshop_list .goldshop_item .shop_msg .shop_goshop button {
+  width: 70%;
+  height: 50%;
+  padding: 0;
+  margin: 0;
+  font-weight: none;
+  background: linear-gradient(0deg, rgba(236, 132, 1, 1), rgba(236, 172, 1, 1));
+  border-radius: 2rpx;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#avd {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30rpx 0;
+}
+
+#avd image {
+  width: 95%;
+  height: 80%;
+}
+
+#waiter {
+  width: 100%;
+  border-bottom: 15rpx solid#F6F7F9;
+}
+
+#waiter .waiter_item {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20rpx;
+}
+
+#waiter .waiter_item .waiter_img {
+  width: 35%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#waiter .waiter_item .waiter_img image {
+  width: 98%;
+  height: 98%;
+}
+
+#waiter .waiter_item .waiter_msg {
+  height: 100%;
+  width: 65%;
+  padding-left: 10rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+#waiter .waiter_item .waiter_msg view {
+  padding: 3rpx 0;
+}
+
+#waiter .waiter_item .waiter_msg .price {
+  color: #ec8401;
+  font-size: 25rpx;
+  padding-left: 50rpx;
+}
+
+#waiter .waiter_item .waiter_msg .msg_info {
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+#waiter .waiter_item .waiter_msg .msg_info text {
+  margin: 0 10rpx;
+
+}
+
+#waiter .waiter_item .waiter_msg .msg_skill {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 24rpx;
+  color: #999;
+}
+
+#waiter .waiter_item .waiter_msg .msg_badge text {
+  font-size: 20rpx;
+  color: #ec8401;
+  margin-right: 10rpx;
+  padding: 3rpx 10rpx;
+  background: rgba(253, 249, 243, 1);
+  border: 1rpx solid rgba(236, 132, 1, 1);
+  border-radius: 6rpx;
+}
+
+#waiter .waiter_item .waiter_msg .msg_checked {
+  width: 100%;
+  height: 36%;
+  display: flex;
+  margin-top: 20rpx;
+  justify-content: start;
+  align-items: center;
+}
+
+#waiter .waiter_item .waiter_msg .msg_checked button {
+  background: #ec8401;
+  color: #fff;
+  width: 165rpx;
+  height: 54rpx;
+  margin: 20rpx 0 0 0;
+  padding: 0 0;
+  line-height: 54rpx;
+  font-size: 30rpx;
+}
+
+#contact {
+  width: 100%;
+  margin-top: 20rpx;
+  margin-bottom: 10rpx;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+
+.contact {
+  width: 100%;
+  height: 80rpx;
+}
+
+#contact .contact_item {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50rpx;
+  padding: 30rpx 0;
+}
+
+#contact .contact_item .contact_msg {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#contact .contact_item .contact_msg text {
+  font-size: 28rpx;
+  color: #222;
+  margin-left: 30rpx;
+}
+
+#contact .contact_item .contact_icon {
+  width: 46rpx;
+}
+
+#contact .contact_next .contact_next_icon {
+  width: 18rpx;
+  height: 29rpx;
+}
+
+.bottom_box {
+  width: 100%;
+  height: 180rpx;
+
+}
+
+.contact_msgchild {
+  display: flex;
+  align-items: center;
+  
+  background-color: rgba(255, 255, 255, 0);
+  border: 0px;
+  height: 46rpx;
+  margin:0;
+  border: none;
+  font-size: 28rpx;
+  padding: 0;
+  line-height: 0;
+
+
+}
+.contact_msgchild::after {
+  border: none;
+}
+
+.contact_icons {
+  vertical-align: middle;
+  z-index: 9999;
+  width: 46rpx;
+  height: 46rpx;
+}

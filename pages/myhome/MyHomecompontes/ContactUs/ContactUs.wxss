@@ -1,0 +1,52 @@
+.ContactUs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.ContactUs_header {
+  height: 340rpx;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.ContactUs_main {
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: rgba(51, 51, 51, 1);
+  height: 210rpx;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 30rpx;
+
+}
+
+.ContactUs_main_item {
+  height: 33.33%;
+  width: 100%;
+  font-size: 28rpx;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.qrCode {
+  width: 100%;
+  height: 800rpx;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+.qrCode_text{
+  margin-top: 30rpx;
+  font-size:30rpx;
+font-family:PingFang SC;
+font-weight:500;
+color:rgba(51,51,51,1);
+}

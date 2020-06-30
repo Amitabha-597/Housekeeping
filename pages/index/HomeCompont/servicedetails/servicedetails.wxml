@@ -1,0 +1,157 @@
+<view class="seds">
+	<view class="seds_imgorlite">
+		<!-- <image style="width:100%" src="../../../../assets/image/gs/sddsd.jpg" mode="widthFix"></image> -->
+		<swiper class="shopswiper" indicator-dots="true" autoplay="true}">
+			<block wx:for="{{shopSwipers}}" wx:key="*this" wx:if="{{shopSwipers !=''}}">
+				<swiper-item>
+					<image style="width:749rpx;height:498rpx" src="{{item}}"></image>
+				</swiper-item>
+			</block>
+			<swiper-item  wx:if="{{shopSwipers ==''}}">
+				<image style="width:749rpx;height:498rpx" src="/assets/image/index/shopdefual.jpg"></image>
+			</swiper-item>
+		</swiper>
+		<view class="seds_title">
+			<view class="seds_title_icon">
+				<image class="seds_title_icon" src="{{shopInfo.logo}}"></image>
+			</view>
+			<view class="seds_title_msg">
+				<view class="seds_title_name" style=" width:452rpx"><text>{{shopInfo.shop_name}}</text>
+					<image class="seds_title_name_goldl" src="/assets/image/index/goldl.png"></image>
+				</view>
+				<view class="seds_title_evaluate">
+					<image class="seds_title_msgicon" src="/assets/image/index/heart.png"></image>
+					<text>好评率98%</text>
+					<text>成交量{{shopInfo.deal_num}}</text>
+				</view>
+			</view>
+			<view class="seds_title_sharebox">
+				<view class="seds_title_share">
+					<image class="seds_title_shareimg" src="/assets/image/index/share.png"></image>
+					<text class="seds_title_sharetxt">分享</text>
+				</view>
+			</view>
+
+		</view>
+		<view class="seds_title_info">
+			<view class="seds_title_infotext" style="">
+				<text style=" text-overflow: -o-ellipsis-lastline;overflow: hidden;text-overflow: ellipsis; display: -webkit-box;-webkit-line-clamp: 2;line-clamp: 2;-webkit-box-orient: vertical;">{{desc}}</text>
+			</view>
+		</view>
+	</view>
+	<view class="seds_colorbar"></view>
+	<view class="seds_card">
+		<view class="seds_cardtab">
+
+
+			<view class='title'>
+				<view class='titleSel' bindtap='titleClick' data-idx='0'>
+					<text>店铺员工</text>
+					<hr class="{{0 == currentIndex ? 'headerLineSel' : 'headerLineUnsel'}}" />
+				</view>
+
+				<view class='titleSel' bindtap='titleClick' data-idx='1'>
+					<text>服务项目</text>
+					<hr class="{{1 == currentIndex ? 'headerLineSel' : 'headerLineUnsel'}} " />
+				</view>
+				<view class='titleSel' bindtap='titleClick' data-idx='2'>
+					<text>客户评价</text>
+					<hr class="{{2 == currentIndex ? 'headerLineSel' : 'headerLineUnsel'}} " />
+				</view>
+			</view>
+
+			<!--内容布局-->
+			<swiper class='swiper' bindchange='pagechange' current='{{currentIndex}}'>
+				<swiper-item class='swiper'>
+					<view id="waiter">
+						<!-- 店铺员工 -->
+						<view class="waiter_item" wx:for="{{waiterlist}}" wx:key="*this" bindtap="toWaiterDetails" data-id="{{item.id}}">
+							<view class="waiter_img">
+								<image src="{{item.himg}}" mode="widthFix"></image>
+							</view>
+							
+							<view class="waiter_msg">
+								<view class="msg_info">
+									<text>{{item.names}} </text>
+									<text>{{item.age}}岁 </text>
+									<text class="price">{{item.salary}}元/h</text>
+								</view>
+								<view class="msg_skill">
+									<text wx:for="{{item.type_cn}}" wx:key="*this">{{item}} </text>|
+								</view>
+								<view class="msg_badge">
+								
+									<text>{{item.nplace}}</text>
+								</view>
+								<view class="msg_checked">
+									<button>专人服务</button>
+								</view>
+							</view>
+						</view>
+					</view>
+				</swiper-item>
+				<swiper-item class='swiper' class='swiper'>
+					<view class="serviceItems">
+						<view class="serviceItemschild" wx:for="{{serviceItems}}" wx:key="id" bindtap="toonLineservice" data-id="{{item.id}}" data-idb="{{shopids}}">
+							<image class="serviceItemschild_img" src="{{item.thumbnail}}"></image>
+							<view class="serviceItemschild_msg">
+								<view class="serviceItemschild_msg_con">
+									{{item.name}}
+								</view>
+								<view class="serviceItemschild_msg_eva">
+									<image style="width:21rpx;vertical-align: middle; margin-right: 10rpx;" src="/assets/image/index/heart.png" mode="widthFix"></image>
+									<text>好评率{{item.rate}}%   </text>
+									<text>预约次数:{{item.subscribe_num}}</text>
+								</view>
+								<view class="serviceItemschild_msg_pric">
+									<view class="serviceItemschild_msg_price">¥{{item.money}}</view>
+									<navigator class="serviceItemschild_msg_btn" url="pages/index/HomeCompont/ConfirmOrder/index">立即预约</navigator>
+								</view>
+							</view>
+						</view>
+
+					</view>
+				</swiper-item>
+				<swiper-item class='swiper' class='swiper'>
+					<view class="seds_comment">
+						<view class="seds_comment_title">
+							<text class="seds_comment_mun">评论{{total}}</text>
+							<navigator class="seds_comment_next" url="/pages/index/HomeCompont/servicedetails/comments/comment?title=navigate">更多</navigator>
+						</view>
+						<view class="seds_comment_list">
+							<view class="seds_comment_list_item" wx:for="{{userevaluation}}" wx:key="id">
+								<view class="seds_comment_list_left">
+									<view class="seds_comment_list_useravtar">
+
+										<image style="width:78rpx;" src="{{item.avatar_url}}" mode="widthFix"></image>
+									</view>
+								</view>
+								<view class="seds_comment_list_right">
+									<view class="seds_comment_list_username">
+										<text>{{item.nickname}}</text>
+										<image style="width:29rpx; margin-left: 10rpx; vertical-align: middle;" src="/assets/image/index/heart.png" mode="widthFix"></image>
+									</view>
+									<view class="seds_comment_list_usercom">{{item.content}}</view>
+									<view class="seds_comment_list_userdate">
+										<text>{{item.add_time}}</text>
+
+										<view>12<image style="width:20rpx; margin-left: 5rpx; vertical-align: middle;" src="/assets/image/index/heart.png" mode="widthFix"></image>
+										</view>
+									</view>
+								</view>
+							</view>
+
+						</view>
+
+					</view>
+				</swiper-item>
+			</swiper>
+
+
+
+
+		</view>
+
+
+	</view>
+</view>

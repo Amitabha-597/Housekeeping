@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "PayMode": "/pages/activity/Actcomponent/Packagedetails/ConfirmOrder/PayMode/actionsheet",
+    "Timer": "/pages/index/HomeCompont/ConfirmOrder/Timer/pickerYMDHM"
+  },
+  "navigationBarTitleText": "确认订单"
+
+}

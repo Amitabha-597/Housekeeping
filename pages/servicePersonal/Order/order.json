@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "SPtabbar":"../Components/servicePersonNav/SPtabbar"
+
+  }
+}

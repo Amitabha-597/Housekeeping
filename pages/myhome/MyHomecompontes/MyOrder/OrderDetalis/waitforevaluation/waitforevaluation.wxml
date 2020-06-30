@@ -1,0 +1,106 @@
+<view class="OrderDetalis">
+	<view class="OrderDetalis_header">
+		<view class="OrderDetalis_header_type">
+			<image style="width:38rpx;margin-right: 30rpx;" src="http://zxty.mrhkj.com/assets/index/myhome/OrderDetalisImg/waitforevaluation.png" mode="widthFix"></image>
+			<text>待评价</text>
+		</view>
+		<view class="OrderDetalis_header_time">快去点评此次服务吧！</view>
+	</view>
+
+	<view class="OrderDetalis_state">
+		<view class="OrderDetalis_state_text">
+			<view>
+				<text>已经确认订单号：</text>
+				<text style="margin-right: 20rpx;">{{evadata.order_no}}</text>
+				<text >家政服务完成</text>
+
+			</view>
+			<image style="width: 15rpx;" src="http://zxty.mrhkj.com/assets/index/myhome/next.png" mode="widthFix"> </image>
+		</view>
+		<view wx:if="{{item.Orderstate.adress}}" class="OrderDetalis_state_adress">{{item.Orderstate.adress}}</view>
+	</view>
+	<view class="CommodityList">
+		<view class="CommodityList_title">商品清单</view>
+		<view class="CommodityList_conent">
+			<view class="CommodityList_conent_imgbox">
+				<image style="width:100%;height:100%" src="{{URL}}{{evadata.thumbnail}}"></image>
+			</view>
+			<view class="CommodityList_conent_text">
+				<view style="font-size:30rpx;font-weight: bold;">{{evadata.title}}</view>
+				<view style="font-size:22rpx; color:#999999; letter-spacing: 3rpx;" class="conent_text_msg">
+					<text>{{evadata.shop_name}}</text>
+					<text>{{evadata.tag}}</text>
+					<text>{{evadata.area}}</text>
+				</view>
+				<view style="font-size:28rpx;font-weight: bold; " class="conent_text_price">
+					<text style="color: #EE8F17;">¥{{evadata.money}}</text>
+					<text style="color: #999999;">X1</text>
+				</view>
+			</view>
+		</view>
+	</view>
+
+	<view class="OdPersonneInfo" wx:if="{{item.severWeater}}">
+		<view class="CommodityList_title">服务人员信息</view>
+		<view class="OdPersonneInfo_conent">
+			<view class="OdPersonneInfo_conent_imgbox">
+				<image src="{{URL}}{{evadata.himg}}"></image>
+			</view>
+			<view class="OdPersonneInfo_conent_text">
+				<view><text>姓名</text><text>{{evadata.staff.names}}</text></view>
+				<view><text>联系电话</text><text>{{evadata.staff.mobile}}</text></view>
+				<view><text>主要职务</text><text>{{evadata.staff.mobile}}</text></view>
+			</view>
+		</view>
+		<view class="OdPersonneInfo_date">
+			<view>预约上门时间</view>
+			<view>{{evadata.subscribe_time}}</view>
+		</view>
+	</view>
+	<view class="Bill">
+		<view class="CommodityList_title">费用明细</view>
+		<view class="Bill_itembox">
+			<view class="Bill_item">
+				<text>商品金额</text>
+				<text>￥{{evadata.money}}</text>
+			</view>
+			<view class="Bill_item">
+				<text>优惠券</text>
+				<text>{{evadata.dscount_money}} </text>
+			</view>
+			<view class="Bill_item">
+				<text>服务小费</text>
+				<text>{{evadata.tips}}</text>
+			</view>
+		</view>
+		<view class="Bill_total">
+			<view class="Bill_total_operation">
+				<view>投诉商家</view>
+				<view bindtap="toApplyRefund" data-orderno="{{evadata.order_no}}">申请退款</view>
+			</view>
+			<view class="Bill_total_price">
+				<text>应付款：</text>
+				<text style="color:#EC8401;font-weight:600;">¥{{evadata.money}}</text>
+			</view>
+		</view>
+	</view>
+	<view class="order_info">
+		<view class="order_info_itembox">
+			<view>订单信息</view>
+			<view>
+				<text style="color:#6b6b6b;">订单编号</text>
+				<text>{{evadata.order_no}}</text>
+			</view>
+			<view>
+				<text style="color:#6b6b6b;">创建时间</text>
+				<text>{{evadata.create_time}}</text>
+			</view>
+		</view>
+		<view class="order_info_btn">
+
+			<navigator class="order_info_btn" url="/pages/myhome/MyHomecompontes/MyOrder/OrderDetalis/waitforevaluation/EvaluateOrder/EvaluateOrder?orderno={{evadata.order_no}}">
+				<view class="order_info_btnB" bindtap="toEva">立即评价</view>
+			</navigator>
+		</view>
+	</view>
+</view>

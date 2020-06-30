@@ -1,0 +1,114 @@
+.morewiter{
+  width: 100%;
+  height: 100%;
+
+}
+.morewiter_main{
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+.morewiter_tab {
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  margin:0 0 20rpx 0;
+}
+.morewiter_tab_child{
+  margin-right: 27rpx;
+  padding:15rpx 20rpx ;
+  background:rgba(246,247,249,1);
+  border-radius: 15rpx;
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  /* color: rgba(236, 132, 1, 1); */
+  color:#222 ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.morewiter_type_itembox {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.active{
+  color: #EC8401;
+}
+.morewiter_type_item {
+  margin: 10rpx 20rpx 10rpx 0;
+  width: 194rpx;
+  height: 70rpx;
+  background: rgb(233, 231, 231);
+  font-size: 22rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: rgba(102, 102, 102, 1);
+  border-radius: 10rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.morewiter_type{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 999;
+  right: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.morewiter_type_name {
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(102, 102, 102, 1);
+  height: 80rpx;
+  width: 100%;
+  line-height: 80rpx;
+}
+.morewiter_type_child{
+  width: 90%;
+  height: 100%;
+  background: #fff;
+  margin-left: 10%;
+  padding-left: 40rpx;
+  position: relative;
+}
+
+.morewiter_type_itembtn{
+  width: 100%;
+  height: 96rpx;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+}
+.morewiter_type_item_rest{
+  width: 211rpx;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 4rpx;
+}
+.morewiter_type_item_see{
+  width: 483rpx;
+  height: 100%;
+  background: #EC8401;
+  color: rgba(254, 254, 254, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 4rpx;
+}

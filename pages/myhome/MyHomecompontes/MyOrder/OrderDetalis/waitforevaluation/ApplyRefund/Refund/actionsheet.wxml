@@ -1,0 +1,37 @@
+<wxs module="utils">
+	var join = function(a, b) {
+		return a + b
+	};
+	var isNotSlot = function(v) {
+		return typeof v !== 'string'
+	}
+	module.exports = {
+		join: join,
+		isNotSlot: isNotSlot
+	}
+</wxs>
+
+<view wx:if="{{mask}}" class="weui-mask {{show ? '' : 'weui-mask_hidden'}} {{maskClass}}" bindtap="closeActionSheet"></view>
+<view class="weui-actionsheet {{show ? 'weui-actionsheet_toggle' : ''}} {{extClass}}">
+	<!-- 标题 -->
+	<view class="{{ !showCancel && index === actions.length-1 ? 'weui-actionsheet__action' : 'weui-actionsheet__menu' }}" wx:key="index" wx:for-item="actionItem" wx:for-index="index" wx:for="{{actions}}">
+		<block wx:if="{{utils.isNotSlot(actionItem)}}">
+			<view class="weui-actionsheet__cell  actionsheet__cell_tiele">
+				退款原因
+			</view>
+			<view class="weui-actionsheet__cell  weui-actionsheet__coupon  " wx:key="actionIndex" wx:for="{{actionItem}}" wx:for-index="actionIndex" data-groupindex="{{index}}" data-index="{{actionIndex}}" data-value="{{item.value}}" bindtap="buttonTap">
+				{{item.text}}
+				<view class="weui-actionsheet__couponicon">
+					<image style="width:100%;" src="/assets/image/index/{{  actionIndex==itemIndex ? 'selectcoupon' : 'circle' }}.png" id="{{id}}" mode="widthFix"></image>
+				</view>
+			</view>
+		</block>
+		<slot name="{{actionItem}}" wx:else></slot>
+	</view>
+	<!-- 取消按钮 -->
+	<view class="weui-actionsheet__action" wx:if="{{showCancel}}">
+		<view class="weui-actionsheet__cell   weui-actionsheet_finish" data-type="close" id="iosActionsheetCancel" bindtap="closeActionSheet">
+			<view class="weui-actionsheet_finishchild">{{cancelText}}</view>
+		</view>
+	</view>
+</view>

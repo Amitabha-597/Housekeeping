@@ -1,0 +1,102 @@
+<view class="OrderDetalis">
+	<view class="OrderDetalis_header">
+		<view class="OrderDetalis_header_type">
+			<image style="width:38rpx;margin-right: 30rpx;" src="http://zxty.mrhkj.com/assets/index/myhome/OrderDetalisImg/waitfordoor.png" mode="widthFix"></image>
+			<text>待上门</text>
+		</view>
+		<view class="OrderDetalis_header_time">服务人员会在预约时间上门服务，请稍等一下</view>
+	</view>
+
+	<view class="OrderDetalis_state">
+		<view class="OrderDetalis_state_text" >
+			<view >
+				<text style="margin-right: 20rpx;">已经安排保洁员</text>
+				<text style="">{{waitfordoor.staff.names}}</text>
+				<text style="margin-right: 20rpx;">{{waitfordoor.staff.mobile}}</text>
+				<text>为您上门服务</text>
+
+			</view>
+			<!-- <image style="width: 15rpx;" src="http://zxty.mrhkj.com/assets/index/myhome/next.png" mode="widthFix"> </image> -->
+		</view>
+	</view>
+	<view class="CommodityList">
+		<view class="CommodityList_title">商品清单</view>
+		<view class="CommodityList_conent">
+			<view class="CommodityList_conent_imgbox" wx:if="{{waitfordoor.thumbnail != ''}}">
+			<image style="width:100%;height:100%" src="{{URlI}}{{waitfordoor.thumbnail}}"></image>
+			</view>
+			<view class="CommodityList_conent_text">
+				<view style="font-size:30rpx;font-weight: bold;">{{waitfordoor.title}}</view>
+				<view style="font-size:22rpx; color:#999999; letter-spacing: 3rpx;" class="conent_text_msg">
+					<text>{{waitfordoor.shop_name}}</text>
+					<text>{{waitfordoor.tag}}</text>
+					<text>{{waitfordoor.shop.area}}</text>
+				</view>
+				<view style="font-size:28rpx;font-weight: bold; " class="conent_text_price">
+					<text style="color: #EE8F17;">¥{{waitfordoor.money}}</text>
+					<text style="color: #999999;">X{{waitfordoor.tips}}</text>
+				</view>
+			</view>
+		</view>
+	</view>
+
+	<view class="OdPersonneInfo">
+		<view class="CommodityList_title">服务人员信息</view>
+		<view class="OdPersonneInfo_conent">
+			<view class="OdPersonneInfo_conent_imgbox" wx:if="{{waitfordoor.thumbnail != ''}}" >
+			<image style="width:100%;height:100%" src="{{URlI}}{{waitfordoor.thumbnail}}"></image>
+			</view>
+			<view class="OdPersonneInfo_conent_text">
+				<view><text>姓名</text><text>{{waitfordoor.staff.names}}</text></view>
+				<view><text>联系电话</text><text>{{waitfordoor.staff.mobile}}</text></view>
+				<view><text>主要职务</text><text></text></view>
+			</view>
+		</view>
+		<view class="OdPersonneInfo_date">
+			<view>预约上门时间</view>
+			<view>{{waitfordoor.create_time}}</view>
+		</view>
+	</view>
+	<view class="Bill">
+		<view class="CommodityList_title">费用明细</view>
+		<view class="Bill_itembox">
+			<view class="Bill_item">
+				<text>商品金额</text>
+				<text>￥{{waitfordoor.money}}</text>
+			</view>
+			<view class="Bill_item">
+				<text>优惠券</text>
+				<text>-{{}}</text>
+			</view>
+			<view class="Bill_item">
+				<text>服务小费</text>
+				<text>{{waitfordoor.tips}}</text>
+			</view>
+		</view>
+		<view class="Bill_total">
+			<view class="Bill_total_operation"></view>
+			<view class="Bill_total_price">
+				<text>应付款：</text>
+				<text style="color:#EC8401;font-weight:600;">¥ {{total}}</text>
+			</view>
+		</view>
+	</view>
+	<view class="order_info">
+		<view class="order_info_itembox">
+			<view>订单信息</view>
+			<view>
+				<text style="color:#6b6b6b;">订单编号</text>
+				<text>{{waitfordoor.order_no}}</text>
+			</view>
+			<view>
+				<text style="color:#6b6b6b;">创建时间</text>
+				<text>{{waitfordoor.create_time}}</text>
+			</view>
+		</view>
+		<view class="order_info_btn">
+
+			<view class="order_info_btnA" bindtap="Txsm">提醒上门</view>
+			<view class="order_info_btnB" bindtap="Alreadyhome"  data-orderno="{{waitfordoor.order_no}}">已经上门</view>
+		</view>
+	</view>
+</view>

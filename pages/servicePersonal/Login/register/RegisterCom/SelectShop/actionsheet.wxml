@@ -1,0 +1,34 @@
+<wxs module="utils">
+	var join = function(a, b) {
+		return a + b
+	};
+	var isNotSlot = function(v) {
+		return typeof v !== 'string'
+	}
+	module.exports = {
+		join: join,
+		isNotSlot: isNotSlot
+	}
+</wxs>
+
+<view wx:if="{{mask}}" class="weui-mask {{show ? '' : 'weui-mask_hidden'}} {{maskClass}}" bindtap="closeActionSheet"></view>
+<view class="weui-actionsheet {{show ? 'weui-actionsheet_toggle' : ''}} {{extClass}}">
+	<!-- 标题 -->
+	<block wx:if="{{title}}">
+		<view class="weui-actionsheet__title">
+			<view class="actionsheet__title_box"></view>
+		</view>
+	</block>
+	<slot name="title" wx:else></slot>
+	<view class="{{ !showCancel && index === actions.length-1 ? 'weui-actionsheet__action' : 'weui-actionsheet__menu' }}" wx:key="index" wx:for-item="actionItem" wx:for-index="index" wx:for="{{actions}}">
+		<block wx:if="{{utils.isNotSlot(actionItem)}}">
+			<view class="weui-actionsheet__cell  actionsheet__cell_tiele" >
+				选择所属公司店铺
+			</view>
+			<view class="weui-actionsheet__cell {{item.type === 'warn' ? 'weui-actionsheet__cell_warn' : '' }}" wx:key="id" wx:for="{{actionItem}}" data-text="{{item.text}}" wx:for-index="actionIndex" data-groupindex="{{index}}" data-index="{{actionIndex}}" data-value="{{item.value}}" bindtap="buttonTap">
+				{{item.text}}
+			</view>
+		</block>
+		<slot name="{{actionItem}}" wx:else></slot>
+	</view>
+</view>

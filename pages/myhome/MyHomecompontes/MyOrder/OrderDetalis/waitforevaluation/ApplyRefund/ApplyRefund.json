@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "Refund":"./Refund/actionsheet"
+  },
+  "navigationBarTitleText": "申请退款"
+}

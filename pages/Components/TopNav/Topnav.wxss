@@ -1,0 +1,25 @@
+.TopNav {
+  width: 100%;
+  height: 128rpx;
+  font-size: 34rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(51, 51, 51, 1);
+  line-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30rpx;
+  box-sizing: border-box;
+}
+.TopNav_title{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.TopNav_titletxt{
+  margin-left: -30rpx;
+  text-align: center;
+  flex: 1;
+}

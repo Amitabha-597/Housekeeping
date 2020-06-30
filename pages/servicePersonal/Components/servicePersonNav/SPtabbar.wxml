@@ -1,0 +1,21 @@
+<view class="ssss"></view>
+
+<view class="navbox">
+	<view class="navItem">
+		<view bindtap="Switchpage" data-url="home/home" data-index="1">
+			<image style="width: 41rpx; height: 42rpx;" src="http://zxty.mrhkj.com/assets/servicePersonal/{{setectNav ==1 ? 'homeselect' : 'home'}}.png"></image>
+			<text style="color:{{setectNav ==1 ? '#F18401' : '#AAAAAA'}}">首页</text>
+		</view>
+		<view>
+			<view class="order"  bindtap="Switchpage" data-url="Order/order">
+				<image style="width:108rpx; height: 108rpx;" src="http://zxty.mrhkj.com/assets/servicePersonal/order.png"></image>
+			</view>
+		</view>
+
+		<view bindtap="Switchpage" data-url="My/my" data-index="2">
+			<image style="width: 41rpx; height: 42rpx;" src="http://zxty.mrhkj.com/assets/servicePersonal/{{setectNav ==2 ? 'mysrlect' : 'my'}}.png"></image>
+			<text style="color:{{setectNav ==2 ? '#F18401' : '#AAAAAA'}}">我的</text>
+			{{setectNavs}}
+		</view>
+	</view>
+</view>

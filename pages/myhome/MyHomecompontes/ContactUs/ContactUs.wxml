@@ -1,0 +1,24 @@
+<view class="ContactUs">
+	<view class="ContactUs_header">
+		<image style="width: 190rpx;" src="http://zxty.mrhkj.com/assets/index/myhome/usavatar.png" mode="widthFix"></image>
+	</view>
+	<view class="ContactUs_main">
+
+		<view class="ContactUs_main_item">
+			<text>工作时间</text>
+			<text>24小时在线</text>
+		</view>
+		<view class="ContactUs_main_item">
+			<text>客服电话</text>
+			<text>400-789-1234</text>
+		</view>
+		<view class="ContactUs_main_item">
+			<text>公司邮箱</text>
+			<text>kefu@wuhuajiazheng.com</text>
+		</view>
+	</view>
+	<view class="qrCode">
+		<image style="width: 188rpx;" src="http://zxty.mrhkj.com/assets/index/myhome/QRcode.png" mode="widthFix"></image>
+    <view class="qrCode_text">微信小程序二维码</view>
+	</view>
+</view>

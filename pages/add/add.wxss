@@ -1,0 +1,119 @@
+.Demand {
+  padding: 30rpx;
+  box-sizing: border-box;
+  background: #f1f1f2;
+}
+
+.Demand_input {
+  height: 172rpx;
+  width: 100%;
+  font-size: 32rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(153, 153, 153, 1);
+}
+
+.Demand_imgbox {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.Demand_img {
+  width: 155rpx;
+  height: 155rpx;
+  margin: 0 28rpx 30rpx 0;
+}
+
+.Demand_label {
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: rgba(34, 34, 34, 1);
+  margin-bottom: 28rpx;
+
+}
+
+.Demand_label_title {
+  margin-bottom: 28rpx;
+}
+
+.Demand_label_conent {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Demand_label_item {
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  padding: 9rpx 10rpx;
+  font-weight: 500;
+  color: #666;
+  border: 1rpx solid #666;
+  border-radius: 15rpx;
+  margin: 0 28rpx 28rpx 0;
+}
+.activetag{
+  color: rgba(236, 132, 1, 1);
+  border: 1rpx solid rgba(236, 132, 1, 1);
+}
+
+.Demand_msg {
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: rgba(34, 34, 34, 1);
+}
+
+.Demand_msg_item>input {
+  width: 210rpx;
+}
+
+.Demand_msg .Demand_msg_item {
+  display: flex;
+  justify-content: space-between;
+  padding: 30rpx 0;
+  
+}
+
+.Demand_msg_item_adress {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.Demand_msg_item_adress>input{
+  width: 60%;
+}
+
+.Demand_msg_item_adressline {
+  margin: 0 10rpx;
+  width: 2px;
+  height: 28rpx;
+  background: #aaa;
+}
+
+.Demand_footer {
+  position: fixed;
+  bottom: 0;
+  width: 750rpx;
+  height: 143rpx;
+  background: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(233, 233, 233, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Demand_footer_item {
+  width: 443rpx;
+  height: 86rpx;
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: rgba(254, 254, 254, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #EC8401;
+
+}

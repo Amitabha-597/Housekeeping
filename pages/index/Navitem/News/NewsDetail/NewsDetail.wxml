@@ -1,0 +1,17 @@
+<wxs module="filter" src="../../../../../utils/timer.wxs"></wxs>
+<view class="NewsDetail">
+
+	<view class="NewsDetail_title">
+		<view class="NewsDetail_title_txt">{{newsde.title}} </view>
+		<view class="NewsDetail_title_msg">
+			<view>{{filter.getDateTime(timer)}}</view>
+			<view>
+				<text>{{newsde.num}}</text>
+				<image style="width: 21rpx;margin-left: 8rpx;" src="/assets/image/index/laud.png" mode="widthFix"> </image>
+			</view>
+		</view>
+	</view>
+	<view class="NewsDetailContent">
+		<rich-text class='content' nodes="{{contentInfo}}"></rich-text>
+	</view>
+</view>

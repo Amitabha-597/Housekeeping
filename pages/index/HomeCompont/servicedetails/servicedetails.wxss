@@ -1,0 +1,451 @@
+.seds {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.seds_imgorlite {
+  width: 100%;
+  height: 788rpx;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+
+}
+
+.seds_imgorlite .shopswiper {
+  width: 749rpx;
+  height: 498rpx;
+}
+
+.seds_img {
+  width: 100%;
+  height: 498rpx;
+}
+
+.seds_title_icon {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.seds_title {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 690rpx;
+
+}
+
+
+
+.seds_title_msg {
+  padding: 20rpx 0;
+}
+
+.seds_title_name {
+  font-size: 23rpx;
+  height: 50rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(34, 34, 34, 1);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.seds_title_name_goldl {
+  width: 30rpx;
+  height: 38rpx;
+  margin-left: 30rpx;
+}
+
+.seds_title_shareimg {
+  width: 19rpx;
+  height: 19rpx;
+}
+
+.seds_title_msgicon {
+  width: 24rpx;
+  height: 20rpx;
+}
+
+.seds_title_evaluate {
+  width: 300rpx;
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(154, 154, 154, 1)
+}
+
+.seds_title_share {
+  width: 92rpx;
+  height: 41rpx;
+  border: 1px solid #ECAC01;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30rpx;
+}
+
+.seds_title_sharetxt {
+  font-size: 22rpx;
+  font-family: SimHei;
+  font-weight: 400;
+  color: rgba(236, 132, 1, 1);
+}
+
+.seds_title_info {
+  width: 690.9rpx;
+  height: 106.2rpx;
+  box-sizing: border-box;
+  background: rgba(246, 247, 249, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.seds_title_infotext {
+  width: 638rpx;
+  height: 60rpx;
+  font-size: 22rpx;
+  font-family: SimHei;
+  font-weight: 400;
+  color: rgba(102, 102, 102, 1);
+  line-height: 35rpx;
+
+}
+
+.seds_title_infotext>text {
+  
+}
+
+.seds_colorbar {
+  width: 100%;
+  height: 30rpx;
+  background: rgb(233, 230, 230);
+}
+
+.seds_card {
+  width: 100%;
+}
+
+.seds_cardtab {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box
+}
+
+.title {
+  width: 100%;
+  height: 120rpx;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.titleSel {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 34rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(34, 34, 34, 1);
+}
+
+.titleUnsel {
+  color: #858fab;
+  font-size: #858fab;
+}
+
+.headerLineSel {
+  background: #EC8401;
+  height: 6rpx;
+  width: 40rpx;
+  position: relative;
+  margin-top: 10rpx;
+}
+
+.headerLineUnsel {
+  background: #fff;
+  height: 6rpx;
+  width: 40rpx;
+  position: relative;
+  margin-top: 10rpx;
+}
+
+.swiper {
+  width: 100%;
+  flex: 1;
+  height: 70vh;
+  overflow: scroll;
+  display: flex;
+  justify-content: center;
+}
+
+.recordItem {
+  margin-top: 10rpx;
+  background-color: white;
+  padding-bottom: 20rpx;
+  padding-top: 20rpx;
+}
+
+#waiter {
+  width: 689rpx;
+  height: 100%;
+  border-bottom: 15rpx solid#F6F7F9;
+}
+
+#waiter .waiter_item {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20rpx;
+}
+
+#waiter .waiter_item .waiter_img {
+  width: 35%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#waiter .waiter_item .waiter_img image {
+  width: 98%;
+  height: 98%;
+}
+
+#waiter .waiter_item .waiter_msg {
+  height: 100%;
+  width: 65%;
+  padding-left: 10rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+#waiter .waiter_item .waiter_msg view {
+  padding: 3rpx 0;
+}
+
+#waiter .waiter_item .waiter_msg .price {
+  color: #ec8401;
+  font-size: 25rpx;
+  padding-left: 50rpx;
+}
+
+#waiter .waiter_item .waiter_msg .msg_info {
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+#waiter .waiter_item .waiter_msg .msg_info text {
+  margin: 0 10rpx;
+
+}
+
+#waiter .waiter_item .waiter_msg .msg_skill {
+  font-size: 24rpx;
+  color: #999;
+}
+
+#waiter .waiter_item .waiter_msg .msg_badge text {
+  font-size: 20rpx;
+  color: #ec8401;
+  margin-right: 10rpx;
+  padding: 2rpx;
+  background: rgba(253, 249, 243, 1);
+  border: 1rpx solid rgba(236, 132, 1, 1);
+  border-radius: 6rpx;
+}
+
+#waiter .waiter_item .waiter_msg .msg_checked {
+  width: 100%;
+  height: 36%;
+  display: flex;
+  margin-top: 20rpx;
+  justify-content: start;
+  align-items: center;
+}
+
+#waiter .waiter_item .waiter_msg .msg_checked button {
+  background: #ec8401;
+  color: #fff;
+  width: 165rpx;
+  height: 54rpx;
+  margin: 20rpx 0 0 0;
+  padding: 0 0;
+  line-height: 54rpx;
+  font-size: 30rpx;
+}
+
+.serviceItems {
+  width: 689rpx;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.serviceItemschild {
+  width: 328rpx;
+  height: 570rpx;
+  background: rgba(255, 255, 255, 1);
+  border: 2px solid rgba(234, 234, 234, 1);
+  border-radius: 12rpx;
+  margin-bottom: 30rpx;
+}
+
+.serviceItemschild_img {
+  width: 328rpx;
+  height: 328rpx;
+  border-radius: 12rpx;
+}
+
+.serviceItemschild_msg {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 17rpx;
+
+}
+
+.serviceItemschild_msg_con {
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: rgba(34, 34, 34, 1);
+}
+
+.serviceItemschild_msg_eva {
+  padding: 5rpx 0 rpx;
+  font-size: 20rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: rgba(154, 154, 154, 1);
+  line-height: 41rpx;
+
+}
+
+.serviceItemschild_msg_eva text {
+  margin-right: 20rpx;
+}
+
+.serviceItemschild_msg_pric {
+  height: 100rpx;
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(236, 132, 1, 1);
+  line-height: 41rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.serviceItemschild_msg_btn {
+  width: 136rpx;
+  height: 54rpx;
+  border: 1rpx solid #ECAC01;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 6rpx;
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.seds_comment {
+  width: 689rpx;
+  height: 100%;
+}
+
+.seds_comment_title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.seds_comment_mun {
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(34, 34, 34, 1);
+}
+
+.seds_comment_next {
+  color: #EB8301;
+  font-size: 24rpx;
+  vertical-align: middle;
+}
+
+.seds_comment_list {
+  width: 100%;
+  height: 100%;
+  padding-top: 40rpx;
+}
+
+
+.seds_comment_list_item {
+  width: 100%;
+  height: 200rpx;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30rpx;
+
+}
+
+.seds_comment_list_left {
+  width: 90rpx;
+  height: 100%;
+
+}
+
+.seds_comment_list_useravtar {
+  width: 77rpx;
+  height: 78rpx;
+
+}
+
+.seds_comment_list_right {
+  width: 588rpx;
+  height: 100%;
+  border-bottom: 1rpx solid #f2f2f2;
+}
+
+.seds_comment_list_username {
+  padding: 0 0 10rpx 0;
+
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(34, 34, 34, 1);
+}
+
+.seds_comment_list_usercom {
+  padding: 10rpx 0;
+
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: rgba(34, 34, 34, 1);
+}
+
+.seds_comment_list_userdate {
+  padding: 10rpx 0;
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 22rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: rgba(102, 102, 102, 1);
+}

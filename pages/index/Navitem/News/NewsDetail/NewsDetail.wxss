@@ -1,0 +1,38 @@
+.NewsDetail {
+  width: 100%;
+  padding: 0 30rpx;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.NewsDetail_title {
+  margin-top: 20rpx;
+
+}
+
+.NewsDetail_title_txt {
+  font-size: 36rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(34, 34, 34, 1);
+}
+
+.NewsDetail_title_msg {
+  margin-top: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24rpx;
+  font-family: SimHei;
+  font-weight: 400;
+  color: rgba(153, 153, 153, 1);
+}
+.NewsDetailContent{
+  margin-top:58rpx ;
+font-size:28rpx;
+font-family:SimHei;
+font-weight:400;
+color:rgba(34,34,34,1);
+letter-spacing: 1rpx;
+line-height:41rpx;
+}

@@ -1,0 +1,415 @@
+.workcondition {
+  width: 100%;
+  background: #F2F2F2;
+  height: 136rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.workcondition_item {
+  width: 402rpx;
+  background: #ccc;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 40rpx;
+}
+
+.workcondition_item>view {
+  width: 200rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+  font-size: 34rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.on {
+  background-image: linear-gradient(#FBAE00, #F18304);
+}
+
+.not {
+  background: #ccc;
+}
+
+.container {
+  height: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.title {
+  width: 100%;
+  height: 73rpx;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 12rpx solid #F2F2F2;
+}
+
+.titleSel {
+  height: 70rpx;
+  width: 20%;
+  color: #666666;
+  font-size: 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: PingFang SC;
+  font-weight: bold;
+}
+
+.titleSel_name {
+  height: 70rpx;
+  font-size: 28rpx;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  justify-content: center;
+}
+
+.headerLineSel {
+  background: #EC8401;
+  height: 10rpx;
+  width: 53rpx;
+  position: relative;
+}
+
+.headerLineUnsel {
+  background: #fff;
+  height: 10rpx;
+  width: 53rpx;
+  position: relative;
+}
+
+.swiper {
+  width: 100%;
+  flex: 1;
+  height: 100vh;
+  overflow: scroll;
+  background: #F2F2F2;
+
+}
+
+
+.newJob {
+  background: #fff;
+  width: 100%;
+  height: 430rpx;
+  box-sizing: border-box;
+  padding: 0 40rpx;
+  border-bottom: 11rpx solid #f1f2f2;
+}
+
+.newJobTitle {
+  font-size: 30rpx;
+  width: 100%;
+  height: 85rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #F08004;
+  border-bottom: 1rpx solid #f1f2f2;
+}
+
+.newJobContent {
+  width: 100%;
+  height: 160rpx;
+  display: flex;
+  margin: 28rpx 0;
+}
+
+.newJobContentImg {
+  width: 160rpx;
+  height: 160rpx;
+
+}
+
+.newJobContentMsg {
+  flex: 1;
+  margin-left: 20rpx;
+  font-size: 24rpx;
+  font-family: SimHei;
+  font-weight: 400;
+  color: rgba(153, 153, 153, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.newJobBtnbox {
+  width: 100%;
+  height: 130rpx;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.newJobBtn {
+  width: 560rpx;
+  height: 78rpx;
+  background-image: linear-gradient(#FAAE00, #F18815);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50rpx;
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+}
+
+.Inservice {
+  width: 100%;
+  height: 480rpx;
+  box-sizing: border-box;
+  padding: 0 40rpx;
+  border-bottom: 11rpx solid #f1f2f2;
+}
+
+.beizhu {
+  width: 100%;
+  height: 45rpx;
+  background: #EEEEEE;
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: rgba(51, 51, 51, 1);
+  line-height: 45rpx;
+  text-indent: 20rpx;
+}
+
+.Inservicebox {
+  height: 125rpx;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.Inservicebox>view {
+  width: 168rpx;
+  height: 62rpx;
+  background-image: linear-gradient(#FAAE00, #F18815);
+  line-height: 62rpx;
+  text-align: center;
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+  margin: 0 20rpx 0 30rpx;
+  border-radius: 10rpx;
+}
+
+.writeIndoor {
+  width: 100%;
+  height: 500rpx;
+  box-sizing: border-box;
+  padding: 0 40rpx;
+background: #fff;
+
+}
+
+.writeIndoor_title {
+  width: 100%;
+  height: 85rpx;
+  font-size: 30rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1rpx solid #f1f1f2;
+}
+
+.writeIndoor_content {
+  width: 100%;
+  height: 267rpx;
+  display: flex;
+  justify-content: center;
+
+}
+
+.writeIndoor_content_left {
+  width: 50rpx;
+  height: 100%;
+}
+
+.writeIndoor_content_right {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.wrremarks {
+  width: 100%;
+  height: 45rpx;
+  background: #EEEEEE;
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: rgba(51, 51, 51, 1);
+  text-indent: 20rpx;
+  line-height: 45rpx;
+}
+
+.writeIndoorbtn {
+  height: 106rpx;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.writeIndoorbtn>view {
+  width: 168rpx;
+  height: 62rpx;
+  background-image: linear-gradient(#FAAE00, #F18815);
+  line-height: 62rpx;
+  text-align: center;
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+  border-radius: 10rpx;
+  margin-left: 30rpx;
+}
+
+.myadress {
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  display: flex;
+  padding: 0 20rpx;
+}
+
+.myadress_title {
+  padding: 10rpx 0;
+  font-size: 30rpx;
+  font-family: SimHei;
+  font-weight: 400;
+  color: rgba(34, 34, 34, 1);
+  line-height: 41rpx;
+}
+
+.myadress_conectbox {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.bottombox{
+  width: 100%;
+  height: 150rpx;
+}
+.myadress_conect {
+  line-height: 41rpx;
+  font-size: 24rpx;
+  font-family: SimHei;
+  font-weight: 400;
+  color: rgba(153, 153, 153, 1);
+}
+
+.neworderbox {
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+
+}
+
+.neworder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.newjoccard {
+  width: 630rpx;
+  height: 419rpx;
+  background: #Ffff;
+  border-radius: 20rpx;
+
+}
+
+.newjoccard_time {
+  width: 100%;
+  height: 229rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.newjoccard_time view:first-child {
+  width: 131rpx;
+  height: 131rpx;
+  background: #F08004;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 60rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+}
+
+.newjoccard_time>view:last-child {
+  font-size: 24rpx;
+  font-family: SimHei;
+  font-weight: 400;
+  color: rgba(122, 122, 122, 1);
+  line-height: 20px;
+}
+
+.neworder_bottombox {
+  margin-top: 94rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.neworder_bottombox>view {
+  width: 40%;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.neworder_bottomboxA {
+  
+  border-radius: 0rpx 20rpx 0rpx 20rpx;
+  font-size: 36rpx;
+  font-family: SimHei;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+  background-image: linear-gradient(#FAAE00, #F18815);
+}
+
+
+.neworder_bottomboxB {
+  box-sizing: border-box;
+  border-radius: 20rpx 0rpx 20rpx 0rpx;
+  font-size: 36rpx;
+  font-family: SimHei;
+  font-weight: 400;
+  color: rgba(240, 128, 4, 1);
+  border:2rpx solid #F5A853;
+  letter-spacing: 2rpx;
+}

@@ -1,0 +1,23 @@
+<wxs module="filter" src="../../../../utils/timer.wxs"></wxs>
+<view class="News">
+	<view class="NewsItem">
+		<view class="NewsItem_contentbox" wx:for="{{NewsLIst}}" wx:key="id" bindtap="toNewsDetail" data-id="{{item.id}}">
+			<navigator class="NewsItem_content" url="/pages/index/Navitem/News/{{item.url}}">
+				<view class="NewsItem_content_imgbox">
+					<image style="width:100%" src="{{item.img_url}}" mode="widthFix"></image>
+				</view>
+				<view class="NewsItem_content_title">
+					<view class="NewsItem_content_title_txt">{{item.title}}</view>
+					<view class="NewsItem_content_title_time">
+						<view>{{filter.getDateTime(item.add_time)}}</view>
+
+						<view>
+							<text>{{item.num}}</text>
+							<image style="width:21rpx;margin-left: 8rpx;" src="/assets/image/index/laud.png" mode="widthFix"></image>
+						</view>
+					</view>
+				</view>
+			</navigator>
+		</view>
+	</view>
+</view>

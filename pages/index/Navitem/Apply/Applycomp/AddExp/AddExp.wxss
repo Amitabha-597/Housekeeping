@@ -1,0 +1,150 @@
+.AddExp {
+  width: 100%;
+  height: 100%;
+  background: rgb(217, 222, 233);
+  padding-top: 30rpx;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(34, 34, 34, 1);
+
+}
+
+.AddExpCard {
+  width: 690rpx;
+  height: 1183rpx;
+  padding: 30rpx;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 20rpx;
+}
+
+.AddExpCarddate_title {
+  font-size: 32rpx;
+  width: 630rpx;
+  text-align: left;
+  margin-bottom: 30rpx;
+}
+
+.AddExpCarddate {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.AddExpCarddate_conent {
+  color: #999;
+  font-size: 28rpx;
+  width: 630rpx;
+  height: 90rpx;
+  background: rgba(245, 246, 248, 1);
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.AddExpCarddate_conentline {
+  width: 40rpx;
+  height: 3rpx;
+  background: #999;
+}
+
+.AddExpCarddate_conent>input {
+  width: 25%;
+}
+
+.WorkConemt {
+  margin-top: 30rpx;
+}
+
+.WorkConemt_conent {
+
+  background:rgba(245,246,248,1);
+  border-radius:10px ;
+  padding: 25rpx 35rpx;
+  box-sizing: border-box;
+  min-height:137rpx ;
+  font-weight: normal;
+font-size: 28rpx;
+line-height: 40rpx;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.ServiceTypeFooter {
+  background: #fff;
+  width: 750rpx;
+  height: 143rpx;
+  border: 1px solid rgba(233, 233, 233, 1);
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.ServiceTypeFooter>view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  border-radius: 10px;
+}
+
+.ServiceTypeCancel {
+  width: 197rpx;
+  height: 86rpx;
+  background: rgba(245, 245, 245, 1);
+  color: rgba(34, 34, 34, 1);
+
+}
+
+.ServiceTypeSave {
+  width: 443rpx;
+  height: 86rpx;
+  background: rgba(236, 132, 1, 1);
+  color: #fff;
+
+}
